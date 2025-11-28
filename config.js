@@ -435,13 +435,13 @@ const STORE_CONFIG = {
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
-    "minQuantityForDiscount": 2,
-    "discountPerItem": 300,
+    "minQuantityForDiscount": null,
+    "discountPerItem": null,
     "discountScope": "all",
     "discountProducts": [],
     "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": 20,
-    "promotionalDiscountedPrice": 0,
+    "promotionalDiscountPercent": null,
+    "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
   },
