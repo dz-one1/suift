@@ -1,5 +1,16 @@
 const STORE_CONFIG = {
-  "PRODUCTS": {},
+  "PRODUCTS": {
+    "1": {
+      "name": "  مودال1",
+      "price": 2000,
+      "image": "",
+      "description": "",
+      "availableSizes": [],
+      "availableColors": [],
+      "ageRanges": [],
+      "colorImages": {}
+    }
+  },
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -234,16 +245,17 @@ const STORE_CONFIG = {
       "desk": 400
     }
   },
+  "FREE_DELIVERY": {},
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": null,
     "discountPerItem": null,
-    "discountScope": "all",
+    "discountScope": "",
     "discountProducts": [],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": null,
     "promotionalDiscountedPrice": null,
-    "promoDiscountScope": "all",
+    "promoDiscountScope": "",
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
@@ -474,6 +486,5 @@ const STORE_CONFIG = {
       "weightTo": 140,
       "enabled": false
     }
-  },
-  "FREE_DELIVERY": {}
+  }
 };
