@@ -2193,8 +2193,8 @@
                     </h4>
                     <div class="form-group">
                         <label>اسم المستودع:</label>
-                        <input type="text" id="newTokenRepo" placeholder="اسم المستودع على GitHub" value="sanix-dz" readonly>
-                        <small style="color: var(--text-light);">المستودع الافتراضي: sanix-dz</small>
+                        <input type="text" id="newTokenRepo" placeholder="اسم المستودع على GitHub" value="suift" readonly>
+                        <small style="color: var(--text-light);">المستودع الافتراضي: suift</small>
                     </div>
                     <div class="form-group">
                         <label>التوكن:</label>
@@ -2389,7 +2389,7 @@
         // إعدادات GitHub المطلوبة
         const GITHUB_CONFIG = {
             username: "dz-one",
-            repository: "sanix-dz",
+            repository: "suift",
             branch: "main",
             defaultFolder: "images"
         };
@@ -3924,7 +3924,7 @@ async function deleteStoreLogo() {
                 if (tokenConfig && repo) {
                     configUrl = `https://raw.githubusercontent.com/${tokenConfig.username}/${repo}/${tokenConfig.branch || 'main'}/config.js?t=${Date.now()}`;
                 } else {
-                    configUrl = 'https://raw.githubusercontent.com/dz-one/sanix-dz/main/config.js?t=' + Date.now();
+                    configUrl = 'https://raw.githubusercontent.com/dz-one/suift/main/config.js?t=' + Date.now();
                 }
                 
                 console.log('🔄 جاري تحميل الإعدادات من:', configUrl);
@@ -5770,7 +5770,7 @@ async function deleteProductImage(productId) {
             loadTokensList();
             updateCurrentRepoDisplay();
             
-            document.getElementById('newTokenRepo').value = 'sanix-dz';
+            document.getElementById('newTokenRepo').value = 'suift';
             document.getElementById('newTokenValue').value = '';
             document.getElementById('newTokenUsername').value = 'dz-one';
             document.getElementById('newTokenBranch').value = 'main';
