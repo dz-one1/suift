@@ -1,10 +1,10 @@
 const STORE_CONFIG = {
   "PRODUCTS": {
     "2": {
-      "name": "",
-      "price": 0,
+      "name": "مودال1",
+      "price": 2800,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
-      "description": "",
+      "description": "قمحة تركية",
       "availableSizes": [
         "S",
         "M"
@@ -292,16 +292,20 @@ const STORE_CONFIG = {
       "minAmount": 7000,
       "wilayas": []
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      2
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
     "discountPerItem": 800,
     "discountScope": "selected",
-    "discountProducts": [],
-    "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": 20,
+    "discountProducts": [
+      2
+    ],
+    "enablePromotionalDiscount": true,
+    "promotionalDiscountPercent": null,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
