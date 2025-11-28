@@ -1,14 +1,50 @@
 const STORE_CONFIG = {
   "PRODUCTS": {
-    "1": {
-      "name": "  مودال1",
-      "price": 2000,
-      "image": "",
+    "2": {
+      "name": "",
+      "price": 0,
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
       "description": "",
-      "availableSizes": [],
-      "availableColors": [],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "availableColors": [
+        "أزرق",
+        "أحمر"
+      ],
       "ageRanges": [],
-      "colorImages": {}
+      "colorImages": {
+        "أزرق": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أزرق-1764363830146-Screenshot_20251128-190616_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "4",
+              "ageTo": "5",
+              "size": "S"
+            },
+            {
+              "ageFrom": "6",
+              "ageTo": "7",
+              "size": "M"
+            }
+          ]
+        },
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أحمر-1764363896583-Screenshot_20251128-190638_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "6",
+              "ageTo": "7",
+              "size": "M"
+            }
+          ]
+        }
+      }
     }
   },
   "DELIVERY_PRICES": {
@@ -245,17 +281,29 @@ const STORE_CONFIG = {
       "desk": 400
     }
   },
-  "FREE_DELIVERY": {},
+  "FREE_DELIVERY": {
+    "desk": {
+      "enabled": false,
+      "minAmount": 5000,
+      "wilayas": []
+    },
+    "home": {
+      "enabled": false,
+      "minAmount": 7000,
+      "wilayas": []
+    },
+    "freeDeliveryProducts": []
+  },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
-    "minQuantityForDiscount": null,
-    "discountPerItem": null,
-    "discountScope": "",
+    "enableQuantityDiscount": true,
+    "minQuantityForDiscount": 1,
+    "discountPerItem": 800,
+    "discountScope": "selected",
     "discountProducts": [],
     "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": null,
+    "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
-    "promoDiscountScope": "",
+    "promoDiscountScope": "all",
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
@@ -403,17 +451,17 @@ const STORE_CONFIG = {
       "enabled": false
     },
     "S": {
-      "heightFrom": 160,
-      "heightTo": 175,
-      "weightFrom": 50,
-      "weightTo": 65,
-      "enabled": false
+      "heightFrom": 120,
+      "heightTo": 130,
+      "weightFrom": 14,
+      "weightTo": 16,
+      "enabled": true
     },
     "M": {
-      "heightFrom": 170,
-      "heightTo": 180,
-      "weightFrom": 65,
-      "weightTo": 80,
+      "heightFrom": 130,
+      "heightTo": 150,
+      "weightFrom": 16,
+      "weightTo": 22,
       "enabled": true
     },
     "L": {
@@ -421,21 +469,21 @@ const STORE_CONFIG = {
       "heightTo": 195,
       "weightFrom": 70,
       "weightTo": 90,
-      "enabled": true
+      "enabled": false
     },
     "XL": {
       "heightFrom": 185,
       "heightTo": 200,
       "weightFrom": 85,
       "weightTo": 110,
-      "enabled": true
+      "enabled": false
     },
     "XXL": {
       "heightFrom": 190,
       "heightTo": 205,
       "weightFrom": 95,
       "weightTo": 120,
-      "enabled": true
+      "enabled": false
     },
     "S1": {
       "heightFrom": 160,
