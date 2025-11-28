@@ -311,21 +311,21 @@ const STORE_CONFIG = {
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
-    "name": "",
+    "name": "معرض رحوبة لملابس الأطفال",
     "storeIcon": "👑",
     "storeTitle": "👑 أحدث موديلات ",
-    "tagline": "متجر أفخم الملابس",
+    "tagline": "متجر أفخم الملابس التربية للاطفال",
     "phoneNumbers": [
-      "0xxxxxxxxx",
-      "0xxxxxxxxx"
+      "0671466489",
+      "0551102155"
     ],
-    "logo": "",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764364345578-Screenshot_20251110-233548_Perplexity.jpg",
     "facebookUrl": "",
     "instagramUrl": "",
     "messengerUrl": "",
     "viberNumber": "",
-    "whatsappNumber": "",
-    "whatsappUrl": ""
+    "whatsappNumber": "213671466489",
+    "whatsappUrl": "https://wa.me/213671466489"
   },
   "GOOGLE_SHEETS": {
     "url": "",
