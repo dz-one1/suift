@@ -410,7 +410,9 @@ const STORE_CONFIG = {
         "58 - المنيعة"
       ]
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      2
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
