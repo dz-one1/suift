@@ -347,7 +347,7 @@ const STORE_CONFIG = {
       ]
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 7000,
       "wilayas": [
         "01 - أدرار",
@@ -415,13 +415,13 @@ const STORE_CONFIG = {
     ]
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 800,
     "discountScope": "selected",
     "discountProducts": [],
-    "enablePromotionalDiscount": true,
-    "promotionalDiscountPercent": null,
+    "enablePromotionalDiscount": false,
+    "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
