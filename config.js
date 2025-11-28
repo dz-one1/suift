@@ -429,8 +429,8 @@ const STORE_CONFIG = {
       ]
     },
     "freeDeliveryProducts": [
-      1,
-      2
+      2,
+      1
     ]
   },
   "DISCOUNTS": {
