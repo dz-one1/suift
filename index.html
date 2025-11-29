@@ -3720,7 +3720,7 @@
 
             // 🟢 أولوية لخصم الكمية
             if (discounts.enableQuantityDiscount) {
-                const minQuantity = discounts.minQuantityForDiscount || 3;
+                const minQuantity = discounts.minQuantityForDiscount || 0;
                 const discountPerItem = discounts.discountPerItem || 0;
                 const discountScope = discounts.discountScope || 'all';
 
