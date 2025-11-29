@@ -45,6 +45,44 @@ const STORE_CONFIG = {
           ]
         }
       }
+    },
+    "3": {
+      "name": "مودال2",
+      "price": 5800,
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764433655760-Adobe%20Express%20-%20file.jpg",
+      "description": "",
+      "availableSizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "availableColors": [
+        "وردي"
+      ],
+      "ageRanges": [
+        {
+          "ageFrom": "5",
+          "ageTo": "6",
+          "size": "S"
+        },
+        {
+          "ageFrom": "7",
+          "ageTo": "8",
+          "size": "M"
+        },
+        {
+          "ageFrom": "9",
+          "ageTo": "10",
+          "size": "L"
+        },
+        {
+          "ageFrom": "11",
+          "ageTo": "12",
+          "size": "XL"
+        }
+      ],
+      "colorImages": {}
     }
   },
   "DELIVERY_PRICES": {
@@ -410,14 +448,18 @@ const STORE_CONFIG = {
         "58 - المنيعة"
       ]
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      2
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
     "discountPerItem": 800,
     "discountScope": "selected",
-    "discountProducts": [],
+    "discountProducts": [
+      3
+    ],
     "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
