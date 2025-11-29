@@ -2,7 +2,7 @@ const STORE_CONFIG = {
   "PRODUCTS": {
     "2": {
       "name": "مودال1",
-      "price": 2800,
+      "price": 2900,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
       "description": "قمحة تركية",
       "availableSizes": [
