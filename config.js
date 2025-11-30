@@ -322,7 +322,7 @@ const STORE_CONFIG = {
   "FREE_DELIVERY": {
     "desk": {
       "enabled": true,
-      "minAmount": 5000,
+      "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
         "02 - الشلف",
@@ -386,7 +386,7 @@ const STORE_CONFIG = {
     },
     "home": {
       "enabled": true,
-      "minAmount": 5000,
+      "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
         "02 - الشلف",
