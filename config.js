@@ -334,10 +334,7 @@ const STORE_CONFIG = {
         "43 - ميلة"
       ]
     },
-    "freeDeliveryProducts": [
-      2,
-      3
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
