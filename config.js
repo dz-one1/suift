@@ -321,7 +321,7 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
@@ -450,7 +450,9 @@ const STORE_CONFIG = {
       ],
       "minQuantity": 3
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      2
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
