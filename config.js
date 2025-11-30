@@ -330,9 +330,7 @@ const STORE_CONFIG = {
     "home": {
       "enabled": true,
       "minAmount": 2000,
-      "wilayas": [
-        "43 - ميلة"
-      ]
+      "wilayas": []
     },
     "freeDeliveryProducts": []
   },
