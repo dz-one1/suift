@@ -449,7 +449,6 @@ const STORE_CONFIG = {
       ]
     },
     "freeDeliveryProducts": [
-      2,
       3
     ]
   },
