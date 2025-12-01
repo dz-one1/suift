@@ -451,7 +451,8 @@ const STORE_CONFIG = {
       "minQuantity": null
     },
     "freeDeliveryProducts": [
-      2
+      2,
+      3
     ]
   },
   "DISCOUNTS": {
@@ -459,9 +460,7 @@ const STORE_CONFIG = {
     "minQuantityForDiscount": 1,
     "discountPerItem": 800,
     "discountScope": "selected",
-    "discountProducts": [
-      3
-    ],
+    "discountProducts": [],
     "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
