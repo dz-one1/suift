@@ -2668,7 +2668,7 @@
                     conditionText += ` ${freeDeliveryConfig.minAmount} دج`;
                     
                     if (freeDeliveryConfig.minQuantity !== null && freeDeliveryConfig.minQuantity !== undefined) {
-                        conditionText += ` و ${freeDeliveryConfig.minQuantity} قطعة`;
+                        conditionText += ` أو شراء ${freeDeliveryConfig.minQuantity} قطع`;
                     }
                     
                     priceElement.innerHTML = `توصيل مجاني <br><small style="font-size:0.6em;">${conditionText}</small>`;
