@@ -2664,8 +2664,9 @@
                 // إضافة رسالة الحد الأدنى للتوصيل المجاني
                 const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[type];
                 if (freeDeliveryConfig) {
-                    let conditionText = 'للمشتريات الأكثر من';
-                    conditionText += ` ${freeDeliveryConfig.minAmount} دج`;
+                    let conditionText = 'للمشتريات إبتداء من';
+                    conditionText += ` ${freeDeliveryConfig.minAmount} دج`; 
+                    
                     
                     if (freeDeliveryConfig.minQuantity !== null && freeDeliveryConfig.minQuantity !== undefined) {
                         conditionText += ` أو شراء ${freeDeliveryConfig.minQuantity} قطع`;
@@ -4054,7 +4055,11 @@
             // تحميل الإعدادات المحفوظة
             loadSavedConfig();
             
-            // تحديث الواجهة بالإعدادات
+            // تحديث ا
+            
+                               
+            
+            لواجهة بالإعدادات
             updateStoreInterface();
             
             // إعداد نظام التحديثات
