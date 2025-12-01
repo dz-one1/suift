@@ -321,15 +321,13 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": true,
-      "minAmount": 2000,
-      "wilayas": [
-        "43 - ميلة"
-      ]
+      "enabled": false,
+      "minAmount": ,
+      "wilayas": []
     },
     "home": {
-      "enabled": true,
-      "minAmount": 2000,
+      "enabled": false,
+      "minAmount": ,
       "wilayas": []
     },
     "freeDeliveryProducts": []
