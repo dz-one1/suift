@@ -383,7 +383,7 @@ const STORE_CONFIG = {
         "02 - الشلف",
         "01 - أدرار"
       ],
-      "minQuantity": 2
+      "minQuantity": 1
     },
     "home": {
       "enabled": true,
@@ -448,7 +448,7 @@ const STORE_CONFIG = {
         "57 - المغير",
         "58 - المنيعة"
       ],
-      "minQuantity": 2
+      "minQuantity": 1
     },
     "freeDeliveryProducts": [
       2,
