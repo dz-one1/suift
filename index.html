@@ -2663,12 +2663,13 @@
                 
                 // إضافة رسالة الحد الأدنى للتوصيل المجاني
                 const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[type];
-                if (freeDeliveryConfig) {
+               /* if (freeDeliveryConfig) {*/
+                if (freeDeliveryConfig.minAmount !== null && freeDeliveryConfig.minAmount !== undefined) {
                     let conditionText = 'للمشتريات الأكثر من';
                     conditionText += ` ${freeDeliveryConfig.minAmount} دج`;
                     
                     if (freeDeliveryConfig.minQuantity !== null && freeDeliveryConfig.minQuantity !== undefined) {
-                        conditionText += ` أو شراء ${freeDeliveryConfig.minQuantity} قطع`;
+                        conditionText += `  شراء ${freeDeliveryConfig.minQuantity} قطع`;
                     }
                     
                     priceElement.innerHTML = `توصيل مجاني <br><small style="font-size:0.6em;">${conditionText}</small>`;
