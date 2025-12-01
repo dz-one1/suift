@@ -451,7 +451,8 @@ const STORE_CONFIG = {
       "minQuantity": 3
     },
     "freeDeliveryProducts": [
-      2
+      2,
+      3
     ]
   },
   "DISCOUNTS": {
