@@ -83,6 +83,22 @@ const STORE_CONFIG = {
         }
       ],
       "colorImages": {}
+    },
+    "4": {
+      "name": "مودال3",
+      "price": 6000,
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764629908672-modal7.jpg.webp",
+      "description": "",
+      "availableSizes": [
+        "S",
+        "S1"
+      ],
+      "availableColors": [
+        "وردي",
+        "أزرق"
+      ],
+      "ageRanges": [],
+      "colorImages": {}
     }
   },
   "DELIVERY_PRICES": {
