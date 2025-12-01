@@ -322,7 +322,7 @@ const STORE_CONFIG = {
   "FREE_DELIVERY": {
     "desk": {
       "enabled": true,
-      "minAmount": 10000,
+      "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
         "02 - الشلف",
@@ -386,7 +386,7 @@ const STORE_CONFIG = {
       "minQuantity": null
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
@@ -448,7 +448,7 @@ const STORE_CONFIG = {
         "57 - المغير",
         "58 - المنيعة"
       ],
-      "minQuantity": 3
+      "minQuantity": null
     },
     "freeDeliveryProducts": [
       2
@@ -459,7 +459,9 @@ const STORE_CONFIG = {
     "minQuantityForDiscount": 1,
     "discountPerItem": 800,
     "discountScope": "selected",
-    "discountProducts": [],
+    "discountProducts": [
+      3
+    ],
     "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
