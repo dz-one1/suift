@@ -337,8 +337,8 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
-      "minAmount": 0,
+      "enabled": true,
+      "minAmount": 10000,
       "wilayas": [
         "03 - الأغواط",
         "04 - أم البواقي",
@@ -402,8 +402,8 @@ const STORE_CONFIG = {
       "minQuantity": null
     },
     "home": {
-      "enabled": false,
-      "minAmount": 0,
+      "enabled": true,
+      "minAmount": 10000,
       "wilayas": [
         "01 - أدرار",
         "02 - الشلف",
@@ -466,7 +466,11 @@ const STORE_CONFIG = {
       ],
       "minQuantity": null
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      3,
+      2,
+      4
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
@@ -487,14 +491,14 @@ const STORE_CONFIG = {
   "STORE_INFO": {
     "name": "  معرض الجودة",
     "storeIcon": "👑",
-    "storeTitle": "👑 أحدث موديلات ",
+    "storeTitle": " أحدث موديلات ",
     "tagline": "متجر أفخم الملابس التربية للاطفال",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
     ],
     "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764364345578-Screenshot_20251110-233548_Perplexity.jpg",
-    "facebookUrl": "",
+    "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
     "viberNumber": "",
