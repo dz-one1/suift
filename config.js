@@ -339,7 +339,7 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
       "wilayas": [
         "03 - الأغواط",
@@ -404,7 +404,7 @@ const STORE_CONFIG = {
       "minQuantity": 2
     },
     "home": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
@@ -468,14 +468,10 @@ const STORE_CONFIG = {
       ],
       "minQuantity": 2
     },
-    "freeDeliveryProducts": [
-      3,
-      2,
-      4
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
+    "enableQuantityDiscount": true,
     "minQuantityForDiscount": 2,
     "discountPerItem": 500,
     "discountScope": "selected",
@@ -484,7 +480,7 @@ const STORE_CONFIG = {
       3,
       4
     ],
-    "enablePromotionalDiscount": true,
+    "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 25,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
