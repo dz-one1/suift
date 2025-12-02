@@ -7,7 +7,8 @@ const STORE_CONFIG = {
       "description": "قمحة تركية",
       "availableSizes": [
         "S",
-        "M"
+        "M",
+        "L"
       ],
       "availableColors": [
         "أزرق",
@@ -54,8 +55,8 @@ const STORE_CONFIG = {
       "availableSizes": [
         "S",
         "M",
-        "L",
-        "XL"
+        "XL",
+        "L"
       ],
       "availableColors": [
         "وردي"
@@ -91,7 +92,8 @@ const STORE_CONFIG = {
       "description": "",
       "availableSizes": [
         "S",
-        "S1"
+        "XL",
+        "XXL"
       ],
       "availableColors": [
         "وردي",
@@ -665,7 +667,7 @@ const STORE_CONFIG = {
       "heightTo": 205,
       "weightFrom": 95,
       "weightTo": 120,
-      "enabled": true
+      "enabled": false
     },
     "S1": {
       "heightFrom": 160,
@@ -693,7 +695,7 @@ const STORE_CONFIG = {
       "heightTo": 180,
       "weightFrom": 50,
       "weightTo": 80,
-      "enabled": true
+      "enabled": false
     },
     "M2": {
       "heightFrom": 160,
@@ -707,7 +709,7 @@ const STORE_CONFIG = {
       "heightTo": 180,
       "weightFrom": 50,
       "weightTo": 80,
-      "enabled": true
+      "enabled": false
     },
     "XXXL": {
       "heightFrom": 195,
