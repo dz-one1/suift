@@ -533,16 +533,16 @@ const STORE_CONFIG = {
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "all",
-    "discountProducts": [
+    "discountProducts": [],
+    "enablePromotionalDiscount": true,
+    "promotionalDiscountPercent": 15,
+    "promotionalDiscountedPrice": null,
+    "promoDiscountScope": "all",
+    "promoDiscountProducts": [
       2,
       3,
       4
-    ],
-    "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": null,
-    "promotionalDiscountedPrice": null,
-    "promoDiscountScope": "all",
-    "promoDiscountProducts": []
+    ]
   },
   "STORE_INFO": {
     "name": "  معرض الجودة",
