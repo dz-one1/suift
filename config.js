@@ -490,7 +490,7 @@ const STORE_CONFIG = {
   },
   "STORE_INFO": {
     "name": "  معرض الجودة",
-    "storeIcon": "👑",
+    "storeIcon": "",
     "storeTitle": " أحدث موديلات ",
     "tagline": "متجر أفخم الملابس التربية للاطفال",
     "phoneNumbers": [
