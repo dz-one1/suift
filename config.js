@@ -472,7 +472,7 @@ const STORE_CONFIG = {
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
-    "minQuantityForDiscount": 2,
+    "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "selected",
     "discountProducts": [
@@ -480,7 +480,7 @@ const STORE_CONFIG = {
       3,
       4
     ],
-    "enablePromotionalDiscount": false,
+    "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 25,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
