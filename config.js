@@ -46,9 +46,25 @@ const STORE_CONFIG = {
           ]
         }
       },
+      "enableMeasurements": true,
+      "measurements": [
+        {
+          "size": "الطول",
+          "value": "150",
+          "category": "custom",
+          "id": 1764707237061
+        }
+      ],
       "sizeGuide": {
-        "enabled": false,
-        "guide": {}
+        "enabled": true,
+        "guide": {
+          "M2": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 45,
+            "weightTo": 50
+          }
+        }
       }
     },
     "3": {
@@ -89,8 +105,21 @@ const STORE_CONFIG = {
       ],
       "colorImages": {},
       "sizeGuide": {
-        "enabled": false,
-        "guide": {}
+        "enabled": true,
+        "guide": {
+          "M": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 40,
+            "weightTo": 55
+          },
+          "L": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 50,
+            "weightTo": 60
+          }
+        }
       }
     },
     "4": {
@@ -110,8 +139,21 @@ const STORE_CONFIG = {
       "ageRanges": [],
       "colorImages": {},
       "sizeGuide": {
-        "enabled": false,
-        "guide": {}
+        "enabled": true,
+        "guide": {
+          "XL": {
+            "heightFrom": 160,
+            "heightTo": 170,
+            "weightFrom": 55,
+            "weightTo": 65
+          },
+          "XXL": {
+            "heightFrom": 160,
+            "heightTo": 185,
+            "weightFrom": 60,
+            "weightTo": 75
+          }
+        }
       }
     }
   },
@@ -352,6 +394,7 @@ const STORE_CONFIG = {
   "FREE_DELIVERY": {
     "desk": {
       "enabled": false,
+      "minAmount": 0,
       "wilayas": [
         "03 - الأغواط",
         "04 - أم البواقي",
@@ -416,6 +459,7 @@ const STORE_CONFIG = {
     },
     "home": {
       "enabled": false,
+      "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
         "02 - الشلف",
