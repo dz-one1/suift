@@ -393,7 +393,7 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [
         "03 - الأغواط",
@@ -455,10 +455,10 @@ const STORE_CONFIG = {
         "01 - أدرار",
         "02 - الشلف"
       ],
-      "minQuantity": 2
+      "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [
         "01 - أدرار",
@@ -520,7 +520,7 @@ const STORE_CONFIG = {
         "57 - المغير",
         "58 - المنيعة"
       ],
-      "minQuantity": 2
+      "minQuantity": 1
     },
     "freeDeliveryProducts": []
   },
