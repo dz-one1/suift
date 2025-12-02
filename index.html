@@ -1,0 +1,4616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">🛒 أنقر على الرابط - 👑 </title>
+    <meta property="og:title" id="ogTitle" content="أنقر على الرابط  🛒  واختر أجمل الموديلات ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="config.js"></script>
+    <style>
+        :root {
+            --primary: #4A6CF7;
+            --primary-dark: #3A5CE5;
+            --secondary: #00D4FF;
+            --secondary-dark: #00B8E0;
+            --accent: #FFD166;
+            --success: #06D6A0;
+            --warning: #FF9E16;
+            --light: #F8F9FA;
+            --dark: #1A1A2E;
+            --gray: #6C757D;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --shadow: 0 8px 30px rgba(0,0,0,0.12);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+            --radius: 20px;
+            --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            direction: rtl;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--dark);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* الهيدر المحسن والمصغر بدون قائمة */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .logo i {
+            font-size: 1.3rem;
+        }
+
+        /* إضافة أنماط جديدة للشعار */
+        .store-logo {
+            width: auto;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: contain;
+            border: 2px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .store-logo-small {
+            width: auto;
+            height: 45px;
+            border-radius: 6px;
+            object-fit: contain;
+            border: 2px solid white;
+        }
+
+        .store-logo-main {
+            width: auto;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: contain;
+            border: 3px solid white;
+            box-shadow: var(--shadow-lg);
+            margin: 0 auto 1rem auto;
+        }
+
+        .store-logo-small, .store-logo {
+            width: auto;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: contain;
+            border: 2px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .store-logo-footer {
+            width: auto;
+            height: 45px;
+            border-radius: 8px;
+            object-fit: contain;
+            border: 2px solid white;
+        }
+
+        #storeIcon {
+            font-size: 1.1rem;
+            margin-left: 0.2rem;
+        }
+
+        /* السلة - الآن على اليسار */
+        .cart-summary {
+            background: rgba(255,255,255,0.25);
+            padding: 0.5rem 0.8rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 600;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .cart-summary:hover {
+            background: rgba(255,255,255,0.35);
+            transform: translateY(-1px);
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            background: var(--accent);
+            color: var(--dark);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 800;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* نظام الصفحات */
+        .page {
+            display: none;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* معرض المنتجات */
+        .models-section {
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .model-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .model-card:active {
+            transform: scale(0.98);
+        }
+
+        /* تحسينات الصور - تم التعديل لحل مشكلة الضغط */
+        .model-image-container {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .model-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: var(--transition);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .model-card:hover .model-image {
+            transform: scale(1.05);
+            filter: brightness(1.02);
+        }
+
+        /* تحسينات الشعارات - تم تكبيرها بشكل ملحوظ */
+        .model-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 2px solid white;
+        }
+
+        /* نظام الخصم المحسن - شارات الخصم المخفية عند عدم التوفر */
+        .discount-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--warning);
+            color: white;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            line-height: 1.2;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 2px solid white;
+            animation: discount-pulse 2s infinite;
+        }
+
+        .discount-badge.discount-hint {
+            background: var(--secondary);
+            font-size: 0.8rem;
+        }
+
+        .discount-badge.promo-discount {
+            background: linear-gradient(135deg, #4A6CF7, #3A5CE5);
+            font-size: 0.8rem;
+            animation: promo-pulse 1.5s infinite;
+        }
+
+        /* شارات الخصم المخفية عند عدم التوفر */
+        .discount-badge.hidden {
+            display: none !important;
+        }
+
+        /* أنماط محسنة للتمييز بين أنواع الخصم */
+        .discount-info.quantity-discount {
+            background: rgba(255, 158, 22, 0.15) !important;
+            color: var(--warning) !important;
+            border-right: 4px solid var(--warning) !important;
+            border-left: 4px solid transparent !important;
+        }
+
+        .promo-discount-info {
+            background: rgba(74, 108, 247, 0.15) !important;
+            color: var(--primary) !important;
+            border-right: 4px solid var(--primary) !important;
+            border-left: 4px solid transparent !important;
+        }
+
+        .discount-info.premium-message {
+            background: rgba(0, 212, 255, 0.15) !important;
+            color: var(--secondary) !important;
+            border-right: 4px solid var(--secondary) !important;
+            border-left: 4px solid transparent !important;
+        }
+
+        /* تحسين عرض الخصم في السلة */
+        .discount-summary {
+            background: linear-gradient(135deg, #fff9e6, #ffe6cc);
+            border: 2px solid var(--warning);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .promo-summary {
+            background: linear-gradient(135deg, #e6f0ff, #ccdeff);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .premium-summary {
+            background: linear-gradient(135deg, #e6f7ff, #cceeff);
+            border: 2px solid var(--secondary);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        /* أنماط جديدة للتوصيل المجاني - تم التعديل لإضافة الحد الأدنى */
+        .free-delivery-badge {
+            background: linear-gradient(135deg, var(--success), #05a181);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-left: 0.5rem;
+            animation: free-delivery-pulse 2s infinite;
+        }
+
+        .free-delivery-message {
+            background: linear-gradient(135deg, rgba(6, 214, 160, 0.15), rgba(5, 161, 129, 0.15));
+            border: 2px solid var(--success);
+            border-radius: var(--radius);
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            text-align: center;
+            color: var(--success);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        /* رسالة الحد الأدنى للتوصيل المجاني */
+        .free-delivery-minimum {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 193, 7, 0.15));
+            border: 2px dashed var(--warning);
+            border-radius: var(--radius);
+            padding: 0.6rem;
+            margin: 0.5rem 0;
+            text-align: center;
+            color: var(--warning);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        @keyframes free-delivery-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(6, 214, 160, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(6, 214, 160, 0);
+            }
+        }
+
+        /* تأثير النبض السريع للتوصيل المجاني */
+        @keyframes fast-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.9);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(6, 214, 160, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(6, 214, 160, 0);
+            }
+        }
+
+        .fast-pulse-effect {
+            animation: fast-pulse 0.4s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* تأثير النبض لشارات الخصم */
+        @keyframes discount-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 158, 22, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 158, 22, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 158, 22, 0);
+            }
+        }
+
+        @keyframes promo-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(74, 108, 247, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0);
+            }
+        }
+
+        .discount-tooltip {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            width: 200px;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+            text-align: right;
+            line-height: 1.5;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .discount-badge:hover .discount-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .model-info {
+            padding: 1rem;
+        }
+
+        .model-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .model-description {
+            color: var(--gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            font-size: 0.85rem;
+        }
+
+        .model-price {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .original-price {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-decoration: line-through;
+            margin-left: 0.4rem;
+        }
+
+        .quick-add-btn {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 3;
+        }
+
+        .quick-add-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* تأثير النبض - أقصى سرعة لجذب الانتباه */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(74, 108, 247, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0);
+            }
+        }
+
+        .pulse-effect {
+            animation: pulse 0.6s infinite;
+        }
+
+        /* تأثير النبض للحقول */
+        .pulse-field {
+            animation: pulse 1s infinite;
+        }
+
+        /* تأثير النبض للعناصر المهمة */
+        .pulse-highlight {
+            animation: pulse 1.5s infinite;
+            position: relative;
+        }
+
+        /* تأثير الوميض للحقول */
+        .blink-field {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3);
+            }
+            51%, 100% {
+                border-color: #e2e8f0;
+                box-shadow: none;
+            }
+        }
+
+        /* تأثير الحقول عند الكتابة */
+        .field-filled {
+            border-color: var(--success) !important;
+            box-shadow: 0 0 0 3px rgba(6, 214, 160, 0.1);
+            background: rgba(6, 214, 160, 0.05);
+        }
+
+        /* تأثير النبض السريع والمتكرر للمبلغ الكلي */
+        @keyframes super-fast-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.8);
+                transform: scale(1);
+            }
+            25% {
+                box-shadow: 0 0 0 10px rgba(255, 215, 0, 0.4);
+                transform: scale(1.02);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0.2);
+                transform: scale(1.05);
+            }
+            75% {
+                box-shadow: 0 0 0 10px rgba(255, 215, 0, 0.4);
+                transform: scale(1.02);
+            }
+        }
+
+        .super-fast-pulse-effect {
+            animation: super-fast-pulse 0.8s infinite;
+        }
+
+        /* تأثير النبض السريع للمجموع الكلي */
+        @keyframes total-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.8);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+
+        .total-pulse-effect {
+            animation: total-pulse 0.6s infinite;
+        }
+
+        /* تأثير الوميض السريع جداً للمزيد من الجذب */
+        @keyframes flash-pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.8);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(74, 108, 247, 0);
+                transform: scale(1.05);
+            }
+        }
+
+        .flash-pulse {
+            animation: flash-pulse 0.8s infinite;
+        }
+
+        /* نموذج الطلب - تم تصغير الحجم */
+        .form-section {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.6rem;
+        }
+
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 40px;
+            height: 2px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 0.8rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.75rem;
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.6rem;
+            font-size: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            font-family: "Cairo", sans-serif;
+            background: #f8f9fa;
+            -webkit-appearance: none;
+        }
+
+        /* حقل رقم الهاتف - تم التعديل */
+        .phone-input {
+            text-align: right;
+            direction: ltr;
+        }
+
+        /* تأثيرات الحقول عند النبض والاختيار */
+        .wilaya-pulse {
+            animation: pulse 1s infinite;
+            border-color: var(--primary) !important;
+        }
+
+        .wilaya-selected {
+            border-color: var(--success) !important;
+            box-shadow: 0 0 0 3px rgba(6, 214, 160, 0.1);
+        }
+
+        .delivery-option.pulse-field {
+            animation: pulse 1s infinite;
+            border-color: var(--primary) !important;
+        }
+
+        .delivery-option.selected {
+            border-color: var(--success) !important;
+            background: rgba(6, 214, 160, 0.1);
+            color: var(--success);
+        }
+
+        .input-with-icon input, 
+        .input-with-icon select {
+            padding-left: 2.2rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+            outline: none;
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-size: 0.8rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-family: "Cairo", sans-serif;
+            text-decoration: none;
+            -webkit-appearance: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        /* خيارات التوصيل - تم تحسينها لعرض الأسعار */
+        .delivery-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.4rem;
+            padding: 0.6rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            background: white;
+            flex: 1;
+            text-align: right;
+            font-size: 0.75rem;
+        }
+
+        .delivery-price {
+            background: var(--success);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-right: auto;
+            display: none; /* مخفي افتراضياً حتى اختيار الولاية */
+        }
+
+        .delivery-option.selected .delivery-price {
+            background: var(--primary);
+            animation: pulse 1s infinite;
+        }
+
+        .delivery-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.2rem;
+            flex: 1;
+        }
+
+        .delivery-type {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .delivery-desc {
+            font-size: 0.65rem;
+            color: var(--gray);
+        }
+
+        .delivery-option i {
+            font-size: 0.9rem;
+        }
+
+        .delivery-option:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* شريط معلومات الاتصال - تم تصغيره */
+        .contact-info-bar {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 0.6rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .contact-info-bar i {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-info-bar p {
+            margin: 0;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .contact-numbers {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.3rem;
+        }
+
+        .contact-number {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: white;
+            font-size: 0.75rem;
+        }
+
+        .contact-number:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* نافذة المنتج - تم تصغير الحجم */
+        .product-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .product-modal.show {
+            display: flex;
+            animation: modalAppear 0.3s ease;
+        }
+
+        @keyframes modalAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .product-modal-content {
+            background: white;
+            border-radius: var(--radius);
+            padding: 1rem;
+            max-width: 95%;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .product-modal-image-container {
+            width: 100%;
+            height: 200px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .product-modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: var(--transition);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .product-modal-image:hover {
+            transform: scale(1.05);
+        }
+
+        .product-modal-price {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(6, 214, 160, 0.1);
+            padding: 0.4rem 0.6rem;
+            border-radius: 50px;
+            width: fit-content;
+            margin-bottom: 0.6rem;
+        }
+
+        .discount-info {
+            background: rgba(255, 158, 22, 0.1);
+            color: var(--warning);
+            padding: 0.4rem 0.6rem;
+            border-radius: var(--radius);
+            margin: 0.4rem 0;
+            border-right: 4px solid var(--warning);
+            font-size: 0.7rem;
+        }
+
+        .promo-discount-info {
+            background: rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 0.6rem;
+            border-radius: var(--radius);
+            margin: 0.4rem 0;
+            border-right: 4px solid var(--primary);
+            font-size: 0.7rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 0.8rem 0;
+        }
+
+        .quantity-btn {
+            background: var(--light);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:active {
+            transform: scale(0.9);
+        }
+
+        .quantity-display {
+            font-size: 0.9rem;
+            font-weight: 700;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .product-modal-close {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            z-index: 10001;
+            transition: var(--transition);
+        }
+
+        .product-modal-close:active {
+            transform: scale(0.9);
+        }
+
+        /* خيارات المقاس واللون مع النقطة الزرقاء الدوارة - تم تصغيرها */
+        .size-options, .color-options {
+            margin: 0.4rem 0;
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.3rem;
+        }
+
+        .size-option, .color-option {
+            padding: 0.2rem 0.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            background: white;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 0.7rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-option.selected, .color-option.selected {
+            border-color: var(--primary);
+            background: rgba(74, 108, 247, 0.1);
+            color: var(--primary);
+        }
+
+        .color-option {
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .color-preview {
+            position: absolute;
+            left: 0.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #e2e8f0;
+        }
+
+        /* تأثير النقطة الزرقاء الدوارة */
+        .size-option::before, .color-option::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            animation: rotate 2s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .size-option:hover::before, .color-option:hover::before {
+            opacity: 1;
+            border-color: var(--secondary);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* جدول المقاسات - الأنماط الجديدة */
+        .size-guide-section {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: var(--radius);
+            border: 2px dashed var(--primary);
+        }
+
+        .size-guide-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .size-guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .size-guide-table th {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-align: center;
+            border: 1px solid var(--primary-dark);
+        }
+
+        .size-guide-table td {
+            padding: 0.5rem;
+            font-size: 0.7rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: var(--transition);
+        }
+
+        .size-guide-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .size-guide-table tr:hover td {
+            background: rgba(74, 108, 247, 0.05);
+            transform: scale(1.02);
+        }
+
+        .size-guide-note {
+            text-align: center;
+            margin-top: 0.8rem;
+            font-size: 0.7rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        /* الأزرار العائمة - تم إخفاء أزرار وسائل التواصل الاجتماعي */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid white;
+        }
+
+        .floating-btn:active {
+            transform: scale(0.9);
+        }
+
+        .admin-btn {
+            background: var(--gradient);
+            display: none;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .facebook-btn {
+            background: #3b5998;
+        }
+
+        .instagram-btn {
+            background: #E1306C;
+        }
+
+        .messenger-btn {
+            background: #0084FF;
+        }
+
+        .viber-btn {
+            background: #7360F2;
+        }
+
+        .back-to-top {
+            background: var(--secondary);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* وسائل التواصل الاجتماعي تحت الشعار */
+        .social-media-under-logo {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-media-under-logo a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid white;
+        }
+
+        .social-media-under-logo .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .social-media-under-logo .facebook-btn {
+            background: #3b5998;
+        }
+
+        .social-media-under-logo .instagram-btn {
+            background: #E1306C;
+        }
+
+        .social-media-under-logo .messenger-btn {
+            background: #0084FF;
+        }
+
+        .social-media-under-logo .viber-btn {
+            background: #7360F2;
+        }
+
+        .social-media-under-logo a:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* نافذة تأكيد الطلب */
+        .order-confirmation-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 4000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .order-confirmation-modal.show {
+            display: flex;
+            animation: modalAppear 0.3s ease;
+        }
+
+        .order-confirmation-content {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+        }
+
+        .order-confirmation-icon {
+            font-size: 4rem;
+            color: var(--success);
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .order-confirmation-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .order-confirmation-message {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-confirmation-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* استجابة الأجهزة الصغيرة */
+        @media (max-width: 640px) {
+            .preview { 
+                height: 220px; 
+            }
+
+            .thumb { 
+                width: 92px; 
+                height: 66px; 
+            }
+            
+            .size-guide-table {
+                font-size: 0.65rem;
+            }
+            
+            .size-guide-table th,
+            .size-guide-table td {
+                padding: 0.4rem 0.3rem;
+            }
+        }
+
+        /* تحسينات للشاشات الكبيرة */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .models-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .model-image-container {
+                height: 320px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .form-section {
+                padding: 1.5rem;
+            }
+
+            .btn-group {
+                flex-direction: row;
+            }
+
+            .product-modal-content {
+                max-width: 800px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .product-modal-image-container {
+                height: 380px;
+                margin-bottom: 0;
+            }
+
+            .contact-info-bar {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: right;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .contact-info-bar i {
+                margin-bottom: 0;
+                margin-left: 0.8rem;
+            }
+            
+            .size-guide-table {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .models-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+
+            .model-card:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .model-card:hover .model-image {
+                transform: scale(1.05);
+                filter: brightness(1.05);
+            }
+
+            .quick-add-btn {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            .model-card:hover .quick-add-btn {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .floating-btn:hover {
+                transform: scale(1.1);
+            }
+
+            .cart-summary:hover {
+                background: rgba(255,255,255,0.35);
+                transform: translateY(-2px);
+            }
+        }
+
+        /* تحسينات للعرض على الشاشات الصغيرة */
+        @media (max-width: 767px) {
+            .discount-tooltip {
+                width: 160px;
+                font-size: 0.65rem;
+            }
+            
+            .discount-badge {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.6rem;
+            }
+
+            .model-badge {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.6rem;
+            }
+
+            .header-content {
+                gap: 0.5rem;
+            }
+
+            .logo {
+                font-size: 0.9rem;
+            }
+
+            .cart-summary {
+                padding: 0.4rem 0.6rem;
+                font-size: 0.7rem;
+            }
+            
+            .product-modal-info .btn{
+                margin-bottom: 3px;
+            }
+            
+            .delivery-option {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .delivery-price {
+                margin-right: 0;
+                order: -1;
+            }
+
+            .order-confirmation-content {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .order-confirmation-icon {
+                font-size: 3rem;
+            }
+
+            .order-confirmation-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* أنماط جديدة للميزات المضافة */
+        .smart-guide-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.5s ease;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .smart-guide-message i {
+            margin-left: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .field-empty {
+            border-color: #e74c3c !important;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+            background: rgba(231, 76, 60, 0.05);
+        }
+
+        .order-summary-highlight {
+            animation: highlightOrderSummary 2s ease;
+        }
+
+        @keyframes highlightOrderSummary {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(74, 108, 247, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 108, 247, 0);
+            }
+        }
+
+        .name-field-highlight {
+            animation: highlightNameField 0.5s ease forwards;
+        }
+
+        @keyframes highlightNameField {
+            to {
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.3);
+            }
+        }
+
+      /* أنماط جديدة للملخص المصغر */
+        .selected-product {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: var(--light);
+            border-radius: var(--radius);
+            margin-bottom: 0.8rem;
+            position: relative;
+            font-size: 0.8rem;
+        }
+
+        .selected-product img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .selected-product-info {
+            flex: 1;
+        }
+
+        .selected-product-details {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 0.3rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+}
+
+.selected-product-detail {
+    background: rgba(0,0,0,0.05);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--dark);
+    border: 1px solid rgba(0,0,0,0.1);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* إخفاء شريط التمرير لتحسين المظهر */
+.selected-product-details::-webkit-scrollbar {
+    height: 3px;
+}
+
+.selected-product-details::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.selected-product-details::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* تحسينات إضافية للعرض في السلة */
+.selected-product {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    background: var(--light);
+    border-radius: var(--radius);
+    margin-bottom: 0.8rem;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.selected-product img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.selected-product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.selected-product-title {
+    margin: 0 0 0.3rem 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+
+.selected-product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.selected-product-quantity button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.selected-product-quantity span {
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.selected-product-remove {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .selected-product {
+        padding: 0.6rem;
+        gap: 0.6rem;
+    }
+    
+    .selected-product img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .selected-product-details {
+        gap: 0.2rem;
+    }
+    
+    .selected-product-detail {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+    }
+    
+    .selected-product-title {
+        font-size: 0.75rem;
+    }
+    
+    .selected-product-price {
+        font-size: 0.7rem;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+    
+    .selected-product-quantity {
+        gap: 0.2rem;
+    }
+    
+    .selected-product-quantity button {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+    
+    .selected-product-quantity span {
+        min-width: 20px;
+        font-size: 0.7rem;
+    }
+}
+
+/* تحسينات للشاشات المتوسطة والكبيرة */
+@media (min-width: 768px) {
+    .selected-product-details {
+        flex-wrap: wrap;
+    }
+}
+        
+        /* أنماط جديدة للفايبر */
+        .viber-btn {
+            background: #7360F2 !important;
+        }
+
+        /* إخفاء الأزرار العائمة الجانبية */
+        .floating-buttons {
+            display: none !important;
+        }
+
+        /* أرقام الهاتف في أسفل الصفحة الأولى - تم التعديل */
+        .phone-numbers-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin: 2rem 0 1rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .phone-numbers-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .phone-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+
+        .phone-number-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.8rem;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .phone-number-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .phone-icon {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .phone-number {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .phone-label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        /* إخفاء صندوق السعر تماماً */
+        .price-box {
+            display: none !important;
+        }
+        
+        /* تحسينات أزرار القياس والألوان */
+        .size-option, .color-option {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e2e8f0;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-option:hover, .color-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+
+        .size-option.selected, .color-option.selected {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+        }
+
+        .color-option {
+            padding-left: 2rem;
+        }
+
+        .color-preview {
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .color-option.selected .color-preview {
+            border-color: white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        /* تأثيرات إضافية للأزرار */
+        .size-option::after, .color-option::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .size-option:hover::after, .color-option:hover::after {
+            opacity: 1;
+        }
+
+        .size-option.selected::after, .color-option.selected::after {
+            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+            opacity: 1;
+        }
+
+        .model-image, .product-modal-image, .selected-product img {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .model-image.loading, .product-modal-image.loading {
+        opacity: 0.3;
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
+
+    /* تحسينات الأداء */
+    .model-image, .product-modal-image {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000;
+    }
+
+    /* تحسينات للشاشات الصغيرة */
+    @media (max-width: 768px) {
+        .model-image, .product-modal-image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* تحسينات إضافية للصور في المحمول */
+        .model-image-container, .product-modal-image-container {
+            height: 250px !important;
+        }
+        
+        .model-image, .product-modal-image {
+            object-fit: contain !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* تحسين عرض الصفحة الثانية على الموبايل */
+        #page2.active {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 60px);
+        }
+        
+        #orderForm {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-section {
+            flex: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .selected-products {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <!-- الهيدر المحسن والمصغر بدون قائمة -->
+    <header id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <!-- السلة - الآن على اليسار -->
+                <a href="#page2" class="cart-summary page-nav" data-page="page2">
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                    <span id="cartTotalPrice">0 دج</span>
+                </a>
+                
+                <!-- الشعار في المنتصف - تم التعديل لدعم الشعار الجديد -->
+                <div class="logo">
+                    <img src="" alt="شعار المتجر" class="store-logo-small" id="storeLogoHeader" style="display: none;">
+                    <span id="storeIcon" style="display: inline;">👑</span>
+                    <span id="storeNameHeader"></span>
+                </div>
+                
+                <!-- مساحة فارغة بدلاً من القائمة -->
+                <div style="width: 40px;"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- الصفحة الأولى: معرض المنتجات -->
+        <div id="page1" class="page active">
+            <section class="models-section" id="models">
+                <!-- الشعار الكبير في الصفحة الرئيسية -->
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="" alt="شعار المتجر" class="store-logo-main" id="storeLogoMain" style="display: none;">
+                    <!-- storeTitle تحت الشعار مباشرة -->
+                    <h2 class="section-title" id="storeTitleHeader" style="margin-top: 1rem;">
+                        <i class="fas fa-star"></i> 
+                        <span id="storeTitleText"></span>
+                    </h2>
+                </div>
+                
+                <!-- وسائل التواصل الاجتماعي تحت الشعار - تمت الإضافة -->
+                <div class="social-media-under-logo">
+                    <a href="#" class="whatsapp-btn" id="whatsappBtnUnderLogo" target="_blank" style="display: none;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="facebook-btn" id="facebookBtnUnderLogo" target="_blank" style="display: none;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="instagram-btn" id="instagramBtnUnderLogo" target="_blank" style="display: none;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="messenger-btn" id="messengerBtnUnderLogo" target="_blank" style="display: none;">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                    <!-- إضافة زر الفايبر -->
+                    <a href="#" class="viber-btn" id="viberBtnUnderLogo" target="_blank" style="display: none;">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                </div>
+                
+                <!-- شعار الجودة والأسعار - تمت الإضافة -->
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary); font-weight: 700; font-size: 1.2rem;">
+                        جودة عالية | أسعار مناسبة
+                    </h3>
+                </div>
+                
+                <!-- جدول المقاسات - سيتم إضافته ديناميكياً إذا كان موجوداً في config.js -->
+                <div id="sizeGuideContainer"></div>
+                
+                <div class="models-grid" id="modelsGrid">
+                    <!-- سيتم إضافة الموديلات ديناميكياً -->
+                </div>
+
+                <!-- أرقام الهاتف في أسفل الصفحة الأولى - تم التعديل -->
+                <div class="contact-info-bar" style="margin-top: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                        <i class="fas fa-headset"></i>
+                        <p>للإستفسار اتصل بالرقم:</p>
+                    </div>
+                    <div class="contact-numbers" id="phoneNumbersFirstPage">
+                        <!-- سيتم إضافة أرقام الهاتف ديناميكياً -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- الصفحة الثانية: تفاصيل الطلب والمعلومات الشخصية في صفحة واحدة -->
+        <div id="page2" class="page">
+            <form id="orderForm">
+                <section class="form-section" id="step1">
+                                      
+                    <!-- زر الرجوع إلى المنتجات -->
+                    <div class="btn-group" style="margin-bottom: 1.2rem;">
+                        <button type="button" class="btn btn-secondary" onclick="switchPage('page1')">
+                            <i class="fas fa-arrow-right"></i> الرجوع إلى المنتجات
+                        </button>
+                    </div>
+                   <h2 class="form-title"><i class="fas fa-shopping-cart"> السلة </i  > </h2> 
+                    
+                    <div class="selected-products" id="selectedProducts">
+                        <!-- سيتم إضافة المنتجات المختارة ديناميكياً -->
+                    </div>
+
+                    <!-- قسم الولاية ونوع التوصيل -->
+                    <div class="form-section" id="deliverySection">
+                        <h2 class="form-title"><i class="fas fa-truck"></i> معلومات التوصيل</h2>
+                        
+                        <div class="form-group">
+                            <label for="wilaya">الولاية</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <select id="wilaya" name="wilaya" required onchange="handleWilayaChange()">
+                                    <option value="">اختر الولاية</option>
+                                    <!-- سيتم إضافة خيارات الولايات ديناميكياً -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- قسم نوع التوصيل - مخفي افتراضياً -->
+                        <div class="form-group" id="deliveryTypeSection" style="display: none;">
+                            <label>اختر نوع التوصيل</label>
+                            
+                            <div class="options-container" style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem;">
+                                <div class="delivery-option" id="deskDelivery" onclick="selectDeliveryType('desk')" style="width: 100%; max-width: 300px;">
+                                    <div class="delivery-info">
+                                        <div class="delivery-type">التوصيل إلى المكتب</div>
+                                        <div class="delivery-desc">أسرع وأوفر</div>
+                                    </div>
+                                    <div class="delivery-price" id="deskDeliveryPrice">0 دج</div>
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="delivery-option" id="homeDelivery" onclick="selectDeliveryType('home')" style="width: 100%; max-width: 300px;">
+                                    <div class="delivery-info">
+                                        <div class="delivery-type">التوصيل إلى المنزل</div>
+                                        <div class="delivery-desc">توصيل مباشر لباب المنزل</div>
+                                    </div>
+                                    <div class="delivery-price" id="homeDeliveryPrice">0 دج</div>
+                                    <i class="fas fa-home"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- معلومات الاتصال الشخصية - تم نقلها إلى هذه الصفحة -->
+                    <div class="form-section personal-section" id="personalInfoSection" style="display: none;">
+                        <h2 class="form-title"><i class="fas fa-user"></i> معلومات الاتصال</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon"><i class="fas fa-user"></i></span>
+                                <input type="text" id="name" name="name" required autocomplete="name" oninput="handleFieldInput(this)">
+                            </div>
+                        </div>
+                        
+                        <!-- حقل الدائرة مضاف تحت رقم الهاتف -->
+                        <div class="form-group">
+                            <label for="commune">الدائرة</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon"><i class="fas fa-map"></i></span>
+                                <input type="text" id="commune" name="commune" required autocomplete="address-level2" oninput="handleFieldInput(this)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon"><i class="fas fa-phone"></i></span>
+                                <input type="tel" id="phone" name="phone" pattern="^0[0-9]{9}$" maxlength="10" required autocomplete="tel" placeholder="0XXXXXXXXX" class="phone-input" oninput="handlePhoneInput(this)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">العنوان الكامل</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon"><i class="fas fa-home"></i></span>
+                                <textarea id="address" name="address" rows="3" required autocomplete="street-address" oninput="handleFieldInput(this)"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- زر تأكيد الطلب - تم نقله إلى هذه الصفحة -->
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-success" id="confirmOrderBtn" disabled>
+                                <i class="fas fa-check"></i> تأكيد الطلب
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- شريط معلومات الاتصال -->
+                    <div class="contact-info-bar">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <i class="fas fa-headset"></i>
+                            <p>للإستفسار اتصل بالرقم:</p>
+                        </div>
+                        <div class="contact-numbers" id="contactNumbers">
+                            <!-- سيتم إضافة أرقام الهاتف ديناميكياً من config.js -->
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة تفاصيل المنتج المحسنة -->
+    <div class="product-modal" id="productModal">
+        <div class="product-modal-content">
+            <button class="product-modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="product-modal-image-container">
+                <img id="productModalImage" class="product-modal-image" src="" alt="">
+            </div>
+            
+            <div class="product-modal-info">
+                <div id="productModalPrice" class="product-modal-price">
+                    <i class="fas fa-tag"></i>
+                    <span id="productModalPriceValue"></span>
+                </div>
+
+                <!-- معلومات الخصم - تم التعديل على الرسالة -->
+                <div class="discount-info" id="discountInfo" style="display: none;">
+                    <i class="fas fa-percentage"></i>
+                    <span id="discountText"></span>
+                </div>
+
+                <!-- معلومات الخصم الترويجي -->
+                <div class="promo-discount-info" id="promoDiscountInfo" style="display: none;">
+                    <i class="fas fa-gift"></i>
+                    <span id="promoDiscountText"></span>
+                </div>
+                
+                <!-- خيارات اللون مع النقطة الزرقاء الدوارة -->
+                <div class="color-options">
+                    <label>اختر اللون:</label>
+                    <div class="options-container" id="colorOptions">
+                        <!-- سيتم إضافة خيارات اللون ديناميكياً -->
+                    </div>
+                </div>
+                
+                <!-- خيارات المقاس مع النقطة الزرقاء الدوارة - مخفية حتى اختيار اللون -->
+                <div class="size-options" id="sizeOptionsContainer" style="display: none;">
+                    <label>المقاسات المتوفرة:</label>
+                    <div class="options-container" id="ageOptions">
+                        <!-- سيتم إضافة خيارات المقاسات ديناميكياً -->
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="decreaseQuantity">-</button>
+                    <span class="quantity-display" id="quantityDisplay">1</span>
+                    <button class="quantity-btn" id="increaseQuantity">+</button>
+                </div>
+                
+                <button class="btn btn-primary btn-full" id="addToCartFromModal" disabled>
+                    <i class="fas fa-cart-plus"></i> أطلب الأن
+                </button>
+                
+                <button class="btn btn-secondary btn-full" onclick="closeProductModal()">
+                    <i class="fas fa-arrow-left"></i> متابعة التسوق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة تأكيد الطلب الجديدة -->
+    <div class="order-confirmation-modal" id="orderConfirmationModal">
+        <div class="order-confirmation-content">
+            <div class="order-confirmation-icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h2 class="order-confirmation-title">تأكيد طلبك</h2>
+            <p class="order-confirmation-message" id="confirmationMessage">
+                جاري معالجة طلبك وتأكيد التفاصيل...
+            </p>
+            
+            <div class="order-confirmation-loading" id="confirmationLoading">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">جاري التحميل...</div>
+            </div>
+            
+            <div class="order-confirmation-success" id="confirmationSuccess" style="display: none;">
+                <div class="order-confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="order-confirmation-title">تم استلام طلبك بنجاح!</h2>
+                <p class="order-confirmation-message">
+                    سنتصل بك خلال 24 ساعة لتأكيد الطلب وتفاصيل التوصيل
+                </p>
+                <button class="btn btn-primary btn-full" onclick="closeOrderConfirmationAndRedirect()">
+                    <i class="fas fa-shopping-bag"></i> متابعة التسوق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- الأزرار العائمة - تم إخفاء جميع أزرار وسائل التواصل الاجتماعي -->
+    <div class="floating-buttons">
+        <!-- تم إخفاء الأزرار العائمة الجانبية حسب الطلب -->
+    </div>
+
+    <script>
+        // رابط Google Apps Script
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCBtirjrJ26PUtxAmw4s-BogXn6uptD3pZsOcr0shUJcVxwc5NkTZp35hRLagUumMj/exec";
+        
+        // المتغيرات العامة
+        let cartItems = [];
+        let currentProductKey = null;
+        let selectedAge = null;
+        let selectedColor = null;
+        let selectedDeliveryType = null;
+        let selectedWilaya = null;
+        let currentPage = 'page1';
+
+        // =============================================================================
+        // 🚀 نظام التنقل بين الصفحات - تم التعديل
+        // =============================================================================
+
+        function switchPage(pageId) {
+            // إخفاء جميع الصفحات
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            document.getElementById(pageId).classList.add('active');
+            currentPage = pageId;
+            
+            // تحديث السلة والعناصر
+            if (pageId === 'page2') {
+                updateSelectedProducts();
+                updatePrice();
+                
+                // إضافة وميض سريع لحقل "اختر الولاية" عند الانتقال للصفحة الثانية
+                const wilayaSelect = document.getElementById('wilaya');
+                if (wilayaSelect) {
+                    wilayaSelect.classList.add('flash-pulse');
+                    wilayaSelect.focus();
+                }
+            }
+        }
+
+        function setupPageNavigation() {
+            // إعداد التنقل بين الصفحات
+            document.querySelectorAll('.page-nav').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    if (targetPage) {
+                        switchPage(targetPage);
+                    }
+                });
+            });
+        }
+
+        // =============================================================================
+        // 📏 نظام جدول المقاسات - تمت الإضافة
+        // =============================================================================
+
+        function initSizeGuide() {
+            const sizeGuideContainer = document.getElementById('sizeGuideContainer');
+            if (!sizeGuideContainer) return;
+            
+            // التحقق من وجود جدول المقاسات في config.js
+            if (STORE_CONFIG.SIZE_GUIDE && Object.keys(STORE_CONFIG.SIZE_GUIDE).length > 0) {
+                const sizeGuide = STORE_CONFIG.SIZE_GUIDE;
+                
+                // إنشاء جدول المقاسات
+                let sizeGuideHTML = `
+                    <div class="size-guide-section">
+                        <h3 class="size-guide-title">
+                            <i class="fas fa-ruler-combined"></i>
+                            جدول المقاسات
+                        </h3>
+                        <div class="size-guide-table-container">
+                            <table class="size-guide-table">
+                                <thead>
+                                    <tr>
+                                        <th>المقاس</th>
+                                        <th>الطول (سم)</th>
+                                        <th>الوزن (كجم)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                `;
+                
+                // إضافة بيانات الجدول
+                Object.keys(sizeGuide).forEach(size => {
+                    const sizeData = sizeGuide[size];
+                    if (sizeData.enabled !== false) {
+                        sizeGuideHTML += `
+                            <tr>
+                                <td><strong>${size}</strong></td>
+                                <td>${sizeData.heightFrom} - ${sizeData.heightTo}</td>
+                                <td>${sizeData.weightFrom} - ${sizeData.weightTo}</td>
+                            </tr>
+                        `;
+                    }
+                });
+                
+                sizeGuideHTML += `
+                                </tbody>
+                            </table>
+                            <p class="size-guide-note">
+                                <i class="fas fa-info-circle"></i>
+                                هذه المقاسات مدروسة ومجربة وفق هدا النوع من القماش والتصميم
+                            </p>
+                        </div>
+                    </div>
+                `;
+                
+                sizeGuideContainer.innerHTML = sizeGuideHTML;
+                console.log('✅ تم تحميل جدول المقاسات بنجاح');
+            } else {
+                // إخفاء الحاوية إذا لم يكن هناك جدول مقاسات
+                sizeGuideContainer.style.display = 'none';
+                console.log('ℹ️ لا يوجد جدول مقاسات في الإعدادات');
+            }
+        }
+
+        // =============================================================================
+        // 🚚 تحديث دالة التوصيل المجاني للتحقق من minQuantity
+        // =============================================================================
+
+        function isFreeDeliveryEligible(deliveryType, wilaya, subtotal, totalQuantity) {
+            if (!STORE_CONFIG.FREE_DELIVERY) return false;
+            
+            const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[deliveryType];
+            if (!freeDeliveryConfig || !freeDeliveryConfig.enabled) return false;
+            
+            // التحقق من الحد الأدنى للطلب
+            if (subtotal < freeDeliveryConfig.minAmount) return false;
+            
+            // التحقق من الحد الأدنى للكمية إذا كان محدداً
+            if (freeDeliveryConfig.minQuantity !== null && freeDeliveryConfig.minQuantity !== undefined) {
+                if (totalQuantity < freeDeliveryConfig.minQuantity) return false;
+            }
+            
+            // التحقق من الولاية المشمولة
+            if (freeDeliveryConfig.wilayas && freeDeliveryConfig.wilayas.length > 0) {
+                if (!freeDeliveryConfig.wilayas.includes(wilaya)) return false;
+            }
+            
+            // التحقق من المنتجات المؤهلة للتوصيل المجاني
+            if (STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts && 
+                STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts.length > 0) {
+                const hasEligibleProduct = cartItems.some(item => 
+                    STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts.includes(parseInt(item.key))
+                );
+                if (hasEligibleProduct) return true;
+            }
+            
+            return true;
+        }
+
+        // =============================================================================
+        // 📞 نظام أرقام الهاتف في أسفل الصفحة الأولى - تم التعديل
+        // =============================================================================
+
+        function initPhoneNumbers() {
+            const phoneNumbersFirstPage = document.getElementById('phoneNumbersFirstPage');
+            if (!phoneNumbersFirstPage) return;
+            
+            phoneNumbersFirstPage.innerHTML = '';
+            
+            if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.phoneNumbers && STORE_CONFIG.STORE_INFO.phoneNumbers.length > 0) {
+                // استخدام أول رقمين فقط
+                const phoneNumbers = STORE_CONFIG.STORE_INFO.phoneNumbers.slice(0, 2);
+                
+                // إذا كان هناك رقم واحد فقط، إضافة رقم افتراضي ثاني
+                if (phoneNumbers.length === 1) {
+                    phoneNumbers.push('0550000000');
+                }
+                
+                phoneNumbers.forEach(phoneNumber => {
+                    const contactNumber = document.createElement('a');
+                    contactNumber.className = 'contact-number';
+                    contactNumber.href = `tel:${phoneNumber}`;
+                    contactNumber.innerHTML = `
+                        <i class="fas fa-phone"></i>
+                        <span>${phoneNumber}</span>
+                    `;
+                    phoneNumbersFirstPage.appendChild(contactNumber);
+                });
+            } else {
+                // أرقام افتراضية
+                phoneNumbersFirstPage.innerHTML = `
+                    <div class="contact-number">
+                        <i class="fas fa-phone"></i>
+                        <span>0550000000</span>
+                    </div>
+                    <div class="contact-number">
+                        <i class="fas fa-phone"></i>
+                        <span>0550000001</span>
+                    </div>
+                `;
+            }
+            
+            console.log('✅ تم تحميل أرقام الهاتف في أسفل الصفحة الأولى');
+        }
+
+        // =============================================================================
+        // 🚚 نظام التوصيل والولايات - تم التعديل مع إضافة الوميض
+        // =============================================================================
+
+        function handleWilayaChange() {
+            const wilayaSelect = document.getElementById('wilaya');
+            selectedWilaya = wilayaSelect.value;
+            
+            if (selectedWilaya) {
+                wilayaSelect.classList.remove('wilaya-pulse', 'flash-pulse');
+                wilayaSelect.classList.add('wilaya-selected');
+                
+                // إظهار خيارات التوصيل
+                const deliveryTypeSection = document.getElementById('deliveryTypeSection');
+                deliveryTypeSection.style.display = 'block';
+                
+                // إضافة تأثير الوميض السريع لأزرار التوصيل
+                const deliveryOptions = document.querySelectorAll('.delivery-option');
+                deliveryOptions.forEach(option => {
+                    option.classList.add('flash-pulse');
+                });
+                
+                // تحديث أسعار التوصيل
+                updateDeliveryPricesDisplay();
+                
+                // التحقق من الحقول
+                checkDeliveryFields();
+            } else {
+                // إخفاء خيارات التوصيل
+                document.getElementById('deliveryTypeSection').style.display = 'none';
+                selectedDeliveryType = null;
+                
+                // إخفاء معلومات التوصيل وزر التأكيد
+                document.getElementById('personalInfoSection').style.display = 'none';
+                document.getElementById('confirmOrderBtn').disabled = true;
+            }
+            
+            updateDeliveryCost();
+        }
+
+        function selectDeliveryType(type) {
+            selectedDeliveryType = type;
+            
+            // إزالة التحديد من جميع الخيارات
+            document.querySelectorAll('.delivery-option').forEach(option => {
+                option.classList.remove('selected', 'pulse-field', 'flash-pulse');
+            });
+            
+            // إضافة التحديد للخيار المختار
+            const selectedOption = document.getElementById(`${type}Delivery`);
+            selectedOption.classList.add('selected');
+            
+            // تحديث عرض سعر التوصيل
+            updateDeliveryPriceDisplay(type);
+            
+            // إظهار حقول معلومات الاتصال الشخصية مباشرة بعد اختيار نوع التوصيل
+            document.getElementById('personalInfoSection').style.display = 'block';
+            
+            // تفعيل حقل الاسم الكامل
+            const nameField = document.getElementById('name');
+            nameField.focus();
+            nameField.classList.add('name-field-highlight');
+            
+            updateDeliveryCost();
+        }
+
+        function updateDeliveryPriceDisplay(type) {
+            const priceElement = document.getElementById(`${type}DeliveryPrice`);
+            const deliveryOption = document.getElementById(`${type}Delivery`);
+            
+            if (!selectedWilaya || !STORE_CONFIG.DELIVERY_PRICES || !STORE_CONFIG.DELIVERY_PRICES[selectedWilaya]) {
+                return;
+            }
+            
+            const prices = STORE_CONFIG.DELIVERY_PRICES[selectedWilaya];
+            const subtotal = calculateTotalPrice().subtotal;
+            const totalQuantity = calculateTotalPrice().totalPieces;
+            const cost = prices[type] || 0;
+
+            // التحقق من أهلية التوصيل المجاني مع minQuantity
+            const isFree = isFreeDeliveryEligible(type, selectedWilaya, subtotal, totalQuantity);
+
+            if (isFree) {
+                priceElement.textContent = 'توصيل مجاني';
+                priceElement.classList.add('free-delivery-badge', 'fast-pulse-effect');
+                priceElement.classList.remove('delivery-price');
+                
+                // إضافة رسالة الحد الأدنى للتوصيل المجاني
+                const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[type];
+                if (freeDeliveryConfig) {
+                    let conditionText = 'للمشتريات الأكثر من';
+                    conditionText += ` ${freeDeliveryConfig.minAmount} دج`;
+                    
+                    if (freeDeliveryConfig.minQuantity !== null && freeDeliveryConfig.minQuantity !== undefined) {
+                        conditionText += ` و ${freeDeliveryConfig.minQuantity} قطعة`;
+                    }
+                    
+                    priceElement.innerHTML = `توصيل مجاني <br><small style="font-size:0.6em;">${conditionText}</small>`;
+                }
+            } else {
+                priceElement.textContent = `${cost} دج`;
+                priceElement.classList.remove('free-delivery-badge', 'fast-pulse-effect');
+                priceElement.classList.add('delivery-price');
+
+                // إظهار رسالة الحد الأدنى للتوصيل المجاني إذا كان الطلب غير مؤهل
+                const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[type];
+                if (freeDeliveryConfig && freeDeliveryConfig.enabled) {
+                    const minAmount = freeDeliveryConfig.minAmount;
+                    const minQuantity = freeDeliveryConfig.minQuantity;
+                    const remainingAmount = minAmount - subtotal;
+                    const remainingQuantity = minQuantity ? minQuantity - totalQuantity : 0;
+                    
+                    let conditionText = '';
+                    
+                    if (remainingAmount > 0 && remainingQuantity > 0) {
+                        conditionText = `أضف ${remainingAmount} دج و ${remainingQuantity} قطعة للتوصيل المجاني`;
+                    } else if (remainingAmount > 0) {
+                        conditionText = `أضف ${remainingAmount} دج للتوصيل المجاني`;
+                    } else if (remainingQuantity > 0) {
+                        conditionText = `أضف ${remainingQuantity} قطعة للتوصيل المجاني`;
+                    }
+                    
+                    if (conditionText) {
+                        priceElement.innerHTML = `${cost} دج <br><small style="font-size:0.6em;">${conditionText}</small>`;
+                    }
+                }
+            }
+
+            // إظهار سعر التوصيل أو التوصيل المجاني
+            priceElement.style.display = 'block';
+        }
+
+        function updateDeliveryPricesDisplay() {
+            if (!selectedWilaya || !STORE_CONFIG.DELIVERY_PRICES || !STORE_CONFIG.DELIVERY_PRICES[selectedWilaya]) {
+                return;
+            }
+            
+            // تحديث عرض أسعار التوصيل لكلا النوعين
+            ['desk', 'home'].forEach(type => {
+                updateDeliveryPriceDisplay(type);
+            });
+        }
+
+        function updateDeliveryCost() {
+            if (selectedWilaya && selectedDeliveryType && STORE_CONFIG.DELIVERY_PRICES && STORE_CONFIG.DELIVERY_PRICES[selectedWilaya]) {
+                const cost = STORE_CONFIG.DELIVERY_PRICES[selectedWilaya][selectedDeliveryType] || 0;
+            }
+            
+            updatePrice();
+            updateCartDisplay();
+        }
+
+        // =============================================================================
+        // 📝 نظام معالجة الحقول
+        // =============================================================================
+
+        function handleFieldInput(field) {
+            if (field.value.trim()) {
+                field.classList.add('field-filled');
+                field.classList.remove('field-empty');
+            } else {
+                field.classList.remove('field-filled');
+                field.classList.add('field-empty');
+            }
+            checkDeliveryFields();
+        }
+
+        function handlePhoneInput(field) {
+            // السماح فقط بالأرقام
+            field.value = field.value.replace(/[^0-9]/g, '');
+            
+            if (field.value.trim()) {
+                field.classList.add('field-filled');
+                field.classList.remove('field-empty');
+            } else {
+                field.classList.remove('field-filled');
+                field.classList.add('field-empty');
+            }
+            checkDeliveryFields();
+        }
+
+        function checkDeliveryFields() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const commune = document.getElementById('commune').value.trim();
+            const confirmBtn = document.getElementById('confirmOrderBtn');
+            
+            // التحقق من اكتمال جميع الحقول
+            const allFieldsFilled = name && phone && address && commune && selectedWilaya && selectedDeliveryType && cartItems.length > 0;
+            
+            // التحقق من صحة رقم الهاتف
+            const phoneValid = /^0[0-9]{9}$/.test(phone);
+            
+            confirmBtn.disabled = !(allFieldsFilled && phoneValid);
+            
+            // إضافة تأثير النبض إذا كانت الحقول مكتملة
+            if (allFieldsFilled && phoneValid) {
+                confirmBtn.classList.add('pulse-effect');
+            } else {
+                confirmBtn.classList.remove('pulse-effect');
+            }
+        }
+
+        // =============================================================================
+        // 🛒 نظام السلة والطلبات - تم التعديل لحل مشكلة الكمية
+        // =============================================================================
+
+        function goToOrderDetails() {
+            switchPage('page2');
+        }
+
+        function addToCartFromModal() {
+            if (!currentProductKey) return;
+            
+            if (!selectedAge) {
+                showNotification('⚠️ الرجاء اختيار اللون والمقاس أولاً قبل إضافة المنتج إلى السلة', 'warning');
+                return;
+            }
+            
+            if (!selectedColor) {
+                showNotification('⚠️ الرجاء اختيار اللون والمقاس أولاً قبل إضافة المنتج إلى السلة', 'warning');
+                return;
+            }
+            
+            const quantity = parseInt(document.getElementById('quantityDisplay').textContent);
+            
+            // الحصول على العنصر المختار
+            const selectedOption = document.querySelector('#ageOptions .size-option.selected');
+            
+            if (!selectedOption) {
+                showNotification('⚠️ الرجاء اختيار مقاس صحيح', 'warning');
+                return;
+            }
+            
+            // الحصول على المقاس مباشرة من dataset
+            const size = selectedOption.dataset.size;
+            
+            // يمكننا أيضاً استخدام الفهرس إذا احتجنا إليه
+            const index = selectedOption.dataset.index;
+            
+            console.log(`✅ تم اختيار المقاس: ${size} (الفهرس: ${index})`);
+            
+            addToCart(currentProductKey, quantity, selectedAge, selectedColor, size);
+            closeProductModal();
+            
+            // الانتقال مباشرة إلى صفحة تفاصيل الطلب مع التأخير بسيط
+            setTimeout(() => {
+                goToOrderDetails();
+            }, 100);
+        }
+
+        function addToCart(productKey, quantity, age, color, size = null) {
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            
+            // تحديد المقاس النهائي
+            let finalSize = size;
+            if (!finalSize) {
+                finalSize = age || 'غير محدد';
+            }
+            
+            // إنشاء معرف فريد لكل عنصر في السلة لحل مشكلة الكمية
+            const itemId = Date.now().toString() + Math.random().toString(36).substr(2, 9);
+            
+            const existingItemIndex = cartItems.findIndex(item => 
+                item.key === productKey && item.age === age && item.color === color
+            );
+            
+            const itemColor = color || 'كما في الصورة';
+            
+            if (existingItemIndex > -1) {
+                // إذا كان المنتج موجوداً بالفعل، نزيد الكمية بشكل طبيعي
+                cartItems[existingItemIndex].quantity += quantity;
+            } else {
+                // الحصول على صورة اللون المختار
+                let itemImage = product.image;
+                if (product.colorImages && product.colorImages[color] && product.colorImages[color].images.length > 0) {
+                    itemImage = product.colorImages[color].images[0];
+                }
+                
+                cartItems.push({
+                    id: itemId,
+                    key: productKey,
+                    name: product.name,
+                    price: parseInt(product.price),
+                    quantity: quantity,
+                    image: itemImage,
+                    age: age,
+                    color: itemColor,
+                    size: finalSize
+                });
+            }
+            
+            updateCartDisplay();
+            updateSelectedProducts();
+            updatePrice();
+            
+            showNotification(`تم إضافة ${product.name} إلى السلة`, 'success');
+        }
+
+        function updateQuantity(itemId, change) {
+            const itemIndex = cartItems.findIndex(item => item.id === itemId);
+            
+            if (itemIndex === -1) {
+                console.error('❌ العنصر غير موجود في السلة:', itemId);
+                return;
+            }
+            
+            const newQuantity = cartItems[itemIndex].quantity + change;
+            
+            if (newQuantity < 1) {
+                removeFromCart(itemId);
+            } else {
+                cartItems[itemIndex].quantity = newQuantity;
+                updateCartDisplay();
+                updateSelectedProducts();
+                updatePrice();
+            }
+        }
+
+        function removeFromCart(itemId) {
+            const itemIndex = cartItems.findIndex(item => item.id === itemId);
+            
+            if (itemIndex === -1) {
+                console.error('❌ العنصر غير موجود في السلة:', itemId);
+                return;
+            }
+            
+            const removedItem = cartItems[itemIndex];
+            cartItems.splice(itemIndex, 1);
+            updateCartDisplay();
+            updateSelectedProducts();
+            updatePrice();
+            
+            // إذا تم حذف جميع المنتجات، إخفاء معلومات التوصيل
+            if (cartItems.length === 0) {
+                document.getElementById('personalInfoSection').style.display = 'none';
+            }
+            
+            showNotification(`تم إزالة ${removedItem.name} من السلة`, 'success');
+        }
+
+        // =============================================================================
+        // 💰 نظام الأسعار والخصم - تم التصحيح مع دعم التوصيل المجاني المحدث
+        // =============================================================================
+
+        function calculateTotalPrice() {
+            const totalPieces = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            
+            // حساب المجموع الجزئي بناءً على السعر الأصلي
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // حساب الخصم التراكمي
+            const discount = calculateTotalDiscount();
+            const afterDiscount = Math.max(subtotal - discount, 0);
+            
+            // حساب تكلفة التوصيل مع دعم التوصيل المجاني المحدث
+            let deliveryCost = 0;
+            let isFreeDelivery = false;
+            
+            if (selectedWilaya && selectedDeliveryType && STORE_CONFIG.DELIVERY_PRICES && STORE_CONFIG.DELIVERY_PRICES[selectedWilaya]) {
+                deliveryCost = STORE_CONFIG.DELIVERY_PRICES[selectedWilaya][selectedDeliveryType] || 0;
+                
+                // التحقق من أهلية التوصيل المجاني مع minQuantity
+                if (isFreeDeliveryEligible(selectedDeliveryType, selectedWilaya, subtotal, totalPieces)) {
+                    isFreeDelivery = true;
+                    deliveryCost = 0;
+                }
+            }
+            
+            const total = afterDiscount + deliveryCost;
+            
+            return {
+                totalPieces,
+                subtotal,
+                discount,
+                afterDiscount,
+                deliveryCost,
+                total,
+                isFreeDelivery
+            };
+        }
+
+        function updatePrice() {
+            const priceDetails = calculateTotalPrice();
+            
+            // تحديث أسعار التوصيل إذا كانت الولاية ونوع التوصيل محددين
+            if (selectedWilaya && selectedDeliveryType) {
+                updateDeliveryPricesDisplay();
+            }
+            
+            return priceDetails;
+        }
+
+        function updateCartDisplay() {
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const priceDetails = calculateTotalPrice();
+            
+            document.getElementById('cartBadge').textContent = totalItems;
+            
+            // تحديث: إظهار السعر بدءاً من أول منتج يضاف
+            if (cartItems.length === 0) {
+                document.getElementById('cartTotalPrice').textContent = '0 دج';
+            } else {
+                let displayText = `${priceDetails.total} دج`;
+                if (priceDetails.isFreeDelivery) {
+                    displayText += ' 🚚 مجاني';
+                }
+                document.getElementById('cartTotalPrice').textContent = displayText;
+            }
+        }
+
+        // =============================================================================
+        // 🎯 نظام الخصم المحسن - تم التصحيح
+        // =============================================================================
+
+        function calculateDiscountedPrice(originalPrice, quantity, productKey = null) {
+            if (!STORE_CONFIG.DISCOUNTS) {
+                return {
+                    finalPrice: originalPrice,
+                    hasDiscount: false,
+                    discountAmount: 0,
+                    discountPerItem: 0,
+                    minQuantity: 0,
+                    hasPromoDiscount: false,
+                    promoDiscountPercent: 0,
+                    isPremiumProduct: true
+                };
+            }
+            
+            let finalPrice = originalPrice;
+            let hasDiscount = false;
+            let hasPromoDiscount = false;
+            let discountAmount = 0;
+            let discountPerItem = 0;
+            let minQuantity = 0;
+            let promoDiscountPercent = 0;
+            let isPremiumProduct = false;
+
+            // التحقق من الخصم الترويجي أولاً
+            if (STORE_CONFIG.DISCOUNTS.enablePromotionalDiscount) {
+                const promoScope = STORE_CONFIG.DISCOUNTS.promoDiscountScope || 'all';
+                let applyPromoDiscount = false;
+                
+                if (promoScope === 'all') {
+                    applyPromoDiscount = true;
+                } else if (promoScope === 'selected' && STORE_CONFIG.DISCOUNTS.promoDiscountProducts) {
+                    const productKeyNum = parseInt(productKey);
+                    applyPromoDiscount = STORE_CONFIG.DISCOUNTS.promoDiscountProducts.includes(productKeyNum);
+                }
+                
+                if (applyPromoDiscount) {
+                    promoDiscountPercent = STORE_CONFIG.DISCOUNTS.promotionalDiscountPercent || 0;
+                    if (promoDiscountPercent > 0) {
+                        discountAmount = Math.round(originalPrice * (promoDiscountPercent / 100));
+                        finalPrice = originalPrice - discountAmount;
+                        hasPromoDiscount = true;
+                        hasDiscount = true;
+                    }
+                }
+            }
+
+            // إذا لم يكن هناك خصم ترويجي، تحقق من خصم الكمية
+            if (!hasPromoDiscount && STORE_CONFIG.DISCOUNTS.enableQuantityDiscount) {
+                minQuantity = STORE_CONFIG.DISCOUNTS.minQuantityForDiscount || 3;
+                discountPerItem = STORE_CONFIG.DISCOUNTS.discountPerItem || 0;
+                const discountScope = STORE_CONFIG.DISCOUNTS.discountScope || 'all';
+                
+                let applyQuantityDiscount = false;
+                
+                if (discountScope === 'all') {
+                    applyQuantityDiscount = true;
+                } else if (discountScope === 'selected' && STORE_CONFIG.DISCOUNTS.discountProducts) {
+                    const productKeyNum = parseInt(productKey);
+                    applyQuantityDiscount = STORE_CONFIG.DISCOUNTS.discountProducts.includes(productKeyNum);
+                }
+                
+                if (applyQuantityDiscount && quantity >= minQuantity) {
+                    discountAmount = discountPerItem * quantity; 
+                    finalPrice = Math.max(((originalPrice * quantity) - discountAmount)/quantity, 0);
+                    hasDiscount = true;
+                }
+            }         
+            
+            // إذا لم يكن هناك خصم، المنتج يعتبر مميز
+            if (!hasDiscount && !hasPromoDiscount) {
+                isPremiumProduct = true;
+            }
+            
+            return {
+                finalPrice: finalPrice,
+                hasDiscount: hasDiscount,
+                discountAmount: discountAmount,
+                discountPerItem: discountPerItem,
+                minQuantity: minQuantity,
+                hasPromoDiscount: hasPromoDiscount,
+                promoDiscountPercent: promoDiscountPercent,
+                isPremiumProduct: isPremiumProduct
+            };
+        }
+
+        function calculateTotalDiscount() {
+            if (!STORE_CONFIG.DISCOUNTS) return 0;
+            
+            let totalDiscount = 0;
+            
+            // حساب خصم الكمية - تم التصحيح
+            if (STORE_CONFIG.DISCOUNTS.enableQuantityDiscount) {
+                const minQuantity = STORE_CONFIG.DISCOUNTS.minQuantityForDiscount || 3;
+                const discountPerItem = STORE_CONFIG.DISCOUNTS.discountPerItem || 0;
+                const discountScope = STORE_CONFIG.DISCOUNTS.discountScope || 'all';
+                
+                if (discountScope === 'all') {
+                    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                    if (totalQuantity >= minQuantity) {
+                        totalDiscount += discountPerItem * totalQuantity;
+                    }
+                } else if (discountScope === 'selected' && STORE_CONFIG.DISCOUNTS.discountProducts) {
+                    const eligibleItems = cartItems.filter(item => 
+                        STORE_CONFIG.DISCOUNTS.discountProducts.includes(parseInt(item.key))
+                    );
+                    const totalEligibleQuantity = eligibleItems.reduce((sum, item) => sum + item.quantity, 0);
+                    if (totalEligibleQuantity >= minQuantity) {
+                        totalDiscount += discountPerItem * totalEligibleQuantity;
+                    }
+                }
+            }
+            
+            // حساب الخصم الترويجي - تم التصحيح
+            if (STORE_CONFIG.DISCOUNTS.enablePromotionalDiscount) {
+                const promoScope = STORE_CONFIG.DISCOUNTS.promoDiscountScope || 'all';
+                const promoPercent = STORE_CONFIG.DISCOUNTS.promotionalDiscountPercent || 0;
+                
+                if (promoScope === 'all') {
+                    cartItems.forEach(item => {
+                        const product = STORE_CONFIG.PRODUCTS[item.key];
+                        totalDiscount += Math.round(product.price * item.quantity * (promoPercent / 100));
+                    });
+                } else if (promoScope === 'selected' && STORE_CONFIG.DISCOUNTS.promoDiscountProducts) {
+                    const eligibleItems = cartItems.filter(item => 
+                        STORE_CONFIG.DISCOUNTS.promoDiscountProducts.includes(parseInt(item.key))
+                    );
+                    eligibleItems.forEach(item => {
+                        const product = STORE_CONFIG.PRODUCTS[item.key];
+                        totalDiscount += Math.round(product.price * item.quantity * (promoPercent / 100));
+                    });
+                }
+            }
+            
+            return totalDiscount;
+        }
+
+        function createDiscountMessage(productKey = null, quantity = 1) {
+            if (!STORE_CONFIG.DISCOUNTS) return '';
+            
+            const product = productKey ? STORE_CONFIG.PRODUCTS[productKey] : null;
+            
+            // التحقق من الخصم الترويجي أولاً
+            if (STORE_CONFIG.DISCOUNTS.enablePromotionalDiscount) {
+                const promoScope = STORE_CONFIG.DISCOUNTS.promoDiscountScope || 'all';
+                let applyPromoDiscount = false;
+                
+                if (promoScope === 'all') {
+                    applyPromoDiscount = true;
+                } else if (promoScope === 'selected' && STORE_CONFIG.DISCOUNTS.promoDiscountProducts) {
+                    const productKeyNum = parseInt(productKey);
+                    applyPromoDiscount = STORE_CONFIG.DISCOUNTS.promoDiscountProducts.includes(productKeyNum);
+                }
+                
+                if (applyPromoDiscount) {
+                    const promoPercent = STORE_CONFIG.DISCOUNTS.promotionalDiscountPercent || 0;
+                    if (promoPercent > 0) {
+                        const discountAmount = Math.round(product.price * (promoPercent / 100));
+                        return `🎉 <strong>خصم ترويجي ${promoPercent}%</strong> - وفر ${discountAmount} دج`;
+                    }
+                }
+            }
+            
+            // إذا لم يكن هناك خصم ترويجي، عرض خصم الكمية
+            const minQuantity = STORE_CONFIG.DISCOUNTS.minQuantityForDiscount || 3;
+            const discountPerItem = STORE_CONFIG.DISCOUNTS.discountPerItem || 0;
+            const discountScope = STORE_CONFIG.DISCOUNTS.discountScope || 'all';
+            
+            let applyQuantityDiscount = false;
+            
+            if (discountScope === 'all') {
+                applyQuantityDiscount = true;
+            } else if (discountScope === 'selected' && STORE_CONFIG.DISCOUNTS.discountProducts) {
+                const productKeyNum = parseInt(productKey);
+                applyQuantityDiscount = STORE_CONFIG.DISCOUNTS.discountProducts.includes(productKeyNum);
+            }
+            
+            if (!applyQuantityDiscount) {
+                return product ? `✨ <strong>اختيارك لهذا المنتج دليل على ذوقك الرفيع</strong>` : '';
+            }
+            
+            if (quantity >= minQuantity) {
+                const totalDiscount = discountPerItem * quantity;
+                return `🎁 <strong>خصم كمية ${discountPerItem } دج للقطعة</strong> - وفر ${totalDiscount} دج`;
+            } else {
+                const remaining = minQuantity - quantity;
+                return `💡 <strong>خصم كمية متاح</strong> - إشتري ${remaining} قطع إضافية لتحصل على خصم ${discountPerItem} دج لكل قطعة`;
+            }
+        }
+
+        function createDiscountBadge(product, quantity = 1, productKey = null) {
+            const discountInfo = calculateDiscountedPrice(product.price, quantity, productKey);
+            const discountMessage = createDiscountMessage(productKey, quantity);
+            
+            // إذا لم يكن هناك خصم، لا تعرض أي شيء
+            if (!discountInfo.hasDiscount && !discountInfo.hasPromoDiscount) {
+                return '';
+            }
+            
+            if (discountInfo.hasPromoDiscount) {
+                return `
+                    <div class="discount-badge promo-discount">
+                        <i class="fas fa-gift"></i>
+                        خصم ${discountInfo.promoDiscountPercent}%
+                        <div class="discount-tooltip">
+                            ${discountMessage}
+                        </div>
+                    </div>
+                `;
+            } else if (discountInfo.hasDiscount) {
+                return `
+                    <div class="discount-badge">
+                        <i class="fas fa-percentage"></i>
+                        خصم ${discountInfo.discountPerItem} دج
+                        <div class="discount-tooltip">
+                            ${discountMessage}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            return '';
+        }
+
+        function updateProductModalDiscount(productKey, quantity) {
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            const discountInfo = calculateDiscountedPrice(product.price, quantity, productKey);
+            const discountMessage = createDiscountMessage(productKey, quantity);
+            
+            const discountInfoElement = document.getElementById('discountInfo');
+            const discountText = document.getElementById('discountText');
+            const promoDiscountInfoElement = document.getElementById('promoDiscountInfo');
+            const promoDiscountText = document.getElementById('promoDiscountText');
+            
+            // إظهار الخصم المناسب حسب النوع أو رسالة الدوق الرفيع
+            if (discountInfo.hasPromoDiscount) {
+                promoDiscountText.innerHTML = discountMessage;
+                promoDiscountInfoElement.style.display = 'block';
+                discountInfoElement.style.display = 'none';
+                
+                // إضافة فئة خاصة للخصم الترويجي
+                promoDiscountInfoElement.className = 'promo-discount-info';
+            } else if (discountInfo.hasDiscount) {
+                discountText.innerHTML = discountMessage;
+                discountInfoElement.style.display = 'block';
+                promoDiscountInfoElement.style.display = 'none';
+                
+                // إضافة فئة خاصة لخصم الكمية
+                discountInfoElement.className = 'discount-info quantity-discount';
+            } else {
+                // إذا لم يكن هناك خصم، عرض رسالة الدوق الرفيع
+                discountText.innerHTML = discountMessage;
+                discountInfoElement.style.display = 'block';
+                discountInfoElement.className = 'discount-info premium-message';
+                promoDiscountInfoElement.style.display = 'none';
+            }
+        }
+
+        // =============================================================================
+        // 🎯 نظام تفاصيل المنتج - المعدل مع دعم ageRanges من config.js
+        // =============================================================================
+
+        function showProductDetails(productKey) {
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            if (!product) {
+                console.error('❌ المنتج غير موجود:', productKey);
+                showNotification('المنتج غير موجود', 'error');
+                return;
+            }
+            
+            currentProductKey = productKey;
+            
+            // إعادة تعيين القيم
+            selectedAge = null;
+            selectedColor = null;
+            document.getElementById('quantityDisplay').textContent = '1';
+            document.getElementById('addToCartFromModal').disabled = true;
+            document.getElementById('sizeOptionsContainer').style.display = 'none';
+            
+            // تحديث بيانات النافذة المنبثقة
+            const productModalImage = document.getElementById('productModalImage');
+            productModalImage.src = product.image;
+            productModalImage.alt = product.name;
+            productModalImage.onerror = function() {
+                this.src = 'https://via.placeholder.com/300x300?text=صورة+غير+متاحة';
+            };
+            
+            // حساب السعر مع الخصم مع تمرير مفتاح المنتج
+            const quantity = parseInt(document.getElementById('quantityDisplay').textContent);
+            const discountInfo = calculateDiscountedPrice(product.price, quantity, productKey);
+            
+            document.getElementById('productModalPriceValue').textContent = `${discountInfo.finalPrice} دج`;
+            
+            // تحديث معلومات الخصم
+            updateProductModalDiscount(productKey, quantity);
+            
+            // إعداد خيارات اللون مع النقطة الزرقاء الدوارة - المعدل
+            const colorOptions = document.getElementById('colorOptions');
+            colorOptions.innerHTML = '';
+            
+            // الحصول على الألوان المتاحة من config.js
+            const availableColors = product.availableColors && product.availableColors.length > 0 
+                ? product.availableColors 
+                : (STORE_CONFIG.AVAILABLE_COLORS && STORE_CONFIG.AVAILABLE_COLORS.length > 0 
+                    ? STORE_CONFIG.AVAILABLE_COLORS 
+                    : ['كما في الصورة', 'أسود', 'أبيض', 'أحمر']);
+            
+            if (availableColors && availableColors.length > 0) {
+                availableColors.forEach(color => {
+                    const colorOption = document.createElement('div');
+                    colorOption.className = 'color-option';
+                    colorOption.textContent = color;
+                    colorOption.dataset.color = color;
+                    
+                    const colorPreview = document.createElement('div');
+                    colorPreview.className = 'color-preview';
+                    colorPreview.style.backgroundColor = getColorHex(color);
+                    colorOption.appendChild(colorPreview);
+                    
+                    colorOption.addEventListener('click', () => {
+                        // إزالة التحديد من جميع خيارات اللون
+                        document.querySelectorAll('#colorOptions .color-option').forEach(option => {
+                            option.classList.remove('selected');
+                        });
+                        
+                        // إضافة التحديد للون المختار
+                        colorOption.classList.add('selected');
+                        selectedColor = color;
+                        
+                        // تحديث الصورة بناءً على اللون المختار
+                        updateProductImageByColor(productKey, color);
+                        
+                        // إظهار المقاسات المتوفرة لهذا اللون من ageRanges في config.js
+                        showAvailableSizesForColor(productKey, color);
+                        
+                        // التحقق من إمكانية تفعيل زر أضف الآن
+                        checkAddButtonState();
+                    });
+                    
+                    colorOptions.appendChild(colorOption);
+                });
+            } else {
+                colorOptions.innerHTML = '<div style="color: #666; text-align: center;">لا توجد ألوان متاحة</div>';
+            }
+            
+            // مسح خيارات المقاسات
+            document.getElementById('ageOptions').innerHTML = '';
+            
+            // تحديث السعر عند تغيير الكمية
+            document.getElementById('quantityDisplay').addEventListener('DOMSubtreeModified', function() {
+                const quantity = parseInt(this.textContent);
+                const updatedDiscountInfo = calculateDiscountedPrice(product.price, quantity, productKey);
+                document.getElementById('productModalPriceValue').textContent = `${updatedDiscountInfo.finalPrice} دج`;
+                
+                // تحديث معلومات الخصم
+                updateProductModalDiscount(productKey, quantity);
+            });
+            
+            document.getElementById('productModal').classList.add('show');
+        }
+
+        function updateProductImageByColor(productKey, color) {
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            const productModalImage = document.getElementById('productModalImage');
+            
+            // إذا كان هناك صورة خاصة بهذا اللون، استخدمها
+            if (product.colorImages && product.colorImages[color] && product.colorImages[color].images.length > 0) {
+                productModalImage.src = product.colorImages[color].images[0];
+            } else {
+                // إذا لم تكن هناك صورة خاصة، استخدم الصورة الرئيسية
+                productModalImage.src = product.image;
+            }
+            
+            productModalImage.onerror = function() {
+                this.src = 'https://via.placeholder.com/300x300?text=صورة+غير+متاحة';
+            };
+        }
+
+        function showAvailableSizesForColor(productKey, color) {
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            const ageOptions = document.getElementById('ageOptions');
+            const sizeOptionsContainer = document.getElementById('sizeOptionsContainer');
+            
+            // مسح خيارات المقاسات السابقة
+            ageOptions.innerHTML = '';
+            selectedAge = null;
+            
+            // إظهار قسم المقاسات
+            sizeOptionsContainer.style.display = 'block';
+            
+            // الحصول على ageRanges من config.js للون المحدد
+            let ageRanges = [];
+            
+            if (product.colorImages && product.colorImages[color] && product.colorImages[color].ageRanges) {
+                // استخدام ageRanges الخاصة باللون المختار
+                ageRanges = product.colorImages[color].ageRanges;
+            } else if (product.ageRanges) {
+                // استخدام ageRanges العامة للمنتج
+                ageRanges = product.ageRanges;
+            }
+            
+            if (ageRanges.length > 0) {
+                // تجميع خيارات المقاسات حسب نطاق العمر
+                const ageGroups = {};
+                
+                ageRanges.forEach((range, index) => {
+                    const ageKey = `${range.ageFrom}-${range.ageTo}`;
+                    if (!ageGroups[ageKey]) {
+                        ageGroups[ageKey] = {
+                            ageFrom: range.ageFrom,
+                            ageTo: range.ageTo,
+                            options: []
+                        };
+                    }
+                    // تخزين كل خيار مع الفهرس والمقاس
+                    ageGroups[ageKey].options.push({
+                        index: index,
+                        size: range.size
+                    });
+                });
+                
+                // عرض خيارات المقاسات
+                Object.values(ageGroups).forEach(ageGroup => {
+                    ageGroup.options.forEach(option => {
+                        const ageOption = document.createElement('div');
+                        ageOption.className = 'size-option';
+                        
+                        // تنسيق نص الخيار بناءً على نطاق العمر والمقاس
+                        let ageText = '';
+                        if (ageGroup.ageFrom === 'A' && ageGroup.ageTo === 'A') {
+                            ageText = `الكبار - المقاس: ${option.size}`;
+                        } else {
+                            ageText = `${ageGroup.ageFrom}-${ageGroup.ageTo} سنوات - المقاس: ${option.size}`;
+                        }
+                        
+                        ageOption.textContent = ageText;
+                        ageOption.dataset.age = `${ageGroup.ageFrom}-${ageGroup.ageTo}`;
+                        ageOption.dataset.size = option.size;
+                        ageOption.dataset.index = option.index;
+                        
+                        ageOption.addEventListener('click', () => {
+                            document.querySelectorAll('#ageOptions .size-option').forEach(option => {
+                                option.classList.remove('selected');
+                            });
+                            ageOption.classList.add('selected');
+                            selectedAge = `${ageGroup.ageFrom}-${ageGroup.ageTo}`;
+                            
+                            // التحقق من إمكانية تفعيل زر أضف الآن
+                            checkAddButtonState();
+                        });
+                        
+                        ageOptions.appendChild(ageOption);
+                    });
+                });
+            } else {
+                // إذا لم يكن هناك نطاقات أعمار، استخدام المقاسات التقليدية
+                const availableSizes = product.availableSizes || [];
+                if (availableSizes.length > 0) {
+                    availableSizes.forEach(size => {
+                        const ageOption = document.createElement('div');
+                        ageOption.className = 'size-option';
+                        ageOption.textContent = `المقاس: ${size}`;
+                        ageOption.dataset.size = size;
+                        
+                        ageOption.addEventListener('click', () => {
+                            document.querySelectorAll('#ageOptions .size-option').forEach(option => {
+                                option.classList.remove('selected');
+                            });
+                            ageOption.classList.add('selected');
+                            selectedAge = size;
+                            
+                            // التحقق من إمكانية تفعيل زر أضف الآن
+                            checkAddButtonState();
+                        });
+                        
+                        ageOptions.appendChild(ageOption);
+                    });
+                } else {
+                    ageOptions.innerHTML = `
+                        <div style="color: #666; text-align: center; padding: 1rem;">
+                            <i class="fas fa-ruler"></i>
+                            <p>لا توجد مقاسات متاحة لهذا اللون</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        function checkAddButtonState() {
+            const addButton = document.getElementById('addToCartFromModal');
+            
+            if (selectedAge && selectedColor) {
+                addButton.disabled = false;
+                addButton.classList.add('fast-pulse-effect');
+            } else {
+                addButton.disabled = true;
+                addButton.classList.remove('fast-pulse-effect');
+            }
+        }
+
+        function getColorHex(colorName) {
+            const colorMap = {
+                "كما في الصورة": "#4A6CF7",
+                "أبيض": "#ffffff",
+                "أسود": "#000000",
+                "رمادي": "#808080",
+                "أزرق": "#3498db",
+                "أحمر": "#e74c3c",
+                "أخضر": "#2ecc71",
+                "زهري": "#e84393",
+                "بنفسجي": "#9b59b6"
+            };
+            return colorMap[colorName] || "#bdc3c7";
+        }
+
+        function quickAddToCart(productKey) {
+            event.stopPropagation();
+            
+            const product = STORE_CONFIG.PRODUCTS[productKey];
+            const productSizes = product.availableSizes || [];
+            const productColors = product.availableColors || [];
+            
+            if (productSizes.length > 1) {
+                showNotification('الرجاء اختيار اللون والمقاس أولاً', 'warning');
+                showProductDetails(productKey);
+                return;
+            }
+            
+            if (productColors.length > 1) {
+                showNotification('الرجاء اختيار اللون والمقاس أولاً', 'warning');
+                showProductDetails(productKey);
+                return;
+            }
+            
+            const defaultSize = productSizes.length === 1 ? productSizes[0] : null;
+            const defaultColor = productColors.length === 1 ? productColors[0] : null;
+            
+            addToCart(productKey, 1, defaultSize, defaultColor);
+        }
+
+        // =============================================================================
+        // 🎨 معرض المنتجات
+        // =============================================================================
+
+        function initModelsGallery() {
+            const grid = document.getElementById('modelsGrid');
+            if (!grid) {
+                console.log('⚠️ عنصر معرض المنتجات غير موجود');
+                return;
+            }
+            
+            grid.innerHTML = '';
+            
+            if (!STORE_CONFIG.PRODUCTS || Object.keys(STORE_CONFIG.PRODUCTS).length === 0) {
+                grid.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; color: var(--gray);">
+                        <i class="fas fa-box-open" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <p>لا توجد منتجات متاحة حالياً</p>
+                        <p style="font-size: 0.9rem;">سيتم تحميل المنتجات قريباً...</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            Object.keys(STORE_CONFIG.PRODUCTS).forEach((key, index) => {
+                const product = STORE_CONFIG.PRODUCTS[key];
+                const availableSizes = product.availableSizes || [];
+                const availableColors = product.availableColors || [];
+                
+                const sizesText = availableSizes.length > 0 
+                    ? `المقاسات: ${availableSizes.join(', ')}` 
+                    : 'لا توجد مقاسات محددة';
+                    
+                const colorsText = availableColors.length > 0 
+                    ? `الألوان: ${availableColors.length}` 
+                    : 'لا توجد ألوان محددة';
+
+                // حساب السعر بعد الخصم مع تمرير مفتاح المنتج
+                const discountInfo = calculateDiscountedPrice(product.price, 1, key);
+                const hasDiscount = discountInfo.hasDiscount || discountInfo.hasPromoDiscount;
+                const discountMessage = createDiscountMessage(key, 1);
+                
+                // التحقق من أهلية المنتج للتوصيل المجاني
+                const isFreeDeliveryProduct = STORE_CONFIG.FREE_DELIVERY && 
+                                            STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts &&
+                                            STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts.includes(parseInt(key));
+                
+                const card = document.createElement('div');
+                card.className = 'model-card';
+                card.innerHTML = `
+                    <div class="model-badge">${index === 0 ? 'الأكثر مبيعاً' : 'جديد'}</div>
+                    ${createDiscountBadge(product, 1, key)}
+                    ${isFreeDeliveryProduct ? `
+                        <div class="free-delivery-badge fast-pulse-effect" style="position: absolute; top: 50px; right: 12px; z-index: 2;">
+                            <i class="fas fa-shipping-fast"></i>
+                            توصيل مجاني
+                        </div>
+                    ` : ''}
+                    <div class="model-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="model-image" 
+                             onerror="this.src='https://via.placeholder.com/300x300?text=صورة+غير+متاحة'">
+                    </div>
+                    <div class="model-info">
+                        <h3 class="model-name">${product.name}</h3>
+                        <p class="model-description">${product.description}</p>
+                        <div style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">
+                            <i class="fas fa-ruler"></i> ${sizesText}
+                        </div>
+                        <div style="font-size: 0.8rem; color: #666; margin-bottom: 0.5rem;">
+                            <i class="fas fa-palette"></i> ${colorsText}
+                        </div>
+                        <div class="model-price">
+                            <i class="fas fa-tag"></i>
+                            ${discountInfo.finalPrice} دج
+                            ${hasDiscount ? `<span class="original-price">${product.price} دج</span>` : ''}
+                        </div>
+                        <!-- رسالة الدوق الرفيع للمنتجات بدون خصم -->
+                        ${!hasDiscount ? `
+                            <div class="discount-info premium-message" style="margin-top: 0.5rem; padding: 0.5rem; font-size: 0.75rem;">
+                                <i class="fas fa-crown"></i>
+                                ${discountMessage}
+                            </div>
+                        ` : ''}
+                    </div>
+                    <button class="quick-add-btn" onclick="quickAddToCart('${key}')">
+                        <i class="fas fa-cart-plus"></i>
+                    </button>
+                `;
+                
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('.quick-add-btn')) {
+                        showProductDetails(key);
+                    }
+                });
+                
+                grid.appendChild(card);
+            });
+            
+            console.log(`✅ تم تحميل ${Object.keys(STORE_CONFIG.PRODUCTS).length} منتج مع نظام تحميل الصور المحسن`);
+        }
+        
+        function updateSelectedProducts() {
+            const container = document.getElementById('selectedProducts');
+            container.innerHTML = '';
+            
+            if (cartItems.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: var(--gray);">
+                        <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>لا تتردد في اختيارات أخرى</p>
+                        <p style="font-size: 0.9rem;">انقر على أي منتج في المعرض لإضافته إلى السلة</p>
+                    </div>
+                `;
+                
+                // إذا لم تكن هناك منتجات، جعل حقل الولاية غير مفعل
+                const wilayaSelect = document.getElementById('wilaya');
+                wilayaSelect.disabled = true;
+                wilayaSelect.value = '';
+                wilayaSelect.classList.remove('wilaya-pulse', 'wilaya-selected');
+                
+                // إخفاء خيارات التوصيل
+                document.getElementById('deliveryTypeSection').style.display = 'none';
+                selectedDeliveryType = null;
+                
+                // إخفاء معلومات التوصيل وزر التأكيد
+                document.getElementById('personalInfoSection').style.display = 'none';
+                
+                return;
+            } else {
+                // إذا كانت هناك منتجات، جعل حقل الولاية مفعل
+                const wilayaSelect = document.getElementById('wilaya');
+                wilayaSelect.disabled = false;
+                wilayaSelect.classList.add('wilaya-pulse');
+            }
+            
+            const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const discountInfo = calculateTotalDiscount();
+            const discountMessage = createTotalDiscountMessage();
+            const priceDetails = calculateTotalPrice();
+            
+            cartItems.forEach((item, index) => {
+                const productElement = document.createElement('div');
+                productElement.className = 'selected-product';
+                
+                // حساب الخصم لكل عنصر - التصحيح: استخدام الكمية الإجمالية
+                const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                const itemDiscountInfo = calculateDiscountedPrice(item.price, totalQuantity, item.key);
+                  
+                const hasDiscount = itemDiscountInfo.hasDiscount || itemDiscountInfo.hasPromoDiscount;
+                
+                productElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="selected-product-info">
+                        <h4 class="selected-product-title">${item.name}</h4>
+                        <div class="selected-product-details">
+                            <span class="selected-product-detail">العمر: ${item.age}</span>
+                            <span class="selected-product-detail">المقاس: ${item.size || 'غير محدد'}</span>
+                            <span class="selected-product-detail">اللون: ${item.color || 'غير محدد'}</span>
+                        </div>
+                        <div class="selected-product-price">
+                            <div>
+                                ${hasDiscount ? `
+                                    <div style="display: flex; align-items: center; gap: 0.3rem; font-size: 0.8rem;">
+                                        <span style="color: var(--gray); text-decoration: line-through;">${item.price} دج</span>
+                                        <span style="color: var(--success); font-weight: 700;">${itemDiscountInfo.finalPrice} دج</span>
+                                        <span style="background: ${itemDiscountInfo.hasPromoDiscount ? 'var(--primary)' : 'var(--warning)'}; color: white; padding: 0.1rem 0.3rem; border-radius: 8px; font-size: 0.6rem;">
+                                            ${itemDiscountInfo.hasPromoDiscount ? `خصم ${itemDiscountInfo.promoDiscountPercent}%` : `وفر ${itemDiscountInfo.discountAmount} دج`}
+                                        </span>
+                                    </div>
+                                ` : `
+                                    <span style="color: var(--success); font-weight: 700; font-size: 0.8rem;">${item.price} دج</span>
+                                `}
+                            </div>
+                            <div class="selected-product-quantity">
+                                <button onclick="updateQuantity('${item.id}', -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="updateQuantity('${item.id}', 1)">+</button>
+                                <button class="selected-product-remove" onclick="removeFromCart('${item.id}')">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(productElement);
+            });
+            
+            // إضافة ملاحظة التوصيل المجاني إذا كان مؤهلاً
+            if (priceDetails.isFreeDelivery) {
+                const freeDeliveryNote = document.createElement('div');
+                freeDeliveryNote.className = 'free-delivery-message';
+                freeDeliveryNote.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <i class="fas fa-shipping-fast"></i>
+                        <strong>🎉 مبروك! التوصيل مجاني لهذا الطلب</strong>
+                    </div>
+                `;
+                container.appendChild(freeDeliveryNote);
+            } else {
+                // إظهار رسالة الحد الأدنى للتوصيل المجاني إذا كان الطلب غير مؤهل
+                if (selectedWilaya && selectedDeliveryType && STORE_CONFIG.FREE_DELIVERY) {
+                    const freeDeliveryConfig = STORE_CONFIG.FREE_DELIVERY[selectedDeliveryType];
+                    if (freeDeliveryConfig && freeDeliveryConfig.enabled) {
+                        const minAmount = freeDeliveryConfig.minAmount;
+                        const minQuantity = freeDeliveryConfig.minQuantity;
+                        const remainingAmount = minAmount - priceDetails.subtotal;
+                        const remainingQuantity = minQuantity ? minQuantity - priceDetails.totalPieces : 0;
+                        
+                        if (remainingAmount > 0 || remainingQuantity > 0) {
+                            const freeDeliveryMinimum = document.createElement('div');
+                            freeDeliveryMinimum.className = 'free-delivery-minimum';
+                            
+                            let conditionText = '';
+                            
+                            if (remainingAmount > 0 && remainingQuantity > 0) {
+                                conditionText = `أضف ${remainingAmount} دج و ${remainingQuantity} قطعة لتحصل على التوصيل المجاني!`;
+                            } else if (remainingAmount > 0) {
+                                conditionText = `أضف ${remainingAmount} دج لتحصل على التوصيل المجاني!`;
+                            } else if (remainingQuantity > 0) {
+                                conditionText = `أضف ${remainingQuantity} قطعة لتحصل على التوصيل المجاني!`;
+                            }
+                            
+                            freeDeliveryMinimum.innerHTML = `
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                    <i class="fas fa-truck"></i>
+                                    <strong>${conditionText}</strong>
+                                </div>
+                            `;
+                            container.appendChild(freeDeliveryMinimum);
+                        }
+                    }
+                }
+            }
+            
+            // إضافة ملاحظة الخصم الإجمالي مع التمييز الواضح
+            if (discountInfo > 0) {
+                const discountType = STORE_CONFIG.DISCOUNTS.enablePromotionalDiscount ? 'promo' : 'discount';
+                const discountNote = document.createElement('div');
+                discountNote.className = `${discountType}-summary`;
+                
+                discountNote.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: ${discountType === 'promo' ? 'var(--primary)' : 'var(--warning)'};">
+                        <i class="fas fa-${discountType === 'promo' ? 'gift' : 'percentage'}" style="font-size: 1.2rem;"></i>
+                        <strong>${discountMessage}</strong>
+                    </div>
+                `;
+                container.appendChild(discountNote);
+            } else if ((STORE_CONFIG.DISCOUNTS && STORE_CONFIG.DISCOUNTS.discountPerItem > 0) || 
+                      (STORE_CONFIG.DISCOUNTS && STORE_CONFIG.DISCOUNTS.enablePromotionalDiscount)) {
+                // إظهار رسالة تذكير بالخصم فقط إذا كان هناك خصم متاح ولم يتم تطبيقه بعد
+                const discountHint = document.createElement('div');
+                discountHint.style.cssText = `
+                    background: linear-gradient(135deg, #e6f7ff, #cceeff);
+                    border: 2px dashed var(--secondary);
+                    border-radius: var(--radius);
+                    padding: 1rem;
+                    text-align: center;
+                    margin-top: 1rem;
+                `;
+                
+                discountHint.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--secondary);">
+                        <i class="fas fa-bullhorn" style="font-size: 1.2rem;"></i>
+                        <strong>${discountMessage || 'خصم متاح عند الشراء'}</strong>
+                    </div>
+                `;
+                container.appendChild(discountHint);
+            }
+        }
+
+        function createTotalDiscountMessage() {
+            const discounts = STORE_CONFIG.DISCOUNTS;
+            if (!discounts) return '🎀 اختيار موفق يعكس ذوقكم الرفيع.';
+
+            const totalDiscount = calculateTotalDiscount();
+            let message = '';
+
+            // 🟢 أولوية لخصم الكمية
+            if (discounts.enableQuantityDiscount) {
+                const minQuantity = discounts.minQuantityForDiscount || 0;
+                const discountPerItem = discounts.discountPerItem || 0;
+                const discountScope = discounts.discountScope || 'all';
+
+                let eligibleQuantity = 0;
+                if (discountScope === 'all') {
+                    eligibleQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+                } else if (discountScope === 'selected' && discounts.discountProducts) {
+                    const eligibleItems = cartItems.filter(item =>
+                        discounts.discountProducts.includes(parseInt(item.key))
+                    );
+                    eligibleQuantity = eligibleItems.reduce((sum, item) => sum + item.quantity, 0);
+                }
+
+                if (eligibleQuantity >= minQuantity) {
+                    message = `<strong>خصم كمية ${discountPerItem} دج للقطعة</strong>`;
+                }
+            }
+
+            // 🔵 إذا لم يكن خصم الكمية مفعلاً نتحقق من الترويجي
+            else if (discounts.enablePromotionalDiscount) {
+                const promoPercent = discounts.promotionalDiscountPercent || 0;
+                if (promoPercent > 0) {
+                    message = `<strong>خصم ترويجي ${promoPercent}%</strong>`;
+                }
+            }
+
+            // ✅ في حالة وجود خصم فعلي
+            if (message && totalDiscount > 0) {
+                return `🎊 ${message} - وفرت ${totalDiscount} دج`;
+            }
+
+            // 💬 في حالة عدم وجود أي خصم
+            return '🎀 اختيار موفق يعكس ذوقكم الرفيع.';
+        }
+
+        // =============================================================================
+        // 🔗 تحديث نظام وسائل التواصل الاجتماعي - إضافة الفايبر
+        // =============================================================================
+
+        function updateSocialMediaLinks() {
+            if (!STORE_CONFIG.STORE_INFO) return;
+            
+            const storeInfo = STORE_CONFIG.STORE_INFO;
+            
+            // تحديث الروابط في الأزرار تحت الشعار
+            if (storeInfo.whatsappUrl) {
+                document.getElementById('whatsappBtnUnderLogo').href = storeInfo.whatsappUrl;
+                document.getElementById('whatsappBtnUnderLogo').style.display = 'flex';
+            }
+            
+            if (storeInfo.facebookUrl) {
+                document.getElementById('facebookBtnUnderLogo').href = storeInfo.facebookUrl;
+                document.getElementById('facebookBtnUnderLogo').style.display = 'flex';
+            }
+            
+            if (storeInfo.instagramUrl) {
+                document.getElementById('instagramBtnUnderLogo').href = storeInfo.instagramUrl;
+                document.getElementById('instagramBtnUnderLogo').style.display = 'flex';
+            }
+            
+            if (storeInfo.messengerUrl) {
+                document.getElementById('messengerBtnUnderLogo').href = storeInfo.messengerUrl;
+                document.getElementById('messengerBtnUnderLogo').style.display = 'flex';
+            }
+            
+            // إضافة زر الفايبر
+            if (storeInfo.viberUrl) {
+                document.getElementById('viberBtnUnderLogo').href = storeInfo.viberUrl;
+                document.getElementById('viberBtnUnderLogo').style.display = 'flex';
+            }
+            
+            // تحديث الروابط في التذييل
+            if (storeInfo.facebookUrl) {
+                document.getElementById('facebookFooter').href = storeInfo.facebookUrl;
+            }
+            
+            if (storeInfo.instagramUrl) {
+                document.getElementById('instagramFooter').href = storeInfo.instagramUrl;
+            }
+            
+            if (storeInfo.whatsappUrl) {
+                document.getElementById('whatsappFooter').href = storeInfo.whatsappUrl;
+            }
+            
+            if (storeInfo.messengerUrl) {
+                document.getElementById('messengerFooter').href = storeInfo.messengerUrl;
+            }
+            
+            // إضافة الفايبر في التذييل
+            if (storeInfo.viberUrl) {
+                let viberFooter = document.getElementById('viberFooter');
+                if (!viberFooter) {
+                    const footerLinks = document.querySelector('footer .container > div > div:last-child');
+                    if (footerLinks) {
+                        const viberLink = document.createElement('a');
+                        viberLink.id = 'viberFooter';
+                        viberLink.href = storeInfo.viberUrl;
+                        viberLink.style.cssText = 'color: white; font-size: 1.2rem;';
+                        viberLink.target = '_blank';
+                        viberLink.innerHTML = '<i class="fab fa-viber"></i>';
+                        footerLinks.appendChild(viberLink);
+                    }
+                } else {
+                    viberFooter.href = storeInfo.viberUrl;
+                }
+            }
+            
+            console.log('✅ تم تحديث روابط وسائل التواصل الاجتماعي مع إضافة الفايبر');
+        }
+
+        // =============================================================================
+        // 🎯 تهيئة الأحداث والمستمعين
+        // =============================================================================
+
+        function setupEventListeners() {
+            // إرسال النموذج - النسخة المحدثة مع نافذة التأكيد
+            document.getElementById('orderForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    address: document.getElementById('address').value.trim(),
+                    commune: document.getElementById('commune').value.trim()
+                };
+                
+                // التحقق من صحة البيانات
+                if (!formData.name || !formData.phone || !formData.address || !formData.commune) {
+                    showNotification('الرجاء ملء جميع الحقول المطلوبة', 'error');
+                    return;
+                }
+                
+                if (!/^0[0-9]{9}$/.test(formData.phone)) {
+                    showNotification('رقم الهاتف يجب أن يبدأ بـ 0 ويتكون من 10 أرقام', 'error');
+                    return;
+                }
+                
+                const orderData = prepareOrderData(formData);
+                const success = await submitOrder(orderData);
+                
+                if (success) {
+                }
+            });
+            
+            // نافذة المنتج - التحكم في الكمية
+            document.getElementById('decreaseQuantity').addEventListener('click', function() {
+                const quantityDisplay = document.getElementById('quantityDisplay');
+                let quantity = parseInt(quantityDisplay.textContent);
+                if (quantity > 1) {
+                    quantityDisplay.textContent = quantity - 1;
+                }
+            });
+            
+            document.getElementById('increaseQuantity').addEventListener('click', function() {
+                const quantityDisplay = document.getElementById('quantityDisplay');
+                let quantity = parseInt(quantityDisplay.textContent);
+                quantityDisplay.textContent = quantity + 1;
+            });
+            
+            // إضافة إلى السلة من النافذة المنبثقة
+            document.getElementById('addToCartFromModal').addEventListener('click', addToCartFromModal);
+            
+            // إغلاق نافذة المنتج بالضغط على ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeProductModal();
+                }
+            });
+            
+            // إغلاق نافذة المنتج بالضغط خارج المحتوى
+            document.getElementById('productModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeProductModal();
+                }
+            });
+            
+            // زر العودة للأعلى
+            document.getElementById('backToTop').addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollToTop();
+            });
+            
+            // إظهار/إخفاء زر العودة للأعلى
+            window.addEventListener('scroll', function() {
+                const backToTop = document.getElementById('backToTop');
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            // منع الإرسال بالضغط على Enter في حقول النموذج
+            document.querySelectorAll('#orderForm input').forEach(input => {
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                    }
+                });
+            });
+        }
+
+        // =============================================================================
+        // 🚀 تهيئة التطبيق عند تحميل الصفحة - مع التحديثات
+        // =============================================================================
+
+        function initializeApp() {
+            console.log('🎯 بدء تهيئة التطبيق...');
+            
+            // تهيئة المتجر الرئيسية
+            initStore();
+            
+            // إعداد مستمعي الأحداث
+            setupEventListeners();
+            
+            // إعداد التنقل بين الصفحات
+            setupPageNavigation();
+            
+            // تحديث السعر الأولي
+            updatePrice();
+            
+            // إدارة تأثيرات الوميض
+            managePulseEffects();
+            
+            // إظهار رسالة ترحيب
+            setTimeout(() => {
+                showNotification('مرحباً بك في متجرنا! 🛍️', 'info');
+            }, 1000);
+            
+            console.log('🎉 تم تهيئة التطبيق بنجاح!');
+        }
+
+        function initStore() {
+            console.log('🚀 بدء تهيئة المتجر...');
+            
+            // تحميل الإعدادات المحفوظة
+            loadSavedConfig();
+            
+            // تحديث الواجهة بالإعدادات
+            updateStoreInterface();
+            
+            // إعداد نظام التحديثات
+            setupRealTimeUpdates();
+            
+            // إعداد التنقل بين الصفحات
+            setupPageNavigation();
+            
+            // تهيئة باقي المكونات
+            initSizeGuide();
+            initModelsGallery();
+            initContactNumbers();
+            initWilayaOptions();
+            initPhoneNumbers();
+            updateCartDisplay();
+            
+            console.log('✅ تم تهيئة المتجر بنجاح');
+        }
+
+        // بدء التطبيق عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        // =============================================================================
+        // 🌟 وظائف إضافية للتحسين
+        // =============================================================================
+
+        function preloadImages() {
+            if (STORE_CONFIG.PRODUCTS) {
+                Object.values(STORE_CONFIG.PRODUCTS).forEach(product => {
+                    if (product.image) {
+                        const img = new Image();
+                        img.src = product.image;
+                    }
+                });
+            }
+        }
+
+        function trackUserBehavior(action, details = {}) {
+            console.log(`📊 تتبع المستخدم: ${action}`, details);
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('show');
+            currentProductKey = null;
+            selectedAge = null;
+            selectedColor = null;
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function closeOrderConfirmationAndRedirect() {
+            document.getElementById('orderConfirmationModal').classList.remove('show');
+            switchPage('page1');
+        }
+
+        function showNotification(message, type = 'info') {
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%) translateY(-100px);
+                background: ${type === 'success' ? 'var(--success)' : type === 'error' ? '#e74c3c' : type === 'warning' ? 'var(--warning)' : 'var(--secondary)'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow-lg);
+                z-index: 10000;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                max-width: 90%;
+                text-align: center;
+            `;
+            
+            const icons = {
+                success: 'fas fa-check-circle',
+                error: 'fas fa-exclamation-circle',
+                warning: 'fas fa-exclamation-triangle',
+                info: 'fas fa-info-circle'
+            };
+            
+            notification.innerHTML = `
+                <i class="${icons[type] || icons.info}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // إظهار الإشعار
+            setTimeout(() => {
+                notification.style.transform = 'translateX(-50%) translateY(0)';
+            }, 100);
+            
+            // إخفاء الإشعار بعد 4 ثوانٍ
+            setTimeout(() => {
+                notification.style.transform = 'translateX(-50%) translateY(-100px)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 500);
+            }, 4000);
+        }
+
+        function loadStoreLogo() {
+            const storeLogoHeader = document.getElementById('storeLogoHeader');
+            const storeLogoMain = document.getElementById('storeLogoMain');
+            const storeIcon = document.getElementById('storeIcon');
+            
+            // التحقق من وجود شعار في الإعدادات
+            if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.logo) {
+                const logoUrl = STORE_CONFIG.STORE_INFO.logo;
+                
+                // تحميل الشعار للهيدر
+                storeLogoHeader.src = logoUrl;
+                storeLogoHeader.onload = function() {
+                    storeLogoHeader.style.display = 'block';
+                    storeIcon.style.display = 'none';
+                    console.log('✅ تم تحميل شعار الهيدر بنجاح');
+                };
+                storeLogoHeader.onerror = function() {
+                    storeLogoHeader.style.display = 'none';
+                    storeIcon.style.display = 'inline';
+                    console.log('❌ فشل تحميل شعار الهيدر، استخدام الأيقونة');
+                };
+                
+                // تحميل الشعار للصفحة الرئيسية
+                storeLogoMain.src = logoUrl;
+                storeLogoMain.onload = function() {
+                    storeLogoMain.style.display = 'block';
+                    console.log('✅ تم تحميل شعار الصفحة الرئيسية بنجاح');
+                };
+                storeLogoMain.onerror = function() {
+                    storeLogoMain.style.display = 'none';
+                    console.log('❌ فشل تحميل شعار الصفحة الرئيسية');
+                };
+            } else {
+                // إذا لم يكن هناك شعار، إخفاء العناصر وإظهار الأيقونة
+                storeLogoHeader.style.display = 'none';
+                storeLogoMain.style.display = 'none';
+                storeIcon.style.display = 'inline';
+                console.log('ℹ️ لا يوجد شعار مرفوع، استخدام الأيقونة الافتراضية');
+            }
+        }
+
+        function loadSavedConfig() {
+            try {
+                const savedConfig = localStorage.getItem('storeConfig');
+                if (savedConfig) {
+                    const parsedConfig = JSON.parse(savedConfig);
+                    Object.assign(STORE_CONFIG, parsedConfig);
+                    console.log('✅ تم تحميل الإعدادات المحفوظة');
+                }
+            } catch (error) {
+                console.log('❌ خطأ في تحميل الإعدادات المحفوظة:', error);
+            }
+        }
+
+        function updateStoreInterface() {
+            if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.name) {
+                const storeName = STORE_CONFIG.STORE_INFO.name;
+                const storeTagline = STORE_CONFIG.STORE_INFO.tagline || '👑 أحدث موديلات الأطفال';
+                
+                // تحديث العناوين
+                document.getElementById('storeNameHeader').textContent = storeName;
+                document.getElementById('storeTitleText').textContent = storeTagline;
+                document.getElementById('storeNameFooter').textContent = storeName;
+                
+                // تحديث title و meta tags
+                document.title = `🛒 ${storeName} - ${storeTagline}`;
+                document.getElementById('ogTitle').content = `🛒 ${storeName} - ${storeTagline}`;
+            }
+            
+            // تحديث عنوان المتجر في التذييل
+            if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.address) {
+                document.getElementById('storeAddressFooter').textContent = STORE_CONFIG.STORE_INFO.address;
+            }
+            
+            // تحميل الشعار
+            loadStoreLogo();
+            
+            // تحديث روابط وسائل التواصل الاجتماعي
+            updateSocialMediaLinks();
+        }
+
+        function setupRealTimeUpdates() {
+            console.log('✅ تم إعداد نظام التحديثات الفورية');
+        }
+
+        function managePulseEffects() {
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const cartBadge = document.getElementById('cartBadge');
+            
+            if (totalItems > 0) {
+                cartBadge.classList.add('pulse-effect');
+            } else {
+                cartBadge.classList.remove('pulse-effect');
+            }
+        }
+
+        function initContactNumbers() {
+            const contactNumbersContainer = document.getElementById('contactNumbers');
+            if (!contactNumbersContainer) return;
+            
+            contactNumbersContainer.innerHTML = '';
+            
+            if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.phoneNumbers && STORE_CONFIG.STORE_INFO.phoneNumbers.length > 0) {
+                // استخدام أول رقمين فقط
+                const phoneNumbers = STORE_CONFIG.STORE_INFO.phoneNumbers.slice(0, 2);
+                
+                // إذا كان هناك رقم واحد فقط، إضافة رقم افتراضي ثاني
+                if (phoneNumbers.length === 1) {
+                    phoneNumbers.push('0550000000');
+                }
+                
+                phoneNumbers.forEach(phoneNumber => {
+                    const contactNumber = document.createElement('a');
+                    contactNumber.className = 'contact-number';
+                    contactNumber.href = `tel:${phoneNumber}`;
+                    contactNumber.innerHTML = `
+                        <i class="fas fa-phone"></i>
+                        <span>${phoneNumber}</span>
+                    `;
+                    contactNumbersContainer.appendChild(contactNumber);
+                });
+            } else {
+                // أرقام افتراضية
+                contactNumbersContainer.innerHTML = `
+                    <div class="contact-number">
+                        <i class="fas fa-phone"></i>
+                        <span>0550000000</span>
+                    </div>
+                    <div class="contact-number">
+                        <i class="fas fa-phone"></i>
+                        <span>0550000001</span>
+                    </div>
+                `;
+            }
+        }
+
+        function initWilayaOptions() {
+            const wilayaSelect = document.getElementById('wilaya');
+            if (!wilayaSelect) return;
+            
+            wilayaSelect.innerHTML = '<option value="">اختر الولاية</option>';
+            
+            if (STORE_CONFIG.DELIVERY_PRICES) {
+                Object.keys(STORE_CONFIG.DELIVERY_PRICES).forEach(wilaya => {
+                    const option = document.createElement('option');
+                    option.value = wilaya;
+                    option.textContent = wilaya;
+                    wilayaSelect.appendChild(option);
+                });
+            } else {
+                // الولايات الافتراضية مع أسعار التوصيل
+                const defaultWilayas = {
+                    'الجزائر': { desk: 400, home: 600 },
+                    'وهران': { desk: 500, home: 700 },
+                    'قسنطينة': { desk: 500, home: 700 },
+                    'عنابة': { desk: 500, home: 700 },
+                    'بليدة': { desk: 400, home: 600 }
+                };
+                
+                Object.keys(defaultWilayas).forEach(wilaya => {
+                    const option = document.createElement('option');
+                    option.value = wilaya;
+                    option.textContent = wilaya;
+                    wilayaSelect.appendChild(option);
+                });
+                
+                // تعيين الأسعار الافتراضية إذا لم تكن موجودة
+                if (!STORE_CONFIG.DELIVERY_PRICES) {
+                    STORE_CONFIG.DELIVERY_PRICES = defaultWilayas;
+                }
+            }
+            
+            // إعادة تعيين الولاية المختارة
+            selectedWilaya = null;
+            
+            // إضافة تأثير النبض لحقل الولاية
+            wilayaSelect.classList.add('wilaya-pulse');
+        }
+
+        // =============================================================================
+        // 📤 نظام إرسال الطلبات الأصلي من الكود الثاني - مع الحفظ المحلي و no-cors
+        // =============================================================================
+
+        // التحقق من الاتصال بالإنترنت
+        function checkInternetConnection() {
+            return navigator.onLine;
+        }
+
+        // حفظ الطلب في localStorage للإدارة
+        function saveOrderToLocalStorage(orderData) {
+            try {
+                const orderId = 'ORD-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+                const orderToSave = {
+                    id: orderId,
+                    timestamp: new Date().toISOString(),
+                    status: 'pending',
+                    customerName: orderData.customerName,
+                    customerPhone: orderData.customerPhone,
+                    customerAddress: orderData.customerAddress,
+                    customerCommune: orderData.customerCommune,
+                    wilaya: orderData.wilaya,
+                    deliveryType: orderData.deliveryType,
+                    items: orderData.items,
+                    subtotal: orderData.subtotal,
+                    discount: orderData.discount,
+                    deliveryCost: orderData.deliveryCost,
+                    total: orderData.total,
+                    totalPieces: orderData.totalPieces
+                };
+                const existingOrders = JSON.parse(localStorage.getItem('storeOrders') || '[]');
+                existingOrders.unshift(orderToSave);
+                localStorage.setItem('storeOrders', JSON.stringify(existingOrders));
+                console.log('💾 تم حفظ الطلب محلياً للإدارة:', orderId);
+                return true;
+            } catch (error) {
+                console.error('❌ خطأ في حفظ الطلب محلياً:', error);
+                return false;
+            }
+        }
+
+        // إرسال الطلب - النظام الأصلي مع no-cors والحفظ المحلي
+        async function submitOrder(orderData) {
+            try {
+                // إخفاء زر تأكيد الطلب
+                const confirmOrderBtn = document.getElementById('confirmOrderBtn');
+                confirmOrderBtn.style.display = 'none';
+
+                // إظهار نافذة تأكيد الطلب
+                showOrderConfirmation();
+                
+                // حفظ الطلب محلياً أولاً
+                const saveSuccess = saveOrderToLocalStorage(orderData);
+                if (!saveSuccess) {
+                    throw new Error('فشل في الحفظ المحلي');
+                }
+
+                // محاولة الإرسال إلى Google Sheets إذا كان هناك اتصال بالإنترنت
+                if (checkInternetConnection()) {
+                    try {
+                        console.log('📤 محاولة إرسال الطلب إلى Google Sheets...');
+                        // استخدام no-cors كما في الكود الأصلي
+                        await fetch(GOOGLE_SCRIPT_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(orderData)
+                        });
+                        console.log('✅ تم محاولة الإرسال (no-cors mode)');
+                    } catch (networkError) {
+                        console.log('🌐 لا يمكن الاتصال بالخادم، لكن الطلب محفوظ محلياً');
+                    }
+                } else {
+                    console.log('🌐 لا يوجد اتصال بالإنترنت - الطلب محفوظ محلياً فقط');
+                }
+
+                // الانتظار 3 ثوانٍ لمحاكاة عملية الإرسال
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                // إظهار رسالة النجاح
+                showOrderSuccessAndRedirect();
+                
+                return true;
+            } catch (error) {
+                console.error('❌ خطأ في معالجة الطلب:', error);
+                showNotification('❌ فشل في حفظ الطلب. يرجى المحاولة مرة أخرى', 'error');
+                // إعادة إظهار زر التأكيد في حالة الخطأ
+                const confirmOrderBtn = document.getElementById('confirmOrderBtn');
+                confirmOrderBtn.style.display = 'inline-flex';
+                return false;
+            }
+        }
+
+        // إظهار نافذة تأكيد الطلب
+        function showOrderConfirmation() {
+            const modal = document.getElementById('orderConfirmationModal');
+            const loading = document.getElementById('confirmationLoading');
+            const success = document.getElementById('confirmationSuccess');
+            
+            // إظهار قسم التحميل وإخفاء قسم النجاح
+            loading.style.display = 'flex';
+            success.style.display = 'none';
+            
+            // تحديث الرسالة
+            document.getElementById('confirmationMessage').textContent = 'جاري معالجة طلبك وتأكيد التفاصيل...';
+            
+            // إظهار النافذة
+            modal.classList.add('show');
+        }
+
+        // إظهار رسالة النجاح في نافذة التأكيد
+        function showOrderSuccessAndRedirect() {
+            const loading = document.getElementById('confirmationLoading');
+            const success = document.getElementById('confirmationSuccess');
+            
+            // إخفاء قسم التحميل وإظهار قسم النجاح
+            loading.style.display = 'none';
+            success.style.display = 'block';
+            
+            // تحديث الرسالة
+            document.getElementById('confirmationMessage').textContent = 'تم استلام طلبك بنجاح! سنتصل بك خلال 24 ساعة';
+            
+            // الانتظار 2 ثوانٍ ثم الانتقال تلقائياً للواجهة الرئيسية
+            setTimeout(() => {
+                closeOrderConfirmationAndRedirect();
+            }, 2000);
+        }
+
+        // تجهيز بيانات الطلب
+        function prepareOrderData(formData) {
+            const priceDetails = calculateTotalPrice();
+            const orderItems = cartItems.map(item => {
+                const itemDiscountInfo = calculateDiscountedPrice(item.price, item.quantity, item.key);
+                return {
+                    name: item.name,
+                    quantity: item.quantity,
+                    price: item.price,
+                    finalPrice: itemDiscountInfo.finalPrice,
+                    size: item.size,
+                    color: item.color,
+                    discount: itemDiscountInfo.hasDiscount ? itemDiscountInfo.discountAmount : 0,
+                    image: item.image
+                };
+            });
+
+            return {
+                timestamp: new Date().toLocaleString('fr-FR'),
+                customerName: formData.name,
+                customerPhone: formData.phone,
+                customerAddress: formData.address,
+                customerCommune: formData.commune,
+                wilaya: selectedWilaya,
+                deliveryType: selectedDeliveryType,
+                items: orderItems,
+                subtotal: priceDetails.subtotal,
+                discount: priceDetails.discount,
+                deliveryCost: priceDetails.deliveryCost,
+                total: priceDetails.total,
+                totalPieces: priceDetails.totalPieces,
+                isFreeDelivery: priceDetails.isFreeDelivery,
+                status: 'جديد'
+            };
+        }
+
+        // إعادة تعيين النموذج
+        function resetOrderForm() {
+            cartItems = [];
+            document.getElementById('orderForm').reset();
+            selectedWilaya = null;
+            selectedDeliveryType = null;
+            updateCartDisplay();
+            updateSelectedProducts();
+            updatePrice();
+            document.getElementById('deliveryTypeSection').style.display = 'none';
+            const wilayaSelect = document.getElementById('wilaya');
+            wilayaSelect.classList.add('wilaya-pulse');
+            wilayaSelect.classList.remove('wilaya-selected');
+            
+            // إخفاء معلومات التوصيل وزر التأكيد
+            document.getElementById('personalInfoSection').style.display = 'none';
+            
+            // إزالة تأثيرات الحقول
+            document.querySelectorAll('input, textarea').forEach(field => {
+                field.classList.remove('blink-field', 'field-filled', 'field-empty');
+            });  
+            
+            // إعادة إظهار زر تأكيد الطلب
+            const confirmOrderBtn = document.getElementById('confirmOrderBtn');
+            confirmOrderBtn.style.display = 'inline-flex';
+            confirmOrderBtn.disabled = true;
+            
+            managePulseEffects();
+        }
+        
+    </script>
+
+    <!-- تذييل الصفحة - تم التعديل لدعم الشعار الجديد -->
+    <footer style="background: var(--dark); color: white; padding: 2rem 0; margin-top: 3rem; text-align: center;">
+        <div class="container">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <div class="logo" style="color: white;">
+                    <img src="" alt="شعار المتجر" class="store-logo-small" id="storeLogoFooter" style="display: none;">
+                    <span id="storeIconFooter">👑</span>
+                    <span id="storeNameFooter"></span>
+                </div>
+                <p style="margin: 0; opacity: 0.8; font-size: 0.9rem;">
+                    <span id="storeAddressFooter"></span>  جودة عالية | أسعار مناسبة
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#" id="facebookFooter" style="color: white; font-size: 1.2rem;" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" id="instagramFooter" style="color: white; font-size: 1.2rem;" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" id="whatsappFooter" style="color: white; font-size: 1.2rem;" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" id="messengerFooter" style="color: white; font-size: 1.2rem;" target="_blank">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </a>
+                    <!-- إضافة زر الفايبر في التذييل -->
+                    <a href="#" id="viberFooter" style="color: white; font-size: 1.2rem;" target="_blank">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                </div>
+                <p style="margin: 1rem 0 0 0; opacity: 0.6; font-size: 0.8rem;">
+                    ©  جميع الحقوق محفوظة. 
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
