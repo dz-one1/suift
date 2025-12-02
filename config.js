@@ -534,8 +534,8 @@ const STORE_CONFIG = {
       3,
       4
     ],
-    "enablePromotionalDiscount": true,
-    "promotionalDiscountPercent": 25,
+    "enablePromotionalDiscount": false,
+    "promotionalDiscountPercent": null,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
