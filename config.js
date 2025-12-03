@@ -530,7 +530,7 @@ const STORE_CONFIG = {
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
-    "minQuantityForDiscount": 2,
+    "minQuantityForDiscount": 3,
     "discountPerItem": 500,
     "discountScope": "all",
     "discountProducts": [
@@ -548,7 +548,7 @@ const STORE_CONFIG = {
     "name": "  معرض الجودة",
     "storeIcon": ".",
     "storeTitle": " أحدث موديلات ",
-    "tagline": "متجر أفخم الملابس التربية للاطفال",
+    "tagline": "متجر أفخم الملابس  للاطفال",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
