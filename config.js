@@ -541,15 +541,15 @@ const STORE_CONFIG = {
     ]
   },
   "STORE_INFO": {
-    "name": "  معرض الجودة",
+    "name": " SANIX-DZ",
     "storeIcon": ".",
-    "storeTitle": " أحدث موديلات ",
-    "tagline": "متجر أفخم الملابس  للاطفال",
+    "storeTitle": " أحدث موديلات الأطفال لسنة 2025",
+    "tagline": "أحدث موديلات الأطفال لسنة 2025",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764364345578-Screenshot_20251110-233548_Perplexity.jpg",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764766555438-product-store-logo-1763847608230.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
