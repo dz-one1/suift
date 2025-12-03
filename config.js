@@ -526,8 +526,8 @@ const STORE_CONFIG = {
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
-    "minQuantityForDiscount": 2,
-    "discountPerItem": 500,
+    "minQuantityForDiscount": 1,
+    "discountPerItem": 600,
     "discountScope": "all",
     "discountProducts": [],
     "enablePromotionalDiscount": false,
