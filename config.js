@@ -96,11 +96,6 @@ const STORE_CONFIG = {
           "ageFrom": "9",
           "ageTo": "10",
           "size": "L"
-        },
-        {
-          "ageFrom": "11",
-          "ageTo": "12",
-          "size": "XL"
         }
       ],
       "colorImages": {},
@@ -139,7 +134,7 @@ const STORE_CONFIG = {
       "ageRanges": [],
       "colorImages": {},
       "sizeGuide": {
-        "enabled": true,
+        "enabled": false,
         "guide": {
           "XL": {
             "heightFrom": 160,
@@ -529,16 +524,16 @@ const STORE_CONFIG = {
     "minQuantityForDiscount": 1,
     "discountPerItem": 600,
     "discountScope": "all",
-    "discountProducts": [],
+    "discountProducts": [
+      2,
+      3,
+      4
+    ],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
-    "promoDiscountProducts": [
-      2,
-      3,
-      4
-    ]
+    "promoDiscountProducts": []
   },
   "STORE_INFO": {
     "name": " SANIX-DZ",
