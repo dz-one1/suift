@@ -522,11 +522,7 @@ const STORE_CONFIG = {
       ],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": [
-      2,
-      3,
-      4
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
