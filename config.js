@@ -542,11 +542,7 @@ const STORE_CONFIG = {
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
-    "promoDiscountProducts": [
-      2,
-      3,
-      4
-    ]
+    "promoDiscountProducts": []
   },
   "STORE_INFO": {
     "name": "  معرض الجودة",
