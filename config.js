@@ -525,20 +525,20 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "all",
-    "discountProducts": [
-      2,
-      3,
-      4
-    ],
-    "enablePromotionalDiscount": false,
+    "discountProducts": [],
+    "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
-    "promoDiscountProducts": []
+    "promoDiscountProducts": [
+      2,
+      3,
+      4
+    ]
   },
   "STORE_INFO": {
     "name": "  معرض الجودة",
