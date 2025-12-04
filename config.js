@@ -1,157 +1,5 @@
 const STORE_CONFIG = {
-  "PRODUCTS": {
-    "2": {
-      "name": "مودال1",
-      "price": 2900,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
-      "description": "قمحة تركية",
-      "availableSizes": [
-        "S",
-        "M",
-        "L"
-      ],
-      "availableColors": [
-        "أزرق",
-        "أحمر"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أزرق": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أزرق-1764363830146-Screenshot_20251128-190616_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "4",
-              "ageTo": "5",
-              "size": "S"
-            },
-            {
-              "ageFrom": "6",
-              "ageTo": "7",
-              "size": "M"
-            }
-          ]
-        },
-        "أحمر": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أحمر-1764363896583-Screenshot_20251128-190638_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "6",
-              "ageTo": "7",
-              "size": "M"
-            }
-          ]
-        }
-      },
-      "enableMeasurements": true,
-      "measurements": [
-        {
-          "size": "الطول",
-          "value": "150",
-          "category": "custom",
-          "id": 1764707237061
-        }
-      ],
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "M2": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 45,
-            "weightTo": 50
-          }
-        }
-      }
-    },
-    "3": {
-      "name": "مودال2",
-      "price": 5800,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764433655760-Adobe%20Express%20-%20file.jpg",
-      "description": "",
-      "availableSizes": [
-        "S",
-        "M",
-        "XL",
-        "L"
-      ],
-      "availableColors": [
-        "وردي"
-      ],
-      "ageRanges": [
-        {
-          "ageFrom": "5",
-          "ageTo": "6",
-          "size": "S"
-        },
-        {
-          "ageFrom": "7",
-          "ageTo": "8",
-          "size": "M"
-        },
-        {
-          "ageFrom": "9",
-          "ageTo": "10",
-          "size": "L"
-        }
-      ],
-      "colorImages": {},
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "M": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 40,
-            "weightTo": 55
-          },
-          "L": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 50,
-            "weightTo": 60
-          }
-        }
-      }
-    },
-    "4": {
-      "name": "مودال3",
-      "price": 6000,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764629908672-modal7.jpg.webp",
-      "description": "",
-      "availableSizes": [
-        "S",
-        "XL",
-        "XXL"
-      ],
-      "availableColors": [
-        "وردي",
-        "أزرق"
-      ],
-      "ageRanges": [],
-      "colorImages": {},
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {
-          "XL": {
-            "heightFrom": 160,
-            "heightTo": 170,
-            "weightFrom": 55,
-            "weightTo": 65
-          },
-          "XXL": {
-            "heightFrom": 160,
-            "heightTo": 185,
-            "weightFrom": 60,
-            "weightTo": 75
-          }
-        }
-      }
-    }
-  },
+  "PRODUCTS": {},
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -520,9 +368,9 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
-    "minQuantityForDiscount": 1,
-    "discountPerItem": 600,
+    "enableQuantityDiscount": false,
+    "minQuantityForDiscount": null,
+    "discountPerItem": null,
     "discountScope": "all",
     "discountProducts": [
       2,
@@ -530,7 +378,7 @@ const STORE_CONFIG = {
       4
     ],
     "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": 15,
+    "promotionalDiscountPercent": null,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
