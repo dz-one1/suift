@@ -6,9 +6,8 @@
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764967481251-modle6.jpg",
       "description": "بدلة تركية  للأميرات",
       "availableSizes": [
-        "S",
         "M",
-        "L"
+        "XL"
       ],
       "availableColors": [
         "أحمر"
@@ -49,11 +48,17 @@
       "sizeGuide": {
         "enabled": true,
         "guide": {
-          "M2": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 45,
-            "weightTo": 50
+          "M": {
+            "heightFrom": 100,
+            "heightTo": 120,
+            "weightFrom": 15,
+            "weightTo": 20
+          },
+          "XL": {
+            "heightFrom": 115,
+            "heightTo": 145,
+            "weightFrom": 25,
+            "weightTo": 30
           }
         }
       },
@@ -61,7 +66,7 @@
       "stock": 0,
       "category": "",
       "createdAt": "2025-12-05T18:44:46.785Z",
-      "updatedAt": "2025-12-05T21:39:47.233Z"
+      "updatedAt": "2025-12-05T21:46:56.787Z"
     },
     "3": {
       "name": "مودال الكاجوال ",
