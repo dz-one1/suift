@@ -414,7 +414,10 @@
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      2,
+      3
+    ]
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
@@ -425,7 +428,7 @@
       3,
       4
     ],
-    "enablePromotionalDiscount": true,
+    "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
