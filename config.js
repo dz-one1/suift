@@ -449,7 +449,7 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764960659389-product-store-logo-1763847608230.jpg",
+    "logo": "",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
