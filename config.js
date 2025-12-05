@@ -80,7 +80,7 @@ const STORE_CONFIG = {
     "3": {
       "name": "مودال2",
       "price": 5800,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764962585448-Modal5.jpg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764967629149-modal3.jpg",
       "description": "",
       "availableSizes": [
         "S",
@@ -130,12 +130,12 @@ const STORE_CONFIG = {
       "category": "",
       "featured": false,
       "createdAt": "2025-12-05T18:45:27.774Z",
-      "updatedAt": "2025-12-05T19:23:16.762Z"
+      "updatedAt": "2025-12-05T20:47:19.041Z"
     },
     "4": {
       "name": "مودال3",
       "price": 6000,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764960363263-modal3.jpg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764967702985-modal1.jpeg",
       "description": "",
       "availableSizes": [
         "S",
@@ -169,7 +169,7 @@ const STORE_CONFIG = {
       "category": "",
       "featured": false,
       "createdAt": "2025-12-05T18:46:14.306Z",
-      "updatedAt": "2025-12-05T18:46:14.306Z"
+      "updatedAt": "2025-12-05T20:48:48.784Z"
     }
   },
   "DELIVERY_PRICES": {
