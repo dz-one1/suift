@@ -8,7 +8,7 @@ const STORE_CONFIG = {
     "2": {
       "name": "مودال",
       "price": 2900,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764962956413-modle6.jpg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764967481251-modle6.jpg",
       "description": "قمحة تركية",
       "availableSizes": [
         "S",
@@ -71,11 +71,11 @@ const STORE_CONFIG = {
           }
         }
       },
-      "featured": true,
+      "featured": false,
       "stock": 0,
       "category": "",
       "createdAt": "2025-12-05T18:44:46.785Z",
-      "updatedAt": "2025-12-05T19:29:27.210Z"
+      "updatedAt": "2025-12-05T20:44:47.862Z"
     },
     "3": {
       "name": "مودال2",
