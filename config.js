@@ -393,26 +393,23 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
     },
     "home": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": [
-      2,
-      3
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
+    "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
-    "discountPerItem": 600,
+    "discountPerItem": 500,
     "discountScope": "all",
     "discountProducts": [
       3
