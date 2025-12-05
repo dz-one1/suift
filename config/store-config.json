@@ -1,17 +1,18 @@
 {
   "PRODUCTS": {
     "2": {
-      "name": "مودال1",
+      "name": "مودال",
       "price": 2900,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
-      "description": "مودال تركي",
+      "description": "قمحة تركية",
       "availableSizes": [
         "S",
-        "M"
+        "M",
+        "L"
       ],
       "availableColors": [
-        "أحمر",
-        "أزرق"
+        "أزرق",
+        "أحمر"
       ],
       "ageRanges": [],
       "colorImages": {
@@ -45,15 +46,27 @@
           ]
         }
       },
+      "enableMeasurements": true,
+      "measurements": [
+        {
+          "size": "الطول",
+          "value": "150",
+          "category": "custom",
+          "id": 1764707237061
+        }
+      ],
       "sizeGuide": {
         "enabled": true,
-        "guide": {}
+        "guide": {
+          "M2": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 45,
+            "weightTo": 50
+          }
+        }
       },
-      "stock": 0,
-      "category": "للصغار",
-      "featured": false,
-      "createdAt": "2025-12-05T14:53:24.193Z",
-      "updatedAt": "2025-12-05T14:53:24.193Z"
+      "featured": false
     },
     "3": {
       "name": "مودال2",
@@ -63,8 +76,8 @@
       "availableSizes": [
         "S",
         "M",
-        "L",
-        "XL"
+        "XL",
+        "L"
       ],
       "availableColors": [
         "وردي"
@@ -84,15 +97,60 @@
           "ageFrom": "9",
           "ageTo": "10",
           "size": "L"
-        },
-        {
-          "ageFrom": "11",
-          "ageTo": "12",
-          "size": "XL"
         }
       ],
       "colorImages": {},
-      "featured": false
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {
+          "M": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 40,
+            "weightTo": 55
+          },
+          "L": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 50,
+            "weightTo": 60
+          }
+        }
+      }
+    },
+    "4": {
+      "name": "مودال3",
+      "price": 6000,
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764629908672-modal7.jpg.webp",
+      "description": "",
+      "availableSizes": [
+        "S",
+        "XL",
+        "XXL"
+      ],
+      "availableColors": [
+        "وردي",
+        "أزرق"
+      ],
+      "ageRanges": [],
+      "colorImages": {},
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {
+          "XL": {
+            "heightFrom": 160,
+            "heightTo": 170,
+            "weightFrom": 55,
+            "weightTo": 65
+          },
+          "XXL": {
+            "heightFrom": 160,
+            "heightTo": 185,
+            "weightFrom": 60,
+            "weightTo": 75
+          }
+        }
+      }
     }
   },
   "DELIVERY_PRICES": {
@@ -332,159 +390,44 @@
   "FREE_DELIVERY": {
     "desk": {
       "enabled": false,
-      "minAmount": 2800,
-      "wilayas": [
-        "01 - أدرار",
-        "02 - الشلف",
-        "03 - الأغواط",
-        "04 - أم البواقي",
-        "05 - باتنة",
-        "06 - بجاية",
-        "07 - بسكرة",
-        "08 - بشار",
-        "09 - البليدة",
-        "10 - البويرة",
-        "11 - تمنراست",
-        "12 - تبسة",
-        "13 - تلمسان",
-        "14 - تيارت",
-        "15 - تيزي وزو",
-        "16 - الجزائر",
-        "17 - الجلفة",
-        "18 - جيجل",
-        "19 - سطيف",
-        "20 - سعيدة",
-        "21 - سكيكدة",
-        "22 - سيدي بلعباس",
-        "23 - عنابة",
-        "24 - قالمة",
-        "25 - قسنطينة",
-        "26 - المدية",
-        "27 - مستغانم",
-        "28 - المسيلة",
-        "29 - معسكر",
-        "30 - ورقلة",
-        "31 - وهران",
-        "32 - البيض",
-        "33 - إليزي",
-        "34 - برج بوعريريج",
-        "35 - بومرداس",
-        "36 - الطارف",
-        "37 - تندوف",
-        "38 - تيسمسيلت",
-        "39 - الوادي",
-        "40 - خنشلة",
-        "41 - سوق أهراس",
-        "42 - تيبازة",
-        "43 - ميلة",
-        "44 - عين الدفلى",
-        "45 - النعامة",
-        "46 - عين تموشنت",
-        "47 - غرداية",
-        "48 - غليزان",
-        "49 - تيميمون",
-        "50 - برج باجي مختار",
-        "51 - أولاد جلال",
-        "52 - بني عباس",
-        "53 - عين صالح",
-        "54 - عين قزام",
-        "55 - توقرت",
-        "56 - جانت",
-        "57 - المغير",
-        "58 - المنيعة"
-      ],
-      "minQuantity": null
+      "minAmount": 0,
+      "wilayas": [],
+      "minQuantity": 1
     },
     "home": {
       "enabled": false,
-      "minAmount": 2800,
-      "wilayas": [
-        "01 - أدرار",
-        "02 - الشلف",
-        "03 - الأغواط",
-        "04 - أم البواقي",
-        "05 - باتنة",
-        "06 - بجاية",
-        "07 - بسكرة",
-        "08 - بشار",
-        "09 - البليدة",
-        "10 - البويرة",
-        "11 - تمنراست",
-        "12 - تبسة",
-        "13 - تلمسان",
-        "14 - تيارت",
-        "15 - تيزي وزو",
-        "16 - الجزائر",
-        "17 - الجلفة",
-        "18 - جيجل",
-        "19 - سطيف",
-        "20 - سعيدة",
-        "21 - سكيكدة",
-        "22 - سيدي بلعباس",
-        "23 - عنابة",
-        "24 - قالمة",
-        "25 - قسنطينة",
-        "26 - المدية",
-        "27 - مستغانم",
-        "28 - المسيلة",
-        "29 - معسكر",
-        "30 - ورقلة",
-        "31 - وهران",
-        "32 - البيض",
-        "33 - إليزي",
-        "34 - برج بوعريريج",
-        "35 - بومرداس",
-        "36 - الطارف",
-        "37 - تندوف",
-        "38 - تيسمسيلت",
-        "39 - الوادي",
-        "40 - خنشلة",
-        "41 - سوق أهراس",
-        "42 - تيبازة",
-        "43 - ميلة",
-        "44 - عين الدفلى",
-        "45 - النعامة",
-        "46 - عين تموشنت",
-        "47 - غرداية",
-        "48 - غليزان",
-        "49 - تيميمون",
-        "50 - برج باجي مختار",
-        "51 - أولاد جلال",
-        "52 - بني عباس",
-        "53 - عين صالح",
-        "54 - عين قزام",
-        "55 - توقرت",
-        "56 - جانت",
-        "57 - المغير",
-        "58 - المنيعة"
-      ],
-      "minQuantity": null
+      "minAmount": 0,
+      "wilayas": [],
+      "minQuantity": 1
     },
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
-    "discountPerItem": 800,
-    "discountScope": "selected",
-    "discountProducts": [],
-    "enablePromotionalDiscount": true,
-    "promotionalDiscountPercent": 20,
+    "discountPerItem": 600,
+    "discountScope": "all",
+    "discountProducts": [
+      3,
+      4
+    ],
+    "enablePromotionalDiscount": false,
+    "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
-    "promoDiscountScope": "selected",
+    "promoDiscountScope": "all",
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
-    "name": "  معرض الجودة",
-    "storeIcon": "",
-    "storeTitle": " أحدث موديلات ",
-    "tagline": "متجر أفخم الملابس التربية للاطفال",
+    "name": " SANIX-DZ",
+    "storeIcon": ".",
+    "storeTitle": " أحدث موديلات الأطفال لسنة 2025",
+    "tagline": "أحدث موديلات الأطفال لسنة 2025",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764364345578-Screenshot_20251110-233548_Perplexity.jpg",
-    "facebookUrl": "",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764766555438-product-store-logo-1763847608230.jpg",
+    "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
     "viberNumber": "",
@@ -623,14 +566,14 @@
       "heightTo": 130,
       "weightFrom": 14,
       "weightTo": 16,
-      "enabled": true
+      "enabled": false
     },
     "M": {
       "heightFrom": 130,
       "heightTo": 150,
       "weightFrom": 16,
       "weightTo": 22,
-      "enabled": true
+      "enabled": false
     },
     "L": {
       "heightFrom": 180,
