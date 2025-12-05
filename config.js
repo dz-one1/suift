@@ -8,7 +8,7 @@ const STORE_CONFIG = {
     "2": {
       "name": "مودال",
       "price": 2900,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764363735577-Screenshot_20251128-190652_Gallery.jpg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764960270351-modal4.jpg",
       "description": "قمحة تركية",
       "availableSizes": [
         "S",
@@ -16,8 +16,8 @@ const STORE_CONFIG = {
         "L"
       ],
       "availableColors": [
-        "أزرق",
-        "أحمر"
+        "أحمر",
+        "أزرق"
       ],
       "ageRanges": [],
       "colorImages": {
@@ -71,18 +71,22 @@ const STORE_CONFIG = {
           }
         }
       },
-      "featured": false
+      "featured": false,
+      "stock": 0,
+      "category": "",
+      "createdAt": "2025-12-05T18:44:46.785Z",
+      "updatedAt": "2025-12-05T18:44:46.785Z"
     },
     "3": {
       "name": "مودال2",
       "price": 5800,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764433655760-Adobe%20Express%20-%20file.jpg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764960318738-modal2.jpg",
       "description": "",
       "availableSizes": [
         "S",
         "M",
-        "XL",
-        "L"
+        "L",
+        "XL"
       ],
       "availableColors": [
         "وردي"
@@ -121,12 +125,17 @@ const STORE_CONFIG = {
             "weightTo": 60
           }
         }
-      }
+      },
+      "stock": 0,
+      "category": "",
+      "featured": false,
+      "createdAt": "2025-12-05T18:45:27.774Z",
+      "updatedAt": "2025-12-05T18:45:27.774Z"
     },
     "4": {
       "name": "مودال3",
       "price": 6000,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764629908672-modal7.jpg.webp",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764960363263-modal3.jpg",
       "description": "",
       "availableSizes": [
         "S",
@@ -134,8 +143,8 @@ const STORE_CONFIG = {
         "XXL"
       ],
       "availableColors": [
-        "وردي",
-        "أزرق"
+        "أزرق",
+        "وردي"
       ],
       "ageRanges": [],
       "colorImages": {},
@@ -155,7 +164,12 @@ const STORE_CONFIG = {
             "weightTo": 75
           }
         }
-      }
+      },
+      "stock": 0,
+      "category": "",
+      "featured": false,
+      "createdAt": "2025-12-05T18:46:14.306Z",
+      "updatedAt": "2025-12-05T18:46:14.306Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -408,7 +422,7 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 600,
     "discountScope": "all",
@@ -416,7 +430,7 @@ const STORE_CONFIG = {
       3,
       4
     ],
-    "enablePromotionalDiscount": false,
+    "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
@@ -431,7 +445,7 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764766555438-product-store-logo-1763847608230.jpg",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1764960659389-product-store-logo-1763847608230.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
