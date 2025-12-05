@@ -421,7 +421,8 @@ const STORE_CONFIG = {
     },
     "freeDeliveryProducts": [
       2,
-      3
+      3,
+      4
     ]
   },
   "DISCOUNTS": {
@@ -441,10 +442,11 @@ const STORE_CONFIG = {
   },
   "STORE_INFO": {
     "name": " SANIX-DZ",
-    "storeIcon": ".",
+    "storeIcon": "",
     "storeTitle": " أحدث موديلات الأطفال لسنة 2025",
     "tagline": "أحدث موديلات الأطفال لسنة 2025",
     "phoneNumbers": [
+      "0651687655",
       "0671466489",
       "0551102155"
     ],
