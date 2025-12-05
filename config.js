@@ -131,45 +131,6 @@ const STORE_CONFIG = {
       "featured": false,
       "createdAt": "2025-12-05T18:45:27.774Z",
       "updatedAt": "2025-12-05T20:47:19.041Z"
-    },
-    "4": {
-      "name": "مودال3",
-      "price": 6000,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-4-1764967702985-modal1.jpeg",
-      "description": "",
-      "availableSizes": [
-        "S",
-        "XL",
-        "XXL"
-      ],
-      "availableColors": [
-        "أزرق",
-        "وردي"
-      ],
-      "ageRanges": [],
-      "colorImages": {},
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {
-          "XL": {
-            "heightFrom": 160,
-            "heightTo": 170,
-            "weightFrom": 55,
-            "weightTo": 65
-          },
-          "XXL": {
-            "heightFrom": 160,
-            "heightTo": 185,
-            "weightFrom": 60,
-            "weightTo": 75
-          }
-        }
-      },
-      "stock": 0,
-      "category": "",
-      "featured": false,
-      "createdAt": "2025-12-05T18:46:14.306Z",
-      "updatedAt": "2025-12-05T20:48:48.784Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -421,8 +382,7 @@ const STORE_CONFIG = {
     },
     "freeDeliveryProducts": [
       2,
-      3,
-      4
+      3
     ]
   },
   "DISCOUNTS": {
@@ -431,8 +391,7 @@ const STORE_CONFIG = {
     "discountPerItem": 600,
     "discountScope": "all",
     "discountProducts": [
-      3,
-      4
+      3
     ],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 15,
