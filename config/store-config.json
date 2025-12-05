@@ -1,47 +1,38 @@
 {
   "PRODUCTS": {
     "2": {
-      "name": "مودال",
-      "price": 2900,
+      "name": "مودال سندريلا",
+      "price": 5600,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764967481251-modle6.jpg",
-      "description": "قمحة تركية",
+      "description": "بدلة تركية  للأميرات",
       "availableSizes": [
         "S",
         "M",
         "L"
       ],
       "availableColors": [
-        "أحمر",
-        "أزرق"
+        "أحمر"
       ],
       "ageRanges": [],
       "colorImages": {
         "أزرق": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أزرق-1764363830146-Screenshot_20251128-190616_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "4",
-              "ageTo": "5",
-              "size": "S"
-            },
-            {
-              "ageFrom": "6",
-              "ageTo": "7",
-              "size": "M"
-            }
-          ]
+          "images": [],
+          "ageRanges": []
         },
         "أحمر": {
           "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أحمر-1764363896583-Screenshot_20251128-190638_Gallery.jpg"
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-أحمر-1764970679608-modle6.jpg"
           ],
           "ageRanges": [
             {
               "ageFrom": "6",
               "ageTo": "7",
               "size": "M"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "XL"
             }
           ]
         }
@@ -70,13 +61,13 @@
       "stock": 0,
       "category": "",
       "createdAt": "2025-12-05T18:44:46.785Z",
-      "updatedAt": "2025-12-05T20:44:47.862Z"
+      "updatedAt": "2025-12-05T21:39:47.233Z"
     },
     "3": {
-      "name": "مودال2",
-      "price": 5800,
+      "name": "مودال الكاجوال ",
+      "price": 4500,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764967629149-modal3.jpg",
-      "description": "",
+      "description": "مودال جداب للأطفال ",
       "availableSizes": [
         "M",
         "L"
@@ -149,7 +140,7 @@
       "category": "",
       "featured": false,
       "createdAt": "2025-12-05T18:45:27.774Z",
-      "updatedAt": "2025-12-05T21:20:44.031Z"
+      "updatedAt": "2025-12-05T21:41:25.530Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -433,9 +424,9 @@
     "whatsappUrl": "https://wa.me/213671466489"
   },
   "GOOGLE_SHEETS": {
-    "url": "",
-    "description": "",
-    "autoUpdate": false
+    "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
+    "description": "  جدول الطلبات",
+    "autoUpdate": true
   },
   "AVAILABLE_COLORS": [
     "أبيض",
