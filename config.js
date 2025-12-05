@@ -83,13 +83,12 @@ const STORE_CONFIG = {
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764967629149-modal3.jpg",
       "description": "",
       "availableSizes": [
-        "S",
         "M",
-        "L",
-        "XL"
+        "L"
       ],
       "availableColors": [
-        "وردي"
+        "أحمر",
+        "أزرق"
       ],
       "ageRanges": [
         {
@@ -108,7 +107,32 @@ const STORE_CONFIG = {
           "size": "L"
         }
       ],
-      "colorImages": {},
+      "colorImages": {
+        "أزرق": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-أزرق-1764969226626-modal4.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "M"
+            }
+          ]
+        },
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-أحمر-1764969513963-modal3.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "9",
+              "ageTo": "12",
+              "size": "L"
+            }
+          ]
+        }
+      },
       "sizeGuide": {
         "enabled": true,
         "guide": {
@@ -130,7 +154,7 @@ const STORE_CONFIG = {
       "category": "",
       "featured": false,
       "createdAt": "2025-12-05T18:45:27.774Z",
-      "updatedAt": "2025-12-05T20:47:19.041Z"
+      "updatedAt": "2025-12-05T21:20:44.031Z"
     }
   },
   "DELIVERY_PRICES": {
