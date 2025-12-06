@@ -10,7 +10,7 @@
         "XL"
       ],
       "availableColors": [
-        "Ø£Ø­ÙØ±"
+        "أحمر"
       ],
       "ageRanges": [],
       "colorImages": {
@@ -63,10 +63,10 @@
         }
       },
       "featured": false,
-      "stock": 0,
-      "category": "",
+      "stock": 100,
+      "category": "عام",
       "createdAt": "2025-12-05T18:44:46.785Z",
-      "updatedAt": "2025-12-05T21:46:56.787Z"
+      "updatedAt": "2025-12-06T09:43:08.278Z"
     },
     "3": {
       "name": "مودال الكاجوال ",
@@ -77,10 +77,7 @@
         "M",
         "L"
       ],
-      "availableColors": [
-        "Ø£Ø­ÙØ±",
-        "Ø£Ø²Ø±Ù"
-      ],
+      "availableColors": [],
       "ageRanges": [
         {
           "ageFrom": "5",
@@ -141,11 +138,11 @@
           }
         }
       },
-      "stock": 0,
-      "category": "",
+      "stock": 100,
+      "category": "عام",
       "featured": false,
       "createdAt": "2025-12-05T18:45:27.774Z",
-      "updatedAt": "2025-12-05T21:41:25.530Z"
+      "updatedAt": "2025-12-06T09:43:13.743Z"
     }
   },
   "DELIVERY_PRICES": {
