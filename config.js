@@ -5,24 +5,24 @@
 
 const STORE_CONFIG = {
   "PRODUCTS": {
-    "1765041742900": {
-      "name": "منتج جديد",
+    "1765044153726": {
+      "name": "منتج بدون اسم",
       "price": 0,
+      "stock": 0,
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-1765044195716-Screenshot_20251128-190616_Gallery.jpg",
       "description": "",
-      "stock": 100,
-      "category": "عام",
-      "featured": false,
-      "availableColors": [],
+      "category": "",
       "availableSizes": [],
-      "ageRanges": [],
+      "availableColors": [],
+      "featured": false,
+      "createdAt": "2025-12-06T18:02:33.726Z",
+      "updatedAt": "2025-12-06T18:03:50.175Z",
       "colorImages": {},
       "sizeGuide": {
         "enabled": false,
         "guide": {}
       },
-      "createdAt": "2025-12-06T17:22:22.900Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765041742900-1765043536004-modal2.jpeg",
-      "updatedAt": "2025-12-06T17:52:21.875Z"
+      "ageRanges": []
     }
   },
   "DELIVERY_PRICES": {
