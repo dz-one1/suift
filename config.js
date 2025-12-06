@@ -4,382 +4,237 @@
 // =============================================================================
 
 const STORE_CONFIG = {
-  "PRODUCTS": {
-    "2": {
-      "name": "مودال سندريلا",
-      "price": 5600,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-1764967481251-modle6.jpg",
-      "description": "بدلة تركية  للأميرات",
-      "availableSizes": [
-        "M",
-        "XL"
-      ],
-      "availableColors": [
-        "أحمر"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "Ø£Ø²Ø±Ù": {
-          "images": [],
-          "ageRanges": []
-        },
-        "Ø£Ø­ÙØ±": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-2-Ø£Ø­ÙØ±-1764970679608-modle6.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "6",
-              "ageTo": "7",
-              "size": "M"
-            },
-            {
-              "ageFrom": "8",
-              "ageTo": "10",
-              "size": "XL"
-            }
-          ]
-        }
-      },
-      "enableMeasurements": true,
-      "measurements": [
-        {
-          "size": "Ø§ÙØ·ÙÙ",
-          "value": "150",
-          "category": "custom",
-          "id": 1764707237061
-        }
-      ],
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "M": {
-            "heightFrom": 100,
-            "heightTo": 120,
-            "weightFrom": 15,
-            "weightTo": 20
-          },
-          "XL": {
-            "heightFrom": 115,
-            "heightTo": 145,
-            "weightFrom": 25,
-            "weightTo": 30
-          }
-        }
-      },
-      "featured": false,
-      "stock": 100,
-      "category": "عام",
-      "createdAt": "2025-12-05T18:44:46.785Z",
-      "updatedAt": "2025-12-06T09:43:08.278Z"
-    },
-    "3": {
-      "name": "مودال الكاجوال ",
-      "price": 4500,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-1764967629149-modal3.jpg",
-      "description": "مودال جداب للأطفال ",
-      "availableSizes": [
-        "M",
-        "L"
-      ],
-      "availableColors": [],
-      "ageRanges": [
-        {
-          "ageFrom": "5",
-          "ageTo": "6",
-          "size": "S"
-        },
-        {
-          "ageFrom": "7",
-          "ageTo": "8",
-          "size": "M"
-        },
-        {
-          "ageFrom": "9",
-          "ageTo": "10",
-          "size": "L"
-        }
-      ],
-      "colorImages": {
-        "Ø£Ø²Ø±Ù": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-Ø£Ø²Ø±Ù-1764969226626-modal4.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "5",
-              "ageTo": "7",
-              "size": "M"
-            }
-          ]
-        },
-        "Ø£Ø­ÙØ±": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-3-Ø£Ø­ÙØ±-1764969513963-modal3.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "9",
-              "ageTo": "12",
-              "size": "L"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "M": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 40,
-            "weightTo": 55
-          },
-          "L": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 50,
-            "weightTo": 60
-          }
-        }
-      },
-      "stock": 100,
-      "category": "عام",
-      "featured": false,
-      "createdAt": "2025-12-05T18:45:27.774Z",
-      "updatedAt": "2025-12-06T09:43:13.743Z"
-    }
-  },
+  "PRODUCTS": {},
   "DELIVERY_PRICES": {
-    "01 - Ø£Ø¯Ø±Ø§Ø±": {
+    "01 - أدرار": {
       "home": 1100,
       "desk": 600
     },
-    "02 - Ø§ÙØ´ÙÙ": {
+    "02 - الشلف": {
       "home": 700,
       "desk": 400
     },
-    "03 - Ø§ÙØ£ØºÙØ§Ø·": {
+    "03 - الأغواط": {
       "home": 1000,
       "desk": 600
     },
-    "04 - Ø£Ù Ø§ÙØ¨ÙØ§ÙÙ": {
+    "04 - أم البواقي": {
       "home": 650,
       "desk": 400
     },
-    "05 - Ø¨Ø§ØªÙØ©": {
+    "05 - باتنة": {
       "home": 700,
       "desk": 400
     },
-    "06 - Ø¨Ø¬Ø§ÙØ©": {
+    "06 - بجاية": {
       "home": 700,
       "desk": 400
     },
-    "07 - Ø¨Ø³ÙØ±Ø©": {
+    "07 - بسكرة": {
       "home": 900,
       "desk": 500
     },
-    "08 - Ø¨Ø´Ø§Ø±": {
+    "08 - بشار": {
       "home": 1100,
       "desk": 600
     },
-    "09 - Ø§ÙØ¨ÙÙØ¯Ø©": {
+    "09 - البليدة": {
       "home": 500,
       "desk": 250
     },
-    "10 - Ø§ÙØ¨ÙÙØ±Ø©": {
+    "10 - البويرة": {
       "home": 700,
       "desk": 400
     },
-    "11 - ØªÙÙØ±Ø§Ø³Øª": {
+    "11 - تمنراست": {
       "home": 1300,
       "desk": 800
     },
-    "12 - ØªØ¨Ø³Ø©": {
+    "12 - تبسة": {
       "home": 700,
       "desk": 400
     },
-    "13 - ØªÙÙØ³Ø§Ù": {
+    "13 - تلمسان": {
       "home": 800,
       "desk": 400
     },
-    "14 - ØªÙØ§Ø±Øª": {
+    "14 - تيارت": {
       "home": 800,
       "desk": 400
     },
-    "15 - ØªÙØ²Ù ÙØ²Ù": {
+    "15 - تيزي وزو": {
       "home": 700,
       "desk": 400
     },
-    "16 - Ø§ÙØ¬Ø²Ø§Ø¦Ø±": {
+    "16 - الجزائر": {
       "home": 500,
       "desk": 250
     },
-    "17 - Ø§ÙØ¬ÙÙØ©": {
+    "17 - الجلفة": {
       "home": 900,
       "desk": 500
     },
-    "18 - Ø¬ÙØ¬Ù": {
+    "18 - جيجل": {
       "home": 700,
       "desk": 400
     },
-    "19 - Ø³Ø·ÙÙ": {
+    "19 - سطيف": {
       "home": 700,
       "desk": 400
     },
-    "20 - Ø³Ø¹ÙØ¯Ø©": {
+    "20 - سعيدة": {
       "home": 800,
       "desk": 400
     },
-    "21 - Ø³ÙÙÙØ¯Ø©": {
+    "21 - سكيكدة": {
       "home": 600,
       "desk": 400
     },
-    "22 - Ø³ÙØ¯Ù Ø¨ÙØ¹Ø¨Ø§Ø³": {
+    "22 - سيدي بلعباس": {
       "home": 700,
       "desk": 400
     },
-    "23 - Ø¹ÙØ§Ø¨Ø©": {
+    "23 - عنابة": {
       "home": 700,
       "desk": 400
     },
-    "24 - ÙØ§ÙÙØ©": {
+    "24 - قالمة": {
       "home": 600,
       "desk": 400
     },
-    "25 - ÙØ³ÙØ·ÙÙØ©": {
+    "25 - قسنطينة": {
       "home": 600,
       "desk": 400
     },
-    "26 - Ø§ÙÙØ¯ÙØ©": {
+    "26 - المدية": {
       "home": 700,
       "desk": 400
     },
-    "27 - ÙØ³ØªØºØ§ÙÙ": {
+    "27 - مستغانم": {
       "home": 700,
       "desk": 400
     },
-    "28 - Ø§ÙÙØ³ÙÙØ©": {
+    "28 - المسيلة": {
       "home": 800,
       "desk": 400
     },
-    "29 - ÙØ¹Ø³ÙØ±": {
+    "29 - معسكر": {
       "home": 700,
       "desk": 400
     },
-    "30 - ÙØ±ÙÙØ©": {
+    "30 - ورقلة": {
       "home": 900,
       "desk": 500
     },
-    "31 - ÙÙØ±Ø§Ù": {
+    "31 - وهران": {
       "home": 800,
       "desk": 400
     },
-    "32 - Ø§ÙØ¨ÙØ¶": {
+    "32 - البيض": {
       "home": 800,
       "desk": 500
     },
-    "33 - Ø¥ÙÙØ²Ù": {
+    "33 - إليزي": {
       "home": 1300,
       "desk": 600
     },
-    "34 - Ø¨Ø±Ø¬ Ø¨ÙØ¹Ø±ÙØ±ÙØ¬": {
+    "34 - برج بوعريريج": {
       "home": 700,
       "desk": 400
     },
-    "35 - Ø¨ÙÙØ±Ø¯Ø§Ø³": {
+    "35 - بومرداس": {
       "home": 700,
       "desk": 400
     },
-    "36 - Ø§ÙØ·Ø§Ø±Ù": {
+    "36 - الطارف": {
       "home": 700,
       "desk": 400
     },
-    "37 - ØªÙØ¯ÙÙ": {
+    "37 - تندوف": {
       "home": 1300,
       "desk": 600
     },
-    "38 - ØªÙØ³ÙØ³ÙÙØª": {
+    "38 - تيسمسيلت": {
       "home": 800,
       "desk": 400
     },
-    "39 - Ø§ÙÙØ§Ø¯Ù": {
+    "39 - الوادي": {
       "home": 900,
       "desk": 500
     },
-    "40 - Ø®ÙØ´ÙØ©": {
+    "40 - خنشلة": {
       "home": 700,
       "desk": 500
     },
-    "41 - Ø³ÙÙ Ø£ÙØ±Ø§Ø³": {
+    "41 - سوق أهراس": {
       "home": 700,
       "desk": 400
     },
-    "42 - ØªÙØ¨Ø§Ø²Ø©": {
+    "42 - تيبازة": {
       "home": 700,
       "desk": 400
     },
-    "43 - ÙÙÙØ©": {
+    "43 - ميلة": {
       "home": 700,
       "desk": 450
     },
-    "44 - Ø¹ÙÙ Ø§ÙØ¯ÙÙÙ": {
+    "44 - عين الدفلى": {
       "home": 700,
       "desk": 400
     },
-    "45 - Ø§ÙÙØ¹Ø§ÙØ©": {
+    "45 - النعامة": {
       "home": 800,
       "desk": 500
     },
-    "46 - Ø¹ÙÙ ØªÙÙØ´ÙØª": {
+    "46 - عين تموشنت": {
       "home": 800,
       "desk": 400
     },
-    "47 - ØºØ±Ø¯Ø§ÙØ©": {
+    "47 - غرداية": {
       "home": 900,
       "desk": 500
     },
-    "48 - ØºÙÙØ²Ø§Ù": {
+    "48 - غليزان": {
       "home": 700,
       "desk": 400
     },
-    "49 - ØªÙÙÙÙÙÙ": {
+    "49 - تيميمون": {
       "home": 1100,
       "desk": 600
     },
-    "50 - Ø¨Ø±Ø¬ Ø¨Ø§Ø¬Ù ÙØ®ØªØ§Ø±": {
+    "50 - برج باجي مختار": {
       "home": 1200,
       "desk": 650
     },
-    "51 - Ø£ÙÙØ§Ø¯ Ø¬ÙØ§Ù": {
+    "51 - أولاد جلال": {
       "home": 900,
       "desk": 500
     },
-    "52 - Ø¨ÙÙ Ø¹Ø¨Ø§Ø³": {
+    "52 - بني عباس": {
       "home": 1100,
       "desk": 600
     },
-    "53 - Ø¹ÙÙ ØµØ§ÙØ­": {
+    "53 - عين صالح": {
       "home": 1300,
       "desk": 700
     },
-    "54 - Ø¹ÙÙ ÙØ²Ø§Ù": {
+    "54 - عين قزام": {
       "home": 1300,
       "desk": 700
     },
-    "55 - ØªÙÙØ±Øª": {
+    "55 - توقرت": {
       "home": 950,
       "desk": 550
     },
-    "56 - Ø¬Ø§ÙØª": {
+    "56 - جانت": {
       "home": 1100,
       "desk": 500
     },
-    "57 - Ø§ÙÙØºÙØ±": {
+    "57 - المغير": {
       "home": 950,
       "desk": 550
     },
-    "58 - Ø§ÙÙÙÙØ¹Ø©": {
+    "58 - المنيعة": {
       "home": 900,
       "desk": 400
     }
@@ -404,9 +259,7 @@ const STORE_CONFIG = {
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "selected",
-    "discountProducts": [
-      3
-    ],
+    "discountProducts": [],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 15,
     "promotionalDiscountedPrice": null,
@@ -432,7 +285,7 @@ const STORE_CONFIG = {
   },
   "GOOGLE_SHEETS": {
     "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
-    "description": "  Ø¬Ø¯ÙÙ Ø§ÙØ·ÙØ¨Ø§Øª",
+    "description": "  جدول الطلبات",
     "autoUpdate": true
   },
   "AVAILABLE_COLORS": [
