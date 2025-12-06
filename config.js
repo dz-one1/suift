@@ -23,6 +23,25 @@ const STORE_CONFIG = {
         "guide": {}
       },
       "ageRanges": []
+    },
+    "1765044360229": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [],
+      "availableSizes": [],
+      "ageRanges": [],
+      "colorImages": {},
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-06T18:06:00.229Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-1765044376296-modal2.jpeg",
+      "updatedAt": "2025-12-06T18:06:23.444Z"
     }
   },
   "DELIVERY_PRICES": {
