@@ -4,46 +4,7 @@
 // =============================================================================
 
 const STORE_CONFIG = {
-  "PRODUCTS": {
-    "1765034809290": {
-      "name": "منتج جديد",
-      "price": 0,
-      "description": "",
-      "stock": 100,
-      "category": "عام",
-      "featured": false,
-      "availableColors": [],
-      "availableSizes": [],
-      "ageRanges": [],
-      "colorImages": {},
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {}
-      },
-      "createdAt": "2025-12-06T15:26:49.290Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765034809290-1765035072682-1uptjrqu.jpg",
-      "updatedAt": "2025-12-06T15:31:22.266Z"
-    },
-    "1765034844262": {
-      "name": "منتج جديد",
-      "price": 0,
-      "description": "",
-      "stock": 100,
-      "category": "عام",
-      "featured": false,
-      "availableColors": [],
-      "availableSizes": [],
-      "ageRanges": [],
-      "colorImages": {},
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {}
-      },
-      "createdAt": "2025-12-06T15:27:24.262Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765034844262-1765034897687-t3evqwxh.jpg",
-      "updatedAt": "2025-12-06T15:28:43.598Z"
-    }
-  },
+  "PRODUCTS": {},
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
