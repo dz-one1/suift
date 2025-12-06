@@ -68,6 +68,7 @@ const STORE_CONFIG = {
       "stock": 0,
       "featured": false,
       "availableColors": [
+        "أسود",
         "رمادي"
       ],
       "availableSizes": [
@@ -97,6 +98,11 @@ const STORE_CONFIG = {
               "ageFrom": "15",
               "ageTo": "17",
               "size": "XL"
+            },
+            {
+              "ageFrom": "  A",
+              "ageTo": "A",
+              "size": "XXL"
             }
           ]
         }
@@ -107,7 +113,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-06T18:06:00.229Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-1765044376296-modal2.jpeg",
-      "updatedAt": "2025-12-06T18:27:19.251Z"
+      "updatedAt": "2025-12-06T19:08:33.122Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -363,7 +369,7 @@ const STORE_CONFIG = {
     "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
-    "discountScope": "selected",
+    "discountScope": "all",
     "discountProducts": [],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 15,
