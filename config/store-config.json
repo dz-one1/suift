@@ -1,18 +1,54 @@
 {
   "PRODUCTS": {
     "1765044153726": {
-      "name": "منتج بدون اسم",
-      "price": 0,
+      "name": "  قمجة تركية",
+      "price": 2500,
       "stock": 0,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-1765044195716-Screenshot_20251128-190616_Gallery.jpg",
       "description": "",
       "category": "",
-      "availableSizes": [],
-      "availableColors": [],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "availableColors": [
+        "أحمر",
+        "أزرق"
+      ],
       "featured": false,
       "createdAt": "2025-12-06T18:02:33.726Z",
-      "updatedAt": "2025-12-06T18:03:50.175Z",
-      "colorImages": {},
+      "updatedAt": "2025-12-06T18:11:27.011Z",
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-أحمر-1765044570181-Screenshot_20251128-190638_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "4",
+              "ageTo": "6",
+              "size": "S"
+            },
+            {
+              "ageFrom": "7",
+              "ageTo": "9",
+              "size": "M"
+            }
+          ]
+        },
+        "أزرق": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-أزرق-1765044649426-Screenshot_20251128-190616_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "4",
+              "ageTo": "6",
+              "size": "S"
+            }
+          ]
+        }
+      },
       "sizeGuide": {
         "enabled": false,
         "guide": {}
@@ -26,17 +62,47 @@
       "category": "",
       "stock": 0,
       "featured": false,
-      "availableColors": [],
-      "availableSizes": [],
+      "availableColors": [
+        "رمادي"
+      ],
+      "availableSizes": [
+        "L",
+        "XL"
+      ],
       "ageRanges": [],
-      "colorImages": {},
+      "colorImages": {
+        "أسود": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-أسود-1765044767363-modal1.jpeg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "12",
+              "ageTo": "14",
+              "size": "L"
+            }
+          ]
+        },
+        "رمادي": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-رمادي-1765045508955-modal2.jpeg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "15",
+              "ageTo": "17",
+              "size": "XL"
+            }
+          ]
+        }
+      },
       "sizeGuide": {
         "enabled": false,
         "guide": {}
       },
       "createdAt": "2025-12-06T18:06:00.229Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-1765044376296-modal2.jpeg",
-      "updatedAt": "2025-12-06T18:06:23.444Z"
+      "updatedAt": "2025-12-06T18:27:19.251Z"
     }
   },
   "DELIVERY_PRICES": {
