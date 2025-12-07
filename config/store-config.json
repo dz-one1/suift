@@ -292,20 +292,18 @@
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": [
-      1765123634157
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
