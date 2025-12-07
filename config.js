@@ -42,8 +42,8 @@ const STORE_CONFIG = {
         "guide": {}
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765146467139-modal2_2_1.jpeg",
-      "updatedAt": "2025-12-07T21:54:19.291Z"
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147297976-product-6-رمادي-1763847452898.jpg",
+      "updatedAt": "2025-12-07T22:41:45.507Z"
     },
     "1765145035052": {
       "name": "منتج جديد",
