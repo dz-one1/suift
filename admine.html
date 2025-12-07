@@ -3124,21 +3124,21 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>رمز المتجر (إيموجي)</label>
+                        <label></label>
                         <input type="text" class="form-control" id="storeIcon" 
-                               value="${CONFIG.STORE_INFO?.storeIcon || '👑'}" 
+                               value="${CONFIG.STORE_INFO?.storeIcon || ''}" 
                                onchange="updateStoreField('storeIcon', this.value)">
                     </div>
                     
                     <div class="form-group">
-                        <label>عنوان المتجر الثانوي</label>
+                        <label></label>
                         <input type="text" class="form-control" id="storeTitle" 
                                value="${CONFIG.STORE_INFO?.storeTitle || '👑 أحدث موديلات الأطفال'}" 
                                onchange="updateStoreField('storeTitle', this.value)">
                     </div>
                     
                     <div class="form-group">
-                        <label>شعار المتجر (تاج)</label>
+                        <label>إختصاص المتجر </label>
                         <input type="text" class="form-control" id="storeTagline" 
                                value="${CONFIG.STORE_INFO?.tagline || 'متجر أفخم الملابس'}" 
                                onchange="updateStoreField('tagline', this.value)">
