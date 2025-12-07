@@ -10,7 +10,7 @@ const STORE_CONFIG = {
       "price": 2500,
       "stock": 0,
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-1765044195716-Screenshot_20251128-190616_Gallery.jpg",
-      "description": "",
+      "description": "قمجة صنع تركي",
       "category": "",
       "availableSizes": [
         "S",
@@ -22,7 +22,7 @@ const STORE_CONFIG = {
       ],
       "featured": false,
       "createdAt": "2025-12-06T18:02:33.726Z",
-      "updatedAt": "2025-12-07T07:30:33.545Z",
+      "updatedAt": "2025-12-07T14:56:07.434Z",
       "colorImages": {
         "أحمر": {
           "images": [
@@ -324,13 +324,13 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
-    "discountScope": "all",
+    "discountScope": "selected",
     "discountProducts": [],
-    "enablePromotionalDiscount": false,
-    "promotionalDiscountPercent": 15,
+    "enablePromotionalDiscount": true,
+    "promotionalDiscountPercent": 25,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
     "promoDiscountProducts": []
