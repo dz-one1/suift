@@ -1,5 +1,46 @@
 {
-  "PRODUCTS": {},
+  "PRODUCTS": {
+    "1765137505304": {
+      "name": "Bagger Nike",
+      "price": 5800,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أسود",
+        "رمادي"
+      ],
+      "availableSizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أسود": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-أسود-1765144363824-modal1.jpeg"
+          ],
+          "ageRanges": []
+        },
+        "رمادي": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-رمادي-1765144401721-modal2_1.jpeg"
+          ],
+          "ageRanges": []
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-07T19:58:25.304Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765137657311-modal1.jpeg",
+      "updatedAt": "2025-12-07T21:54:19.291Z"
+    }
+  },
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -424,14 +465,14 @@
       "heightTo": 195,
       "weightFrom": 70,
       "weightTo": 90,
-      "enabled": false
+      "enabled": true
     },
     "XL": {
       "heightFrom": 185,
       "heightTo": 200,
       "weightFrom": 85,
       "weightTo": 110,
-      "enabled": false
+      "enabled": true
     },
     "XXL": {
       "heightFrom": 190,
