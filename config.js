@@ -42,8 +42,8 @@ const STORE_CONFIG = {
         "guide": {}
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147297976-product-6-رمادي-1763847452898.jpg",
-      "updatedAt": "2025-12-07T22:41:45.507Z"
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
+      "updatedAt": "2025-12-07T22:46:27.350Z"
     },
     "1765145035052": {
       "name": "منتج جديد",
@@ -142,7 +142,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:07:14.589Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145234589-1765145594620-Screenshot_20251128-190402_Chrome.jpg",
-      "updatedAt": "2025-12-07T22:16:49.211Z"
+      "updatedAt": "2025-12-07T22:42:20.884Z"
     },
     "1765145814607": {
       "name": "منتج جديد",
