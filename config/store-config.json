@@ -39,6 +39,49 @@
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765137657311-modal1.jpeg",
       "updatedAt": "2025-12-07T21:54:19.291Z"
+    },
+    "1765145035052": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أحمر"
+      ],
+      "availableSizes": [
+        "S"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-أحمر-1765145134528-modle6.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "8",
+              "size": "S"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {
+          "S": {
+            "heightFrom": 100,
+            "heightTo": 150,
+            "weightFrom": 18,
+            "weightTo": 25
+          }
+        }
+      },
+      "createdAt": "2025-12-07T22:03:55.052Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765145087470-modle6.jpg",
+      "updatedAt": "2025-12-07T22:05:08.394Z"
     }
   },
   "DELIVERY_PRICES": {
