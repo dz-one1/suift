@@ -81,7 +81,112 @@
       },
       "createdAt": "2025-12-07T22:03:55.052Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765145087470-modle6.jpg",
-      "updatedAt": "2025-12-07T22:05:08.394Z"
+      "updatedAt": "2025-12-07T22:07:06.178Z"
+    },
+    "1765145234589": {
+      "name": "قمجة تركية ",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أخضر",
+        "رمادي",
+        "أصفر"
+      ],
+      "availableSizes": [
+        "S"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "رمادي": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145234589-رمادي-1765145674948-Screenshot_20251128-190530_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "6",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "6",
+              "ageTo": "7",
+              "size": "S"
+            }
+          ]
+        },
+        "أصفر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145234589-أصفر-1765145739678-Screenshot_20251128-190550_Gallery.jpg",
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145234589-أصفر-1765145787241-Screenshot_20251128-190507_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "6",
+              "ageTo": "7",
+              "size": "S"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-07T22:07:14.589Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145234589-1765145594620-Screenshot_20251128-190402_Chrome.jpg",
+      "updatedAt": "2025-12-07T22:16:49.211Z"
+    },
+    "1765145814607": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أحمر",
+        "أزرق"
+      ],
+      "availableSizes": [
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-أحمر-1765145936084-Screenshot_20251128-190638_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        },
+        "أزرق": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-أزرق-1765145972716-Screenshot_20251128-190616_Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-07T22:16:54.607Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
+      "updatedAt": "2025-12-07T22:19:58.760Z"
     }
   },
   "DELIVERY_PRICES": {
