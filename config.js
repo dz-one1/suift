@@ -339,7 +339,7 @@ const STORE_CONFIG = {
     "name": " SANIX-DZ",
     "storeIcon": "-",
     "storeTitle": " أحدث موديلات الأطفال لسنة 2025",
-    "tagline": "أحدث موديلات الأطفال لسنة 2025",
+    "tagline": "أحدث موديلات الأطفال لسنة 2026",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
