@@ -1,5 +1,61 @@
 {
-  "PRODUCTS": {},
+  "PRODUCTS": {
+    "1765123634157": {
+      "name": "لباس الاعراس للاطفال",
+      "price": 5000,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أبيض",
+        "وردي"
+      ],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "وردي": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765123634157-وردي-1765123767583-modal11.jpg.webp"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        },
+        "أبيض": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765123634157-أبيض-1765123840914-modal15.jpg.webp"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-07T16:07:14.157Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765123634157-1765123713532-modal8.jpg.webp",
+      "updatedAt": "2025-12-07T16:12:12.543Z"
+    }
+  },
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -410,14 +466,14 @@
       "heightTo": 130,
       "weightFrom": 14,
       "weightTo": 16,
-      "enabled": false
+      "enabled": true
     },
     "M": {
       "heightFrom": 130,
       "heightTo": 150,
       "weightFrom": 16,
       "weightTo": 22,
-      "enabled": false
+      "enabled": true
     },
     "L": {
       "heightFrom": 180,
