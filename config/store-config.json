@@ -67,61 +67,6 @@
         }
       },
       "ageRanges": []
-    },
-    "1765044360229": {
-      "name": "Baddy",
-      "price": 0,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أسود",
-        "رمادي"
-      ],
-      "availableSizes": [
-        "L",
-        "XL"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أسود": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-أسود-1765044767363-modal1.jpeg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "12",
-              "ageTo": "14",
-              "size": "L"
-            }
-          ]
-        },
-        "رمادي": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-رمادي-1765045508955-modal2.jpeg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "15",
-              "ageTo": "17",
-              "size": "XL"
-            },
-            {
-              "ageFrom": "  A",
-              "ageTo": "A",
-              "size": "XXL"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {}
-      },
-      "createdAt": "2025-12-06T18:06:00.229Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044360229-1765044376296-modal2.jpeg",
-      "updatedAt": "2025-12-06T19:17:53.211Z"
     }
   },
   "DELIVERY_PRICES": {
