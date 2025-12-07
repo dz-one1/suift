@@ -22,7 +22,7 @@ const STORE_CONFIG = {
       ],
       "featured": false,
       "createdAt": "2025-12-06T18:02:33.726Z",
-      "updatedAt": "2025-12-06T19:16:26.272Z",
+      "updatedAt": "2025-12-07T07:30:33.545Z",
       "colorImages": {
         "أحمر": {
           "images": [
@@ -55,8 +55,21 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": false,
-        "guide": {}
+        "enabled": true,
+        "guide": {
+          "S": {
+            "heightFrom": 120,
+            "heightTo": 130,
+            "weightFrom": 20,
+            "weightTo": 25
+          },
+          "M": {
+            "heightFrom": 125,
+            "heightTo": 135,
+            "weightFrom": 25,
+            "weightTo": 35
+          }
+        }
       },
       "ageRanges": []
     },
