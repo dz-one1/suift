@@ -4959,10 +4959,10 @@
                     </div>
                     
                     <div class="action-card">
-                        <h3><i class="fab fa-github"></i> تحميل من GitHub</h3>
-                        <p>تحميل الإعدادات من مستودع GitHub</p>
+                        <h3><i class="fab fa-github"></i> تحميل من Serveur</h3>
+                        <p>تحميل الإعدادات من مستودع Serveur</p>
                         <button class="btn btn-primary" onclick="loadConfigFromGitHub()">
-                            <i class="fas fa-download"></i> تحميل من GitHub
+                            <i class="fas fa-download"></i> تحميل من Serveur
                         </button>
                     </div>
                     
@@ -5112,7 +5112,7 @@
         }
 
         // =============================================================================
-        // 🔄 نظام مزامنة GitHub (محدث لدعم UTF-8)
+        // 🔄 نظام مزامنة Serveur (محدث لدعم UTF-8)
         // =============================================================================
 
         async function uploadConfigToGitHub() {
@@ -5133,7 +5133,7 @@
                 if (saveButton) {
                     const originalText = saveButton.innerHTML;
                     saveButton.disabled = true;
-                    saveButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الرفع إلى GitHub...';
+                    saveButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الرفع إلى Serveur...';
                 }
 
                 if (!saveConfig()) {
@@ -5189,7 +5189,7 @@
                 );
 
                 if (response.ok) {
-                    showNotification('تم رفع الإعدادات إلى GitHub بنجاح', 'success');
+                    showNotification('تم رفع الإعدادات إلى Serveur بنجاح', 'success');
                     localStorage.setItem('lastGitHubSync', new Date().toISOString());
                     updateStats();
                     
@@ -5200,11 +5200,11 @@
                     return true;
                 } else {
                     const errorData = await response.json();
-                    throw new Error(errorData.message || 'فشل في رفع الملف إلى GitHub');
+                    throw new Error(errorData.message || 'فشل في رفع الملف إلى Serveur');
                 }
             } catch (error) {
                 console.error('GitHub upload error:', error);
-                showNotification('خطأ في رفع الإعدادات إلى GitHub: ' + error.message, 'error');
+                showNotification('خطأ في رفع الإعدادات إلى Serveur: ' + error.message, 'error');
                 if (saveButton) {
                     saveButton.disabled = false;
                     saveButton.innerHTML = '<i class="fas fa-sync-alt"></i> مزامنة كاملة';
@@ -5246,7 +5246,7 @@
                     const importedConfig = JSON.parse(content);
                     
                     showConfirmModal(
-                        'تم العثور على إعدادات على GitHub. هل تريد تحميلها؟',
+                        'تم العثور على إعدادات على Serveur. هل تريد تحميلها؟',
                         () => {
                             CONFIG = { ...CONFIG, ...importedConfig };
                             saveConfig();
@@ -5257,7 +5257,7 @@
                             loadSettingsContent();
                             updateStats();
                             
-                            showNotification('تم تحميل الإعدادات من GitHub بنجاح', 'success');
+                            showNotification('تم تحميل الإعدادات من Serveur بنجاح', 'success');
                             
                             setTimeout(() => {
                                 window.location.reload();
@@ -5267,16 +5267,16 @@
                     
                     return true;
                 } else if (response.status === 404) {
-                    showNotification('لم يتم العثور على إعدادات على GitHub', 'info');
+                    showNotification('لم يتم العثور على إعدادات على Serveur', 'info');
                     return false;
                 } else {
                     const errorData = await response.json();
-                    throw new Error(errorData.message || 'فشل في تحميل الملف من GitHub');
+                    throw new Error(errorData.message || 'فشل في تحميل الملف من Serveur');
                 }
                 
             } catch (error) {
                 console.error('GitHub load error:', error);
-                showNotification('خطأ في تحميل الإعدادات من GitHub: ' + error.message, 'error');
+                showNotification('خطأ في تحميل الإعدادات من Serveur: ' + error.message, 'error');
                 return false;
             }
         }
@@ -5297,7 +5297,7 @@
         }
 
         // =============================================================================
-        // 🎯 تحديث ملف config.js على GitHub (محدث لدعم UTF-8)
+        // 🎯 تحديث ملف config.js على Serveur (محدث لدعم UTF-8)
         // =============================================================================
 
         async function updateStoreConfigFile() {
@@ -5433,7 +5433,7 @@ function updateConfig(newConfig) {
                 );
 
                 if (response.ok) {
-                    showNotification('تم تحديث ملف config.js على GitHub بنجاح', 'success');
+                    showNotification('تم تحديث ملف config.js على Serveur بنجاح', 'success');
                     localStorage.setItem('lastConfigUpdate', new Date().toISOString());
                     return true;
                 } else {
