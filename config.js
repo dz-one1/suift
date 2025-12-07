@@ -4,76 +4,7 @@
 // =============================================================================
 
 const STORE_CONFIG = {
-  "PRODUCTS": {
-    "1765044153726": {
-      "name": "  قمجة تركية",
-      "price": 2500,
-      "stock": 0,
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-1765044195716-Screenshot_20251128-190616_Gallery.jpg",
-      "description": "قمجة صنع تركي",
-      "category": "",
-      "availableSizes": [
-        "S",
-        "M"
-      ],
-      "availableColors": [
-        "أحمر",
-        "أزرق"
-      ],
-      "featured": false,
-      "createdAt": "2025-12-06T18:02:33.726Z",
-      "updatedAt": "2025-12-07T14:56:07.434Z",
-      "colorImages": {
-        "أحمر": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-أحمر-1765044570181-Screenshot_20251128-190638_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "4",
-              "ageTo": "6",
-              "size": "S"
-            },
-            {
-              "ageFrom": "7",
-              "ageTo": "9",
-              "size": "M"
-            }
-          ]
-        },
-        "أزرق": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765044153726-أزرق-1765044649426-Screenshot_20251128-190616_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "4",
-              "ageTo": "6",
-              "size": "S"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "S": {
-            "heightFrom": 120,
-            "heightTo": 130,
-            "weightFrom": 20,
-            "weightTo": 25
-          },
-          "M": {
-            "heightFrom": 125,
-            "heightTo": 135,
-            "weightFrom": 25,
-            "weightTo": 35
-          }
-        }
-      },
-      "ageRanges": []
-    }
-  },
+  "PRODUCTS": {},
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -321,9 +252,7 @@ const STORE_CONFIG = {
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": [
-      1765044153726
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
