@@ -42,7 +42,7 @@ const STORE_CONFIG = {
         "guide": {}
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765137657311-modal1.jpeg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765146467139-modal2_2_1.jpeg",
       "updatedAt": "2025-12-07T21:54:19.291Z"
     },
     "1765145035052": {
