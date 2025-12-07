@@ -308,9 +308,7 @@ const STORE_CONFIG = {
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": [
-      1765123634157
-    ]
+    "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
