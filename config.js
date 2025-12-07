@@ -32,7 +32,7 @@ const STORE_CONFIG = {
         },
         "رمادي": {
           "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-رمادي-1765144401721-modal2_1.jpeg"
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-رمادي-1765144935019-modal2_2.jpeg"
           ],
           "ageRanges": []
         }
