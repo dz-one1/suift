@@ -455,13 +455,7 @@ const STORE_CONFIG = {
   ],
   "AVAILABLE_SIZES": [
     "S",
-    "S1",
-    "S2",
-    "S3",
     "M",
-    "M1",
-    "M2",
-    "M3",
     "L",
     "XL",
     "XXL",
@@ -478,7 +472,8 @@ const STORE_CONFIG = {
     "46",
     "47",
     "48",
-    "49"
+    "49",
+    "50"
   ],
   "SIZE_GUIDE": {
     "38": {
