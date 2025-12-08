@@ -68,8 +68,8 @@ const STORE_CONFIG = {
       "updatedAt": "2025-12-08T16:50:57.069Z"
     },
     "1765145035052": {
-      "name": "منتج جديد",
-      "price": 0,
+      "name": "فستان الافراح",
+      "price": 6800,
       "description": "",
       "category": "",
       "stock": 0,
@@ -108,11 +108,11 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:03:55.052Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765147070998-modle6.jpg",
-      "updatedAt": "2025-12-07T22:38:00.231Z"
+      "updatedAt": "2025-12-08T18:43:00.574Z"
     },
     "1765145814607": {
-      "name": "منتج جديد",
-      "price": 0,
+      "name": "قمجة تركية",
+      "price": 3000,
       "description": "",
       "category": "",
       "stock": 0,
@@ -157,7 +157,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:16:54.607Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-07T22:19:58.760Z"
+      "updatedAt": "2025-12-08T18:42:28.886Z"
     }
   },
   "DELIVERY_PRICES": {
