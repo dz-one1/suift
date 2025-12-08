@@ -68,9 +68,9 @@ const STORE_CONFIG = {
       "updatedAt": "2025-12-08T16:50:57.069Z"
     },
     "1765145035052": {
-      "name": "لباس الافراح",
-      "price": 5000,
-      "description": "فستان الاميرات",
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
       "category": "",
       "stock": 0,
       "featured": false,
@@ -108,11 +108,11 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:03:55.052Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765147070998-modle6.jpg",
-      "updatedAt": "2025-12-08T17:04:32.983Z"
+      "updatedAt": "2025-12-07T22:38:00.231Z"
     },
     "1765145814607": {
-      "name": "قمجة عصرية",
-      "price": 3500,
+      "name": "منتج جديد",
+      "price": 0,
       "description": "",
       "category": "",
       "stock": 0,
@@ -157,7 +157,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:16:54.607Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-08T17:04:56.727Z"
+      "updatedAt": "2025-12-07T22:19:58.760Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -430,7 +430,7 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765092171060-product-store-logo-1763847608230.jpg",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
