@@ -28,13 +28,35 @@ const STORE_CONFIG = {
           "images": [
             "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-أسود-1765144363824-modal1.jpeg"
           ],
-          "ageRanges": []
+          "ageRanges": [
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "S"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "M"
+            }
+          ]
         },
         "رمادي": {
           "images": [
             "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-رمادي-1765144935019-modal2_2.jpeg"
           ],
-          "ageRanges": []
+          "ageRanges": [
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "S"
+            },
+            {
+              "ageFrom": "M",
+              "ageTo": "M",
+              "size": "M"
+            }
+          ]
         }
       },
       "sizeGuide": {
@@ -43,7 +65,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
-      "updatedAt": "2025-12-07T22:46:27.350Z"
+      "updatedAt": "2025-12-08T16:50:57.069Z"
     },
     "1765145035052": {
       "name": "منتج جديد",
