@@ -47,8 +47,8 @@
               "size": "S"
             },
             {
-              "ageFrom": "M",
-              "ageTo": "M",
+              "ageFrom": "A",
+              "ageTo": "A",
               "size": "M"
             }
           ]
