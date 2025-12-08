@@ -60,8 +60,21 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": false,
-        "guide": {}
+        "enabled": true,
+        "guide": {
+          "S": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 40,
+            "weightTo": 55
+          },
+          "M": {
+            "heightFrom": 160,
+            "heightTo": 175,
+            "weightFrom": 60,
+            "weightTo": 70
+          }
+        }
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
@@ -410,12 +423,12 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
+    "enableQuantityDiscount": true,
     "minQuantityForDiscount": 2,
-    "discountPerItem": 400,
-    "discountScope": "selected",
+    "discountPerItem": 500,
+    "discountScope": "all",
     "discountProducts": [],
-    "enablePromotionalDiscount": true,
+    "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
