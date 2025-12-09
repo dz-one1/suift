@@ -410,12 +410,16 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
-    "minQuantityForDiscount": 2,
-    "discountPerItem": 400,
+    "enableQuantityDiscount": true,
+    "minQuantityForDiscount": 1,
+    "discountPerItem": 500,
     "discountScope": "selected",
-    "discountProducts": [],
-    "enablePromotionalDiscount": true,
+    "discountProducts": [
+      1765145035052,
+      1765137505304,
+      1765145814607
+    ],
+    "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
