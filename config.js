@@ -413,7 +413,7 @@ const STORE_CONFIG = {
     "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
-    "discountScope": "selected",
+    "discountScope": "all",
     "discountProducts": [
       1765145035052,
       1765137505304,
