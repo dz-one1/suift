@@ -4825,7 +4825,7 @@
                 return;
             }
             
-            storageKeys['suift'] = {
+            storageKeys['suift1'] = {
                 key: fullKey,
                 username: 'dz-one1',
                 branch: 'main',
@@ -4859,8 +4859,8 @@
         }
         
         function getDefaultRepo() {
-            if (storageKeys['suift']) {
-                return 'suift';
+            if (storageKeys['suift1']) {
+                return 'suift1';
             }
             
             const repos = Object.keys(storageKeys);
