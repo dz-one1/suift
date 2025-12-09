@@ -60,30 +60,17 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "S": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 40,
-            "weightTo": 55
-          },
-          "M": {
-            "heightFrom": 160,
-            "heightTo": 175,
-            "weightFrom": 60,
-            "weightTo": 70
-          }
-        }
+        "enabled": false,
+        "guide": {}
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
       "updatedAt": "2025-12-08T16:50:57.069Z"
     },
     "1765145035052": {
-      "name": "فستان الافراح",
-      "price": 6800,
-      "description": "",
+      "name": "لباس الافراح",
+      "price": 5000,
+      "description": "فستان الاميرات",
       "category": "",
       "stock": 0,
       "featured": false,
@@ -121,11 +108,11 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:03:55.052Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765147070998-modle6.jpg",
-      "updatedAt": "2025-12-08T18:43:00.574Z"
+      "updatedAt": "2025-12-08T17:04:32.983Z"
     },
     "1765145814607": {
-      "name": "قمجة تركية",
-      "price": 3000,
+      "name": "قمجة عصرية",
+      "price": 3500,
       "description": "",
       "category": "",
       "stock": 0,
@@ -170,7 +157,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T22:16:54.607Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-08T18:42:28.886Z"
+      "updatedAt": "2025-12-08T17:04:56.727Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -423,12 +410,12 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": []
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
-    "minQuantityForDiscount": 1,
-    "discountPerItem": 500,
-    "discountScope": "all",
+    "enableQuantityDiscount": false,
+    "minQuantityForDiscount": 2,
+    "discountPerItem": 400,
+    "discountScope": "selected",
     "discountProducts": [],
-    "enablePromotionalDiscount": false,
+    "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "all",
@@ -438,12 +425,12 @@ const STORE_CONFIG = {
     "name": " SANIX-DZ",
     "storeIcon": "-",
     "storeTitle": "-",
-    "tagline": "أحدث موديلات الأطفال لسنة 2026",
+    "tagline": "أحدث موديلات الأطفال لسنة 2025",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765092171060-product-store-logo-1763847608230.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
