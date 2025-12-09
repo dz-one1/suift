@@ -9,69 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <script>
-let CONFIG = {};
-
-// دالة تحميل الإعدادات
-async function loadConfig() {
-    try {
-        const response = await fetch('store-config.json');
-        CONFIG = await response.json();
-        
-        // بدء تشغيل المتجر بعد تحميل الإعدادات
-        initializeStore();
-    } catch (error) {
-        console.error('خطأ في تحميل الإعدادات:', error);
-        // استخدم إعدادات افتراضية
-        CONFIG = {
-            PRODUCTS: {},
-            DELIVERY_PRICES: {},
-            FREE_DELIVERY: {},
-            DISCOUNTS: {},
-            STORE_INFO: {},
-            AVAILABLE_COLORS: [],
-            AVAILABLE_SIZES: [],
-            SIZE_GUIDE: {}
-        };
-        initializeStore();
-    }
-}
-
-// دالة لتحميل الإعدادات بصيغة متوافقة مع الكود القديم
-function loadProductsConfig() {
-    return CONFIG.PRODUCTS || {};
-}
-
-function loadDeliveryConfig() {
-    return {
-        deliveryPrices: CONFIG.DELIVERY_PRICES || {},
-        freeDelivery: CONFIG.FREE_DELIVERY || {}
-    };
-}
-
-function loadDiscountConfig() {
-    return CONFIG.DISCOUNTS || {};
-}
-
-function loadStoreInfo() {
-    return CONFIG.STORE_INFO || {};
-}
-
-function loadSizesColorsConfig() {
-    return {
-        availableColors: CONFIG.AVAILABLE_COLORS || [],
-        availableSizes: CONFIG.AVAILABLE_SIZES || [],
-        sizeGuide: CONFIG.SIZE_GUIDE || {}
-    };
-}
-
-function loadAllConfig() {
-    return CONFIG;
-}
-
-// بدء تحميل الإعدادات عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', loadConfig);
-</script>
+  
+    <script src="config.js"></script>
     <style>
         /* ===== إعادة التعيين والأساسيات ===== */
         :root {
@@ -2306,7 +2245,7 @@ document.addEventListener('DOMContentLoaded', loadConfig);
             const product = STORE_CONFIG.PRODUCTS[productKey];
             const productModalImage = document.getElementById('productModalImage');
             
-            // البحث عن صورة اللون المحدد في store-config.json
+            // البحث عن صورة اللون المحدد في config.js
             if (product.colorImages && product.colorImages[color] && product.colorImages[color].images.length > 0) {
                 // استخدام أول صورة متاحة لهذا اللون
                 productModalImage.src = product.colorImages[color].images[0];
