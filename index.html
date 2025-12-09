@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="config.js"></script>
+    <script src="config.json"></script>
     <style>
         /* ===== إعادة التعيين والأساسيات ===== */
         :root {
@@ -2244,7 +2244,7 @@
             const product = STORE_CONFIG.PRODUCTS[productKey];
             const productModalImage = document.getElementById('productModalImage');
             
-            // البحث عن صورة اللون المحدد في config.js
+            // البحث عن صورة اللون المحدد في config.json
             if (product.colorImages && product.colorImages[color] && product.colorImages[color].images.length > 0) {
                 // استخدام أول صورة متاحة لهذا اللون
                 productModalImage.src = product.colorImages[color].images[0];
