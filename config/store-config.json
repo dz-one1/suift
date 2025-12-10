@@ -55,7 +55,7 @@
         }
       },
       "sizeGuide": {
-        "enabled": true,
+        "enabled": false,
         "guide": {
           "S": {
             "heightFrom": 150,
@@ -73,7 +73,7 @@
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765372073719-modal2-2-1.jpeg",
-      "updatedAt": "2025-12-08T16:50:57.069Z"
+      "updatedAt": "2025-12-10T18:43:29.602Z"
     },
     "1765145035052": {
       "name": "فستان الافراح",
@@ -165,7 +165,24 @@
       },
       "createdAt": "2025-12-07T22:16:54.607Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-08T18:42:28.886Z"
+      "updatedAt": "2025-12-10T18:43:42.232Z"
+    },
+    "1765392721362": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [],
+      "availableSizes": [],
+      "ageRanges": [],
+      "colorImages": {},
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-10T18:52:01.362Z"
     }
   },
   "DELIVERY_PRICES": {
