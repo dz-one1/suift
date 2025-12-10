@@ -165,7 +165,30 @@
       },
       "createdAt": "2025-12-07T22:16:54.607Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-10T18:43:42.232Z"
+      "updatedAt": "2025-12-10T21:33:48.310Z"
+    },
+    "1765403828307": {
+      "name": "مودال  انجليزي",
+      "price": 6000,
+      "description": "مودال يومي أنيق",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أبيض"
+      ],
+      "availableSizes": [
+        "S"
+      ],
+      "ageRanges": [],
+      "colorImages": {},
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-10T21:57:08.307Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765403828307-1765403865071-modal5.jpg",
+      "updatedAt": "2025-12-10T21:59:41.873Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -404,13 +427,13 @@
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
