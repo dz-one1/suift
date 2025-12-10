@@ -78,7 +78,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765372073719-modal2-2-1.jpeg",
-      "updatedAt": "2025-12-10T18:43:29.602Z"
+      "updatedAt": "2025-12-10T20:12:00.498Z"
     },
     "1765145035052": {
       "name": "فستان الافراح",
@@ -437,10 +437,14 @@ const STORE_CONFIG = {
       "wilayas": [],
       "minQuantity": 1
     },
-    "freeDeliveryProducts": []
+    "freeDeliveryProducts": [
+      1765137505304,
+      1765145035052,
+      1765145814607
+    ]
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "all",
