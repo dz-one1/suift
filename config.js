@@ -25,9 +25,7 @@ const STORE_CONFIG = {
       "ageRanges": [],
       "colorImages": {
         "أسود": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-أسود-1765144363824-modal1.jpeg"
-          ],
+          "images": [],
           "ageRanges": [
             {
               "ageFrom": "A",
@@ -55,7 +53,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
-      "updatedAt": "2025-12-10T16:09:59.895Z"
+      "updatedAt": "2025-12-10T16:15:21.682Z"
     },
     "1765145035052": {
       "name": "لباس الافراح",
