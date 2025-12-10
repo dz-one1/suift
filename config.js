@@ -45,11 +45,6 @@ const STORE_CONFIG = {
               "ageFrom": "A",
               "ageTo": "A",
               "size": "S"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "M"
             }
           ]
         }
@@ -60,7 +55,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
-      "updatedAt": "2025-12-08T16:50:57.069Z"
+      "updatedAt": "2025-12-10T16:09:59.895Z"
     },
     "1765145035052": {
       "name": "لباس الافراح",
