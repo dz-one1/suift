@@ -77,7 +77,7 @@ const STORE_CONFIG = {
         }
       },
       "createdAt": "2025-12-07T19:58:25.304Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765147579439-modal1_1.jpeg",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765372073719-modal2-2-1.jpeg",
       "updatedAt": "2025-12-08T16:50:57.069Z"
     },
     "1765145035052": {
