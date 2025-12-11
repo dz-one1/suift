@@ -118,55 +118,6 @@
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765147070998-modle6.jpg",
       "updatedAt": "2025-12-08T18:43:00.574Z"
     },
-    "1765145814607": {
-      "name": "قمجة تركية",
-      "price": 3000,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أحمر",
-        "أزرق"
-      ],
-      "availableSizes": [
-        "M"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أحمر": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-أحمر-1765145936084-Screenshot_20251128-190638_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "8",
-              "ageTo": "10",
-              "size": "M"
-            }
-          ]
-        },
-        "أزرق": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-أزرق-1765145972716-Screenshot_20251128-190616_Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "8",
-              "ageTo": "10",
-              "size": "M"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {}
-      },
-      "createdAt": "2025-12-07T22:16:54.607Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145814607-1765145855588-Screenshot_20251128-190652_Gallery.jpg",
-      "updatedAt": "2025-12-10T21:33:48.310Z"
-    },
     "1765403828307": {
       "name": "مودال  انجليزي",
       "price": 6000,
@@ -447,7 +398,6 @@
   "FREE_DELIVERY_PRODUCTS": [
     1765145035052,
     1765403828307,
-    1765145814607,
     1765137505304
   ],
   "DISCOUNTS": {
