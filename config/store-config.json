@@ -129,17 +129,30 @@
         "أبيض"
       ],
       "availableSizes": [
-        "S"
+        "L"
       ],
       "ageRanges": [],
-      "colorImages": {},
+      "colorImages": {
+        "أبيض": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765403828307-أبيض-1765456389450-modal5.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "12",
+              "ageTo": "14",
+              "size": "L"
+            }
+          ]
+        }
+      },
       "sizeGuide": {
         "enabled": false,
         "guide": {}
       },
       "createdAt": "2025-12-10T21:57:08.307Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765403828307-1765403865071-modal5.jpg",
-      "updatedAt": "2025-12-10T21:59:41.873Z"
+      "updatedAt": "2025-12-11T12:34:01.653Z"
     }
   },
   "DELIVERY_PRICES": {
