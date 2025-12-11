@@ -4,7 +4,63 @@
 // =============================================================================
 
 const STORE_CONFIG = {
-  "PRODUCTS": {},
+  "PRODUCTS": {
+    "1765456782838": {
+      "name": "Bagger nike",
+      "price": 5800,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أسود",
+        "رمادي"
+      ],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أسود": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-أسود-1765456878648-modal1-1.jpeg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        },
+        "رمادي": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-رمادي-1765457014036-modal2-2-1.jpeg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-11T12:39:42.838Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-1765456803780-modal1.jpeg",
+      "updatedAt": "2025-12-11T12:44:04.845Z"
+    }
+  },
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
