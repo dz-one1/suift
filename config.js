@@ -56,8 +56,8 @@ const STORE_CONFIG = {
       "updatedAt": "2025-12-11T12:44:04.845Z"
     },
     "1765488374530": {
-      "name": "منتج جديد",
-      "price": 0,
+      "name": "فستان الافراح",
+      "price": 5200,
       "description": "فستان المناسبات والافراح ",
       "category": "",
       "stock": 0,
@@ -89,7 +89,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-11T21:26:14.530Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765488374530-1765488425903-modle6.jpg",
-      "updatedAt": "2025-12-11T21:29:16.305Z"
+      "updatedAt": "2025-12-11T21:31:04.170Z"
     }
   },
   "DELIVERY_PRICES": {
