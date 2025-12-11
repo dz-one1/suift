@@ -4,162 +4,7 @@
 // =============================================================================
 
 const STORE_CONFIG = {
-  "PRODUCTS": {
-    "1765137505304": {
-      "name": "Bagger Nike",
-      "price": 5800,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أسود",
-        "رمادي"
-      ],
-      "availableSizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أسود": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-أسود-1765144363824-modal1.jpeg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "S"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "M"
-            }
-          ]
-        },
-        "رمادي": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-رمادي-1765144935019-modal2_2.jpeg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "S"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "M"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {
-          "S": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 40,
-            "weightTo": 55
-          },
-          "M": {
-            "heightFrom": 160,
-            "heightTo": 175,
-            "weightFrom": 60,
-            "weightTo": 70
-          }
-        }
-      },
-      "createdAt": "2025-12-07T19:58:25.304Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765137505304-1765372073719-modal2-2-1.jpeg",
-      "updatedAt": "2025-12-10T20:12:00.498Z"
-    },
-    "1765145035052": {
-      "name": "فستان الافراح",
-      "price": 6800,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أحمر"
-      ],
-      "availableSizes": [
-        "S"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أحمر": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-أحمر-1765145134528-modle6.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "5",
-              "ageTo": "8",
-              "size": "S"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "S": {
-            "heightFrom": 100,
-            "heightTo": 150,
-            "weightFrom": 18,
-            "weightTo": 25
-          }
-        }
-      },
-      "createdAt": "2025-12-07T22:03:55.052Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765145035052-1765147070998-modle6.jpg",
-      "updatedAt": "2025-12-08T18:43:00.574Z"
-    },
-    "1765403828307": {
-      "name": "مودال  انجليزي",
-      "price": 6000,
-      "description": "مودال يومي أنيق",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أبيض"
-      ],
-      "availableSizes": [
-        "L"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أبيض": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765403828307-أبيض-1765456389450-modal5.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "12",
-              "ageTo": "14",
-              "size": "L"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": false,
-        "guide": {}
-      },
-      "createdAt": "2025-12-10T21:57:08.307Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765403828307-1765403865071-modal5.jpg",
-      "updatedAt": "2025-12-11T12:34:01.653Z"
-    }
-  },
+  "PRODUCTS": {},
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -413,11 +258,6 @@ const STORE_CONFIG = {
       1765145814607
     ]
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765145035052,
-    1765403828307,
-    1765137505304
-  ],
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
@@ -654,6 +494,7 @@ const STORE_CONFIG = {
       "enabled": false
     }
   },
+  "FREE_DELIVERY_PRODUCTS": [],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
@@ -1166,8 +1007,7 @@ function loadProductsConfig() {
 function loadDeliveryConfig() {
     return {
         deliveryPrices: STORE_CONFIG.DELIVERY_PRICES || {},
-        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {},
-        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY_PRODUCTS || []
+        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {}
     };
 }
 
