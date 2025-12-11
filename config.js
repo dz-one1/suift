@@ -314,6 +314,9 @@ const STORE_CONFIG = {
       1765145814607
     ]
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838
+  ],
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
@@ -550,9 +553,6 @@ const STORE_CONFIG = {
       "enabled": false
     }
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
@@ -1065,7 +1065,8 @@ function loadProductsConfig() {
 function loadDeliveryConfig() {
     return {
         deliveryPrices: STORE_CONFIG.DELIVERY_PRICES || {},
-        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {}
+        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {},
+        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY_PRODUCTS || []
     };
 }
 
