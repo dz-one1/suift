@@ -342,11 +342,13 @@
     ]
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": false,
+    "enableQuantityDiscount": true,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
-    "discountScope": "all",
-    "discountProducts": [],
+    "discountScope": "selected",
+    "discountProducts": [
+      1765488374530
+    ],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
