@@ -26,11 +26,6 @@
               "ageFrom": "5",
               "ageTo": "7",
               "size": "S"
-            },
-            {
-              "ageFrom": "8",
-              "ageTo": "10",
-              "size": "M"
             }
           ]
         },
@@ -54,6 +49,42 @@
       "createdAt": "2025-12-11T12:39:42.838Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-1765456803780-modal1.jpeg",
       "updatedAt": "2025-12-11T12:44:04.845Z"
+    },
+    "1765488374530": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "فستان المناسبات والافراح ",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أحمر"
+      ],
+      "availableSizes": [
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765488374530-أحمر-1765488523865-modle6.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "8",
+              "ageTo": "10",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": false,
+        "guide": {}
+      },
+      "createdAt": "2025-12-11T21:26:14.530Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765488374530-1765488425903-modle6.jpg",
+      "updatedAt": "2025-12-11T21:29:16.305Z"
     }
   },
   "DELIVERY_PRICES": {
