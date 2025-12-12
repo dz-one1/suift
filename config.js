@@ -43,11 +43,6 @@ const STORE_CONFIG = {
               "ageFrom": "8",
               "ageTo": "10",
               "size": "M"
-            },
-            {
-              "ageFrom": "12",
-              "ageTo": "14",
-              "size": "L"
             }
           ]
         }
@@ -58,7 +53,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-11T12:39:42.838Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-1765456803780-modal1.jpeg",
-      "updatedAt": "2025-12-12T00:28:18.899Z"
+      "updatedAt": "2025-12-12T17:42:05.505Z"
     },
     "1765488374530": {
       "name": "فستان الافراح",
