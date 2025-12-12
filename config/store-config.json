@@ -585,12 +585,15 @@
   "POINTS_SYSTEM": {
     "currentPoints": 500,
     "remainingDays": 30,
-    "lastReset": "2025-12-12T15:33:26.904Z",
+    "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838
+  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
@@ -1085,8 +1088,5 @@
   },
   "storageKeys": {},
   "timestamp": "2025-12-07T10:15:31.349Z",
-  "version": "1.0",
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ]
+  "version": "1.0"
 }
