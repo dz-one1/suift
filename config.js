@@ -343,7 +343,8 @@ const STORE_CONFIG = {
       1765137505304,
       1765145035052,
       1765145814607,
-      1765488374530
+      1765488374530,
+      1765456782838
     ]
   },
   "DISCOUNTS": {
@@ -583,7 +584,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 498,
+    "currentPoints": 500,
     "remainingDays": 30,
     "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
