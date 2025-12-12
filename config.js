@@ -347,13 +347,11 @@ const STORE_CONFIG = {
     ]
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "selected",
-    "discountProducts": [
-      1765488374530
-    ],
+    "discountProducts": [],
     "enablePromotionalDiscount": false,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
@@ -583,6 +581,14 @@ const STORE_CONFIG = {
       "weightTo": 140,
       "enabled": false
     }
+  },
+  "POINTS_SYSTEM": {
+    "currentPoints": 500,
+    "remainingDays": 30,
+    "lastReset": "2025-12-12T00:01:42.038Z",
+    "planType": "free",
+    "monthlyPoints": 500,
+    "resetPeriod": 30
   },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838
