@@ -2217,16 +2217,77 @@
         const SECURITY_POINTS = {
             INITIAL: 500,
             UPLOAD_IMAGE: 1,          // رفع صورة: تخصم نقطة واحدة
-            SYNC_DATA: 1,             // حفظ ومزامنة: تخصم نقطة واحدة
+            SYNC_DATA: 2,             // حفظ ومزامنة: تخصم نقطة واحدة
             DELETE_IMAGE: 1,          // حذف صورة: تخصم نقطة واحدة
             CLEAN_IMAGES: 1,          // تنظيف الصور: تخصم نقطة واحدة
-            FULL_SYNC: 1,             // مزامنة كاملة: تخصم نقطة واحدة
+            FULL_SYNC: 2,             // مزامنة كاملة: تخصم نقطة واحدة
             ADD_PRODUCT: 0            // إضافة منتج: لا تخصم نقاط
         };
         
         // =============================================================================
         // 📅 نظام النقاط الشهري والتجديد التلقائي
         // =============================================================================
+
+
+        function initSecurityPoints() {
+            let points = localStorage.getItem('securityPoints');
+            if (points === null) {
+                points = SECURITY_POINTS.INITIAL;
+                localStorage.setItem('securityPoints', points);
+            }
+            updateSecurityCounter();
+        }
+        
+        function getSecurityPoints() {
+            return parseInt(localStorage.getItem('securityPoints') || SECURITY_POINTS.INITIAL);
+        }
+        
+        function updateSecurityCounter() {
+            const points = getSecurityPoints();
+            const counterElement = document.getElementById('securityCounter');
+            const valueElement = document.getElementById('counterValue');
+            
+            if (counterElement && valueElement) {
+                valueElement.textContent = points;
+                
+                // إظهار رسالة عند وصول العداد إلى 0
+                if (points <= 0) {
+                    counterElement.innerHTML = '<i class="fas fa-crown"></i><span>أنت في الخطة المدفوعة</span>';
+                    return;
+                }
+                
+                // تغيير اللون بناءً على عدد النقاط
+                counterElement.classList.remove('warning', 'danger');
+                if (points < 100) {
+                    counterElement.classList.add('danger');
+                } else if (points < 250) {
+                    counterElement.classList.add('warning');
+                }
+            }
+        }
+        
+        function deductPoints(actionType) {
+            const currentPoints = getSecurityPoints();
+            
+            if (currentPoints <= 0) return true;
+            
+            const cost = SECURITY_POINTS[actionType] || 0;
+            
+            if (cost > 0) {
+                const newPoints = Math.max(0, currentPoints - cost);
+                localStorage.setItem('securityPoints', newPoints);
+                updateSecurityCounter();
+                return true;
+            }
+            return false;
+        }
+        
+        function hasEnoughPoints(actionType) {
+            const currentPoints = getSecurityPoints();
+            const cost = SECURITY_POINTS[actionType] || 0;
+            return currentPoints >= cost;
+        }
+
         
         function initMonthlyPointsSystem() {
             // التحقق من تاريخ بدء الاشتراك
