@@ -43,6 +43,11 @@ const STORE_CONFIG = {
               "ageFrom": "8",
               "ageTo": "10",
               "size": "M"
+            },
+            {
+              "ageFrom": "12",
+              "ageTo": "14",
+              "size": "L"
             }
           ]
         }
@@ -53,7 +58,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-11T12:39:42.838Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-1765456803780-modal1.jpeg",
-      "updatedAt": "2025-12-11T12:44:04.845Z"
+      "updatedAt": "2025-12-12T00:28:18.899Z"
     },
     "1765488374530": {
       "name": "فستان الافراح",
@@ -585,7 +590,7 @@ const STORE_CONFIG = {
   "POINTS_SYSTEM": {
     "currentPoints": 500,
     "remainingDays": 30,
-    "lastReset": "2025-12-12T00:01:42.038Z",
+    "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30
