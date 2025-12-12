@@ -346,6 +346,9 @@
       1765488374530
     ]
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838
+  ],
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
@@ -591,9 +594,6 @@
     "resetPeriod": 30,
     "currentMonthDays": 30
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
