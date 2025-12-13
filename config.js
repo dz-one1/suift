@@ -48,7 +48,7 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": true,
+        "enabled": false,
         "guide": {}
       },
       "createdAt": "2025-12-11T12:39:42.838Z",
@@ -328,19 +328,15 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
-      "wilayas": [
-        "01 - أدرار"
-      ],
+      "wilayas": [],
       "minQuantity": 1
     },
     "home": {
-      "enabled": true,
+      "enabled": false,
       "minAmount": 0,
-      "wilayas": [
-        "01 - أدرار"
-      ],
+      "wilayas": [],
       "minQuantity": 1
     },
     "freeDeliveryProducts": [
@@ -586,14 +582,86 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 498,
-    "remainingDays": 30,
-    "lastReset": "2025-12-13T07:16:28.530Z",
+    "currentPoints": 482,
+    "remainingDays": 29,
+    "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
-    "lastUpdate": "2025-12-13T14:41:22.206Z"
+    "lastUpdate": "2025-12-13T16:54:51.395Z",
+    "pointsHistory": [
+      {
+        "date": "2025-12-13T12:05:36.186Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:06:34.383Z",
+        "action": "UPLOAD_IMAGE",
+        "pointsBefore": 482,
+        "pointsAfter": 481,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:09:33.670Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:16:51.121Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:29:49.030Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:37:02.011Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:37:46.228Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 482,
+        "pointsAfter": 480,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:41:17.205Z",
+        "action": "UPLOAD_IMAGE",
+        "pointsBefore": 484,
+        "pointsAfter": 483,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:41:27.220Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 483,
+        "pointsAfter": 481,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:46:48.645Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 481,
+        "pointsAfter": 479,
+        "user": "admin"
+      }
+    ]
   },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838
