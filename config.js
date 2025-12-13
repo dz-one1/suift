@@ -582,14 +582,14 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 480,
+    "currentPoints": 478,
     "remainingDays": 29,
     "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
-    "lastUpdate": "2025-12-13T16:54:51.395Z",
+    "lastUpdate": "2025-12-13T18:59:07.554Z",
     "pointsHistory": [
       {
         "date": "2025-12-13T12:05:36.186Z",
