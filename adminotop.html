@@ -6583,4 +6583,238 @@
                         
                         const repo = getDefaultRepo();
                         if (!repo) {
-                            showNotification('لم يتم إعداد
+showNotification('لم يتم إعداد مفتاح التخزين', 'error');
+                            return;
+                        }
+                        
+                        const storageKeyConfig = storageKeys[repo];
+                        const folderPath = storageKeyConfig.defaultFolder || 'images';
+                        
+                        const response = await fetch(`https://api.github.com/repos/${storageKeyConfig.username}/${repo}/contents/${folderPath}`, {
+                            headers: {
+                                'Authorization': `token ${storageKeyConfig.key}`
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            const files = await response.json();
+                            const unusedImages = [];
+                            
+                            files.forEach(file => {
+                                if (file.type === 'file' && file.download_url) {
+                                    if (!usedImageUrls.has(file.download_url)) {
+                                        unusedImages.push(file);
+                                    }
+                                }
+                            });
+                            
+                            if (unusedImages.length === 0) {
+                                showNotification('لا توجد صور غير مستخدمة', 'info');
+                                return;
+                            }
+                            
+                            let deletedCount = 0;
+                            for (const file of unusedImages) {
+                                try {
+                                    await fetch(`https://api.github.com/repos/${storageKeyConfig.username}/${repo}/contents/${file.path}`, {
+                                        method: 'DELETE',
+                                        headers: {
+                                            'Authorization': `token ${storageKeyConfig.key}`,
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify({
+                                            message: `Delete unused image: ${file.name}`,
+                                            sha: file.sha,
+                                            branch: storageKeyConfig.branch
+                                        })
+                                    });
+                                    deletedCount++;
+                                } catch (error) {
+                                    console.error('Error deleting image:', error);
+                                }
+                            }
+                            
+                            showNotification(`تم حذف ${deletedCount} صورة غير مستخدمة`, 'success');
+                        }
+                    } catch (error) {
+                        showNotification('حدث خطأ أثناء تنظيف الصور', 'error');
+                    }
+                }
+            );
+        }
+
+        function goToStore() {
+            const storeUrl = window.location.href.replace(/admin\.html.*$/, 'index.html');
+            window.open(storeUrl, '_blank');
+        }
+
+        // =============================================================================
+        // 🚀 تهيئة النظام عند التحميل
+        // =============================================================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuthentication();
+            
+            checkDisplayMode();
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                setTimeout(() => {
+                    if (!isPWAInstalled) {
+                        document.getElementById('pwaInstallCard').style.display = 'block';
+                    }
+                }, 5000);
+            });
+            
+            window.addEventListener('appinstalled', () => {
+                isPWAInstalled = true;
+                document.getElementById('pwaInstallCard').style.display = 'none';
+                document.getElementById('pwaInstallPrompt').style.display = 'none';
+            });
+            
+            window.addEventListener('online', checkConnection);
+            window.addEventListener('offline', checkConnection);
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 's') {
+                    e.preventDefault();
+                    startQuickSave();
+                }
+                
+                if (e.key === 'Escape') {
+                    if (document.getElementById('productModal').style.display === 'flex') {
+                        closeProductModal();
+                    } else if (document.getElementById('wilayaModal').style.display === 'flex') {
+                        closeWilayaModal();
+                    } else if (document.getElementById('uploadImageModal').style.display === 'flex') {
+                        closeUploadImageModal();
+                    } else if (document.getElementById('colorsSizesModal').style.display === 'flex') {
+                        closeColorsSizesModal();
+                    } else if (document.getElementById('sizeGuideModal').style.display === 'flex') {
+                        closeSizeGuideModal();
+                    } else if (document.getElementById('confirmModal').style.display === 'flex') {
+                        hideConfirmModal();
+                    }
+                }
+            });
+            
+            setInterval(() => {
+                updateStats();
+            }, 30000);
+            
+            updateLastSyncTime();
+        });
+
+        // =============================================================================
+        // 📋 ملف manifest.json
+        // =============================================================================
+        const manifest = {
+            "name": "لوحة تحكم المتجر",
+            "short_name": "لوحة التحكم",
+            "description": "لوحة تحكم متقدمة لإدارة متجر الأطفال",
+            "start_url": "/admin.html",
+            "display": "standalone",
+            "background_color": "#f5f7fa",
+            "theme_color": "#4361ee",
+            "orientation": "portrait-primary",
+            "scope": "/",
+            "lang": "ar",
+            "dir": "rtl",
+            "icons": [
+                {
+                    "src": "icons/icon-72x72.png",
+                    "sizes": "72x72",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-128x128.png",
+                    "sizes": "128x128",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-144x144.png",
+                    "sizes": "144x144",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-152x152.png",
+                    "sizes": "152x152",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-384x384.png",
+                    "sizes": "384x384",
+                    "type": "image/png"
+                },
+                {
+                    "src": "icons/icon-512x512.png",
+                    "sizes": "512x512",
+                    "type": "image/png"
+                }
+            ]
+        };
+
+        // =============================================================================
+        // 🔧 ملف Service Worker (sw.js)
+        // =============================================================================
+        const serviceWorkerCode = `
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open('store-admin-v1').then(cache => {
+            return cache.addAll([
+                '/',
+                '/admin.html',
+                'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+            ]);
+        })
+    );
+});
+
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cacheName => {
+                    if (cacheName !== 'store-admin-v1') {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
+});
+
+self.addEventListener('fetch', event => {
+    if (event.request.url.includes('github.com') || 
+        event.request.url.includes('googleapis.com') ||
+        event.request.url.includes('cdnjs.cloudflare.com')) {
+        event.respondWith(fetch(event.request));
+    } else {
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                return response || fetch(event.request);
+            })
+        );
+    }
+});
+`;
+
+        // =============================================================================
+        // 🏁 نهاية الكود - النظام كامل وجاهز للعمل
+        // =============================================================================
+    </script>
+</body>
+</html>
