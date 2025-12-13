@@ -346,13 +346,11 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": [
       1765137505304,
       1765145035052,
-      1765145814607,
-      1765456782838,
-      1765488374530
+      1765145814607
     ]
   },
   "DISCOUNTS": {
-    "enableQuantityDiscount": true,
+    "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
     "discountPerItem": 500,
     "discountScope": "all",
@@ -507,14 +505,14 @@ const STORE_CONFIG = {
       "heightTo": 130,
       "weightFrom": 14,
       "weightTo": 16,
-      "enabled": true
+      "enabled": false
     },
     "M": {
       "heightFrom": 130,
       "heightTo": 150,
       "weightFrom": 16,
       "weightTo": 22,
-      "enabled": true
+      "enabled": false
     },
     "L": {
       "heightFrom": 180,
@@ -588,7 +586,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 472,
+    "currentPoints": 470,
     "remainingDays": 29,
     "lastReset": "2025-12-12T00:27:32.315Z",
     "planType": "free",
