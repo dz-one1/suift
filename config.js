@@ -48,7 +48,7 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": false,
+        "enabled": true,
         "guide": {}
       },
       "createdAt": "2025-12-11T12:39:42.838Z",
@@ -328,15 +328,19 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
-      "wilayas": [],
+      "wilayas": [
+        "01 - أدرار"
+      ],
       "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
-      "wilayas": [],
+      "wilayas": [
+        "01 - أدرار"
+      ],
       "minQuantity": 1
     },
     "freeDeliveryProducts": [
@@ -582,9 +586,9 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 479,
-    "remainingDays": 29,
-    "lastReset": "2025-12-12T00:27:32.315Z",
+    "currentPoints": 498,
+    "remainingDays": 30,
+    "lastReset": "2025-12-13T07:16:28.530Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
