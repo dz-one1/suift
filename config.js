@@ -590,7 +590,8 @@ const STORE_CONFIG = {
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
-    "currentMonthDays": 30
+    "currentMonthDays": 30,
+    "lastUpdate": "2025-12-13T12:07:18.359Z"
   },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838
