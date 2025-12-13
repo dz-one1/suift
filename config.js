@@ -589,7 +589,7 @@ const STORE_CONFIG = {
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
-    "lastUpdate": "2025-12-13T12:11:01.363Z"
+    "lastUpdate": "2025-12-13T14:37:07.968Z"
   },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838
