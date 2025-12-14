@@ -582,8 +582,88 @@
       "enabled": false
     }
   },
-  
-  
+  "POINTS_SYSTEM": {
+    "currentPoints": 496,
+    "remainingDays": 30,
+    "lastReset": "2025-12-14T16:23:18.422Z",
+    "planType": "free",
+    "monthlyPoints": 500,
+    "resetPeriod": 30,
+    "currentMonthDays": 30,
+    "lastUpdate": "2025-12-13T18:59:22.674Z",
+    "pointsHistory": [
+      {
+        "date": "2025-12-13T12:05:36.186Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:06:34.383Z",
+        "action": "UPLOAD_IMAGE",
+        "pointsBefore": 482,
+        "pointsAfter": 481,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:09:33.670Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:16:51.121Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T12:29:49.030Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:37:02.011Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 484,
+        "pointsAfter": 482,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:37:46.228Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 482,
+        "pointsAfter": 480,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:41:17.205Z",
+        "action": "UPLOAD_IMAGE",
+        "pointsBefore": 484,
+        "pointsAfter": 483,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:41:27.220Z",
+        "action": "FULL_SYNC",
+        "pointsBefore": 483,
+        "pointsAfter": 481,
+        "user": "admin"
+      },
+      {
+        "date": "2025-12-13T14:46:48.645Z",
+        "action": "SYNC_DATA",
+        "pointsBefore": 481,
+        "pointsAfter": 479,
+        "user": "admin"
+      }
+    ]
+  },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838,
     1765488374530
