@@ -346,10 +346,6 @@
       1765488374530
     ]
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838,
-    1765488374530
-  ],
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
@@ -586,6 +582,10 @@
       "enabled": false
     }
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838,
+    1765488374530
+  ],
   "POINTS_SYSTEM": {
     "currentPoints": 500,
     "remainingDays": 30,
