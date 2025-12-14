@@ -346,6 +346,10 @@
       1765488374530
     ]
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838,
+    1765488374530
+  ],
   "DISCOUNTS": {
     "enableQuantityDiscount": false,
     "minQuantityForDiscount": 1,
@@ -664,9 +668,6 @@
       }
     ]
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
