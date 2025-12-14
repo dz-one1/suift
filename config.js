@@ -1182,8 +1182,7 @@ function loadProductsConfig() {
 function loadDeliveryConfig() {
     return {
         deliveryPrices: STORE_CONFIG.DELIVERY_PRICES || {},
-        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {},
-        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts || []
+        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {}
     };
 }
 
