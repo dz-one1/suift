@@ -586,10 +586,10 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 495,
-    "remainingDays": 30,
-    "lastReset": "2025-12-14T06:46:26.838Z",
-    "planType": "free",
+    "currentPoints": 9999,
+    "remainingDays": "∞",
+    "lastReset": "2025-12-12T00:27:32.315Z",
+    "planType": "unlimited",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
@@ -1182,7 +1182,8 @@ function loadProductsConfig() {
 function loadDeliveryConfig() {
     return {
         deliveryPrices: STORE_CONFIG.DELIVERY_PRICES || {},
-        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {}
+        freeDelivery: STORE_CONFIG.FREE_DELIVERY || {},
+        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts || []
     };
 }
 
