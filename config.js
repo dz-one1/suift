@@ -587,14 +587,10 @@ const STORE_CONFIG = {
       "enabled": false
     }
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838,
-    1765488374530
-  ],
   "POINTS_SYSTEM": {
-    "currentPoints": 500,
+    "currentPoints": 498,
     "remainingDays": 30,
-    "lastReset": "2025-12-14T16:06:04.496Z",
+    "lastReset": "2025-12-14T16:06:45.209Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
@@ -673,6 +669,10 @@ const STORE_CONFIG = {
       }
     ]
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838,
+    1765488374530
+  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
