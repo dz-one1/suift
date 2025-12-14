@@ -85,6 +85,97 @@
       "createdAt": "2025-12-11T21:26:14.530Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765488374530-1765488425903-modle6.jpg",
       "updatedAt": "2025-12-11T21:31:04.170Z"
+    },
+    "1765734051098": {
+      "name": "قمجة تركية",
+      "price": 2500,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أحمر",
+        "vert motard",
+        "Vert pistache"
+      ],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-أحمر-1765735538838-Screenshot-20251128-190507-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "9",
+              "size": "M"
+            }
+          ]
+        },
+        "vert motard": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-vert%20motard-1765735620402-Screenshot-20251128-190530-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "9",
+              "size": "M"
+            }
+          ]
+        },
+        "Vert pistache": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-Vert%20pistache-1765735698221-Screenshot-20251128-190550-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "5",
+              "ageTo": "7",
+              "size": "S"
+            },
+            {
+              "ageFrom": "8",
+              "ageTo": "9",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {
+          "S": {
+            "heightFrom": 80,
+            "heightTo": 100,
+            "weightFrom": 20,
+            "weightTo": 25
+          },
+          "M": {
+            "heightFrom": 95,
+            "heightTo": 110,
+            "weightFrom": 23,
+            "weightTo": 30
+          }
+        }
+      },
+      "createdAt": "2025-12-14T17:40:51.098Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-1765734134763-Screenshot-20251128-190724-Gallery.jpg",
+      "updatedAt": "2025-12-14T18:10:07.931Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -382,7 +473,9 @@
     "أخضر",
     "وردي",
     "رمادي",
-    "أصفر"
+    "أصفر",
+    "vert motard",
+    "Vert pistache"
   ],
   "AVAILABLE_SIZES": [
     "S",
@@ -577,7 +670,7 @@
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 498,
+    "currentPoints": 492,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
