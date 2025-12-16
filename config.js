@@ -1,3 +1,4 @@
+
 // =============================================================================
 // ⚙️ ملف الإعدادات الرئيسي للمتجر
 // =============================================================================
@@ -418,21 +419,26 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
-      "wilayas": [],
+      "wilayas": [
+        "01 - أدرار"
+      ],
       "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
-      "wilayas": [],
+      "wilayas": [
+        "01 - أدرار"
+      ],
       "minQuantity": 1
     },
     "freeDeliveryProducts": [
       1765137505304,
       1765145035052,
-      1765145814607
+      1765145814607,
+      1765488374530
     ]
   },
   "DISCOUNTS": {
@@ -441,14 +447,15 @@ const STORE_CONFIG = {
     "discountPerItem": 500,
     "discountScope": "selected",
     "discountProducts": [
-      1765456782838,
-      1765488374530
+      1765456782838
     ],
-    "enablePromotionalDiscount": false,
+    "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
-    "promoDiscountScope": "all",
-    "promoDiscountProducts": []
+    "promoDiscountScope": "selected",
+    "promoDiscountProducts": [
+      1765734051098
+    ]
   },
   "STORE_INFO": {
     "name": " SANIX-DZ",
@@ -677,7 +684,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 490,
+    "currentPoints": 488,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
@@ -757,6 +764,30 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ]
+  },
+  "PIXEL_CODES": {
+    "facebook": {
+      "enabled": true,
+      "pixelId": "",
+      "events": {
+        "pageView": true,
+        "addToCart": true,
+        "purchase": true,
+        "initiateCheckout": true,
+        "viewContent": true
+      }
+    },
+    "tiktok": {
+      "enabled": false,
+      "pixelId": "",
+      "events": {
+        "pageView": true,
+        "addToCart": true,
+        "purchase": true,
+        "initiateCheckout": true,
+        "viewContent": true
+      }
+    }
   },
   "FREE_DELIVERY_PRODUCTS": [
     1765456782838
@@ -1255,32 +1286,7 @@ const STORE_CONFIG = {
   },
   "storageKeys": {},
   "timestamp": "2025-12-07T10:15:31.349Z",
-  "version": "1.0",
-  // إضافة إعدادات البكسل الجديدة هنا
-  "PIXEL_CODES": {
-    "facebook": {
-      "enabled": false,
-      "pixelId": "",
-      "events": {
-        "pageView": true,
-        "addToCart": true,
-        "purchase": true,
-        "initiateCheckout": true,
-        "viewContent": true
-      }
-    },
-    "tiktok": {
-      "enabled": false,
-      "pixelId": "",
-      "events": {
-        "pageView": true,
-        "addToCart": true,
-        "purchase": true,
-        "initiateCheckout": true,
-        "viewContent": true
-      }
-    }
-  }
+  "version": "1.0"
 };
 
 // =============================================================================
