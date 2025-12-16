@@ -684,7 +684,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 488,
+    "currentPoints": 486,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
@@ -763,7 +763,8 @@ const STORE_CONFIG = {
         "pointsAfter": 479,
         "user": "admin"
       }
-    ]
+    ],
+    "lastUpdated": "2025-12-16T19:30:23.366Z"
   },
   "PIXEL_CODES": {
     "facebook": {
@@ -778,7 +779,7 @@ const STORE_CONFIG = {
       }
     },
     "tiktok": {
-      "enabled": false,
+      "enabled": true,
       "pixelId": "",
       "events": {
         "pageView": true,
