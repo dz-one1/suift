@@ -679,7 +679,7 @@
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 488,
+    "currentPoints": 486,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
@@ -758,7 +758,8 @@
         "pointsAfter": 479,
         "user": "admin"
       }
-    ]
+    ],
+    "lastUpdated": "2025-12-16T19:30:21.555Z"
   },
   "PIXEL_CODES": {
     "facebook": {
@@ -773,7 +774,7 @@
       }
     },
     "tiktok": {
-      "enabled": false,
+      "enabled": true,
       "pixelId": "",
       "events": {
         "pageView": true,
