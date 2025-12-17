@@ -2320,55 +2320,58 @@
         }
         
         function checkAndResetMonthlyPoints() {
-            const subscriptionStart = localStorage.getItem('subscriptionStart');
-            if (!subscriptionStart) return;
-            
-            const startDate = new Date(subscriptionStart);
-            const currentDate = new Date();
-            
-            // حساب عدد الأيام المنقضية
-            const timeDiff = currentDate - startDate;
-            const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-            
-            // إذا مر 30 يومًا، نجدد النقاط والأيام
-            if (daysPassed >= FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS) {
-                resetMonthlyPoints();
-            } else {
-                // حساب الأيام المتبقية
-                const remainingDays = FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS - daysPassed;
-                localStorage.setItem('remainingDays', remainingDays.toString());
-                
-                // حساب النقاط المتبقية (تتناقص تدريجياً)
-                const points = FREE_PLAN_SETTINGS.MONTHLY_POINTS - 
-                              Math.floor((daysPassed / FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS) * FREE_PLAN_SETTINGS.MONTHLY_POINTS);
-                
-                // التأكد من أن النقاط لا تقل عن 0
-                const finalPoints = Math.max(0, points);
-                localStorage.setItem('securityPoints', finalPoints.toString());
-                
-                // إذا كانت النقاط 0، نتحكم في عداد الأيام
-                if (finalPoints <= 0) {
-                    manageDaysCounterWhenPointsZero();
-                }
-                
-                // تحديث config
-                savePointsToConfig();
-                
-                // تحديث ملف النظام
-                localStorage.setItem('monthlyPointsSystem', JSON.stringify({
-                    currentPoints: finalPoints,
-                    remainingDays: remainingDays,
-                    lastReset: subscriptionStart,
-                    planType: FREE_PLAN_SETTINGS.PLAN_TYPE,
-                    monthlyPoints: FREE_PLAN_SETTINGS.MONTHLY_POINTS,
-                    resetPeriod: FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS,
-                    currentMonthDays: localStorage.getItem('currentMonthDays') || FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS.toString(),
-                    lastUpdate: new Date().toISOString()
-                }));
-                
-                console.log('فحص النقاط الشهرية - الأيام المنقضية:', daysPassed, 'الأيام المتبقية:', remainingDays, 'النقاط:', finalPoints);
-            }
-        }
+    const subscriptionStart = localStorage.getItem('subscriptionStart');
+    if (!subscriptionStart) return;
+
+    const startDate = new Date(subscriptionStart);
+    const currentDate = new Date();
+    
+    // حساب تاريخ التجديد القادم (تاريخ البدء + 30 يوم)
+    const nextRenewalDate = new Date(startDate);
+    nextRenewalDate.setDate(startDate.getDate() + FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS);
+    
+    // حساب الفرق بالأيام بين تاريخ التجديد القادم وتاريخ اليوم
+    const timeDiff = nextRenewalDate - currentDate;
+    let remainingDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    
+    // إذا كان تاريخ التجديد القادم أصغر من تاريخ اليوم
+    if (remainingDays < 0) {
+        // تمديد تاريخ التجديد ب 30 يومًا
+        const newRenewalDate = new Date(currentDate);
+        newRenewalDate.setDate(currentDate.getDate() + FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS);
+        
+        // تحديث تاريخ البدء ليصبح اليوم
+        localStorage.setItem('subscriptionStart', currentDate.toISOString());
+        
+        // الأيام الباقية تصبح 30 يومًا
+        remainingDays = FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS;
+        
+        // إعادة تعيين النقاط إلى 500
+        localStorage.setItem('securityPoints', FREE_PLAN_SETTINGS.MONTHLY_POINTS.toString());
+        
+        // حفظ في config
+        savePointsToConfig();
+        
+        console.log('تم تمديد الاشتراك 30 يومًا بسبب انتهاء الفترة');
+    }
+    
+    // حفظ الأيام المتبقية
+    localStorage.setItem('remainingDays', remainingDays.toString());
+    
+    // حساب النقاط المتبقية (تتناقص تدريجياً)
+    const daysPassed = FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS - remainingDays;
+    const points = FREE_PLAN_SETTINGS.MONTHLY_POINTS - 
+                  Math.floor((daysPassed / FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS) * FREE_PLAN_SETTINGS.MONTHLY_POINTS);
+    
+    // التأكد من أن النقاط لا تقل عن 0
+    const finalPoints = Math.max(0, points);
+    localStorage.setItem('securityPoints', finalPoints.toString());
+    
+    // تحديث config
+    savePointsToConfig();
+    
+    console.log('فحص النقاط - الأيام المتبقية:', remainingDays, 'النقاط:', finalPoints);
+}
         
         function manageDaysCounterWhenPointsZero() {
             // الحصول على آخر تاريخ تحديث للأيام
@@ -2441,36 +2444,46 @@
         }
         
         function getRemainingDays() {
-            // أولوية: القراءة من CONFIG
-            if (CONFIG.POINTS_SYSTEM && CONFIG.POINTS_SYSTEM.remainingDays !== undefined) {
-                return CONFIG.POINTS_SYSTEM.remainingDays;
-            }
-            
-            // ثانياً: القراءة من localStorage
-            let remainingDays = localStorage.getItem('remainingDays');
-            
-            if (remainingDays === null) {
-                // إذا لم تكن موجودة، احسبها
-                const subscriptionStart = localStorage.getItem('subscriptionStart');
-                if (!subscriptionStart) return FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS;
-                
-                const startDate = new Date(subscriptionStart);
-                const currentDate = new Date();
-                
-                const timeDiff = currentDate - startDate;
-                const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-                remainingDays = Math.max(0, FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS - daysPassed);
-                localStorage.setItem('remainingDays', remainingDays.toString());
-                
-                // تحديث CONFIG
-                savePointsToConfig();
-            }
-            
-            // تحويل إلى عدد صحيح
-            const days = parseInt(remainingDays);
-            
-            return isNaN(days) ? FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS : days;
+    // أولوية: القراءة من CONFIG
+    if (CONFIG.POINTS_SYSTEM && CONFIG.POINTS_SYSTEM.remainingDays !== undefined) {
+        return CONFIG.POINTS_SYSTEM.remainingDays;
+    }
+    
+    // ثانياً: القراءة من localStorage
+    let remainingDays = localStorage.getItem('remainingDays');
+    
+    if (remainingDays === null) {
+        // إذا لم تكن موجودة، احسبها
+        const subscriptionStart = localStorage.getItem('subscriptionStart');
+        if (!subscriptionStart) return FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS;
+        
+        const startDate = new Date(subscriptionStart);
+        const currentDate = new Date();
+        
+        // حساب تاريخ التجديد القادم
+        const nextRenewalDate = new Date(startDate);
+        nextRenewalDate.setDate(startDate.getDate() + FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS);
+        
+        // حساب الأيام المتبقية
+        const timeDiff = nextRenewalDate - currentDate;
+        remainingDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        
+        // إذا انتهت الفترة
+        if (remainingDays < 0) {
+            remainingDays = FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS;
         }
+        
+        localStorage.setItem('remainingDays', remainingDays.toString());
+        
+        // تحديث CONFIG
+        savePointsToConfig();
+    }
+    
+    // تحويل إلى عدد صحيح
+    const days = parseInt(remainingDays);
+    
+    return isNaN(days) ? FREE_PLAN_SETTINGS.RESET_PERIOD_DAYS : days;
+}
         
         function getSecurityPoints() {
             // أولاً: حاول قراءة النقاط من localStorage
