@@ -684,7 +684,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 484,
+    "currentPoints": 482,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
@@ -764,7 +764,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-17T08:08:49.405Z"
+    "lastUpdated": "2025-12-17T09:12:26.182Z"
   },
   "PIXEL_CODES": {
     "facebook": {
@@ -790,6 +790,9 @@ const STORE_CONFIG = {
       }
     }
   },
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838
+  ],
   "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
@@ -1284,10 +1287,7 @@ const STORE_CONFIG = {
   },
   "storageKeys": {},
   "timestamp": "2025-12-07T10:15:31.349Z",
-  "version": "1.0",
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ]
+  "version": "1.0"
 };
 
 // =============================================================================
