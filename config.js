@@ -421,17 +421,13 @@ const STORE_CONFIG = {
     "desk": {
       "enabled": true,
       "minAmount": 0,
-      "wilayas": [
-        "01 - أدرار"
-      ],
+      "wilayas": [],
       "minQuantity": 1
     },
     "home": {
       "enabled": true,
       "minAmount": 0,
-      "wilayas": [
-        "01 - أدرار"
-      ],
+      "wilayas": [],
       "minQuantity": 1
     },
     "freeDeliveryProducts": [
@@ -684,8 +680,8 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 478,
-    "remainingDays": 28,
+    "currentPoints": 474,
+    "remainingDays": 27,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
     "monthlyPoints": 500,
@@ -764,7 +760,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-17T10:38:54.045Z"
+    "lastUpdated": "2025-12-17T19:58:26.897Z"
   },
   "PIXEL_CODES": {
     "facebook": {
