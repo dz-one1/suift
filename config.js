@@ -1,5 +1,6 @@
+
 // =============================================================================
-// ⚙️ ملف الإعدادات الرئيسي للمتجر - النسخة المحدثة مع نظام النقاط
+// ⚙️ ملف الإعدادات الرئيسي للمتجر
 // =============================================================================
 
 const STORE_CONFIG = {
@@ -471,8 +472,7 @@ const STORE_CONFIG = {
     "messengerUrl": "",
     "viberNumber": "",
     "whatsappNumber": "213671466489",
-    "whatsappUrl": "https://wa.me/213671466489",
-    "tiktokUrl": "" // ✅ إضافة حقل TikTok الجديد
+    "whatsappUrl": "https://wa.me/213671466489"
   },
   "GOOGLE_SHEETS": {
     "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
@@ -684,14 +684,14 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 488,
+    "currentPoints": 484,
     "remainingDays": 30,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
-    "lastUpdated": "2025-12-13T18:59:22.674Z",
+    "lastUpdate": "2025-12-13T18:59:22.674Z",
     "pointsHistory": [
       {
         "date": "2025-12-13T12:05:36.186Z",
@@ -763,22 +763,23 @@ const STORE_CONFIG = {
         "pointsAfter": 479,
         "user": "admin"
       }
-    ]
+    ],
+    "lastUpdated": "2025-12-17T08:08:49.405Z"
   },
   "PIXEL_CODES": {
     "facebook": {
       "enabled": true,
       "pixelId": "",
       "events": {
-        "pageView": true,
+        "pageView": false,
         "addToCart": true,
-        "purchase": true,
+        "purchase": false,
         "initiateCheckout": true,
         "viewContent": true
       }
     },
     "tiktok": {
-      "enabled": false,
+      "enabled": true,
       "pixelId": "",
       "events": {
         "pageView": true,
@@ -789,10 +790,7 @@ const STORE_CONFIG = {
       }
     }
   },
-  "FREE_DELIVERY_PRODUCTS": [
-    1765456782838
-  ],
-  "DEFAULT_CONFIG": {
+  "config": {
     "PRODUCTS": {},
     "DELIVERY_PRICES": {
       "01 - أدرار": {
@@ -1068,8 +1066,7 @@ const STORE_CONFIG = {
       "messengerUrl": "",
       "viberNumber": "",
       "whatsappNumber": "",
-      "whatsappUrl": "",
-      "tiktokUrl": "" // ✅ إضافة حقل TikTok في الإعدادات الافتراضية
+      "whatsappUrl": ""
     },
     "GOOGLE_SHEETS": {
       "url": "",
@@ -1283,69 +1280,14 @@ const STORE_CONFIG = {
         "weightTo": 140,
         "enabled": false
       }
-    },
-    "POINTS_SYSTEM": {
-      "currentPoints": 500,
-      "remainingDays": 30,
-      "lastReset": null,
-      "planType": "free",
-      "monthlyPoints": 500,
-      "resetPeriod": 30,
-      "currentMonthDays": 30,
-      "lastUpdated": null
-    },
-    "PIXEL_CODES": {
-      "facebook": {
-        "enabled": false,
-        "pixelId": "",
-        "events": {
-          "pageView": true,
-          "addToCart": true,
-          "purchase": true,
-          "initiateCheckout": true,
-          "viewContent": true
-        }
-      },
-      "tiktok": {
-        "enabled": false,
-        "pixelId": "",
-        "events": {
-          "pageView": true,
-          "addToCart": true,
-          "purchase": true,
-          "initiateCheckout": true,
-          "viewContent": true
-        }
-      }
     }
   },
   "storageKeys": {},
   "timestamp": "2025-12-07T10:15:31.349Z",
-  "version": "1.1.0" // ✅ تحديث رقم الإصدار
-};
-
-// =============================================================================
-// 🔄 إعدادات نظام النقاط الشهري
-// =============================================================================
-
-const FREE_PLAN_SETTINGS = {
-  MONTHLY_POINTS: 500,
-  RESET_PERIOD_DAYS: 30,
-  PLAN_TYPE: 'free'
-};
-
-// =============================================================================
-// 🔧 تكلفة العمليات بالنقاط
-// =============================================================================
-
-const SECURITY_POINTS = {
-  INITIAL: 500,
-  UPLOAD_IMAGE: 1,          // رفع صورة: تخصم نقطة واحدة
-  SYNC_DATA: 2,             // حفظ ومزامنة: تخصم نقطتين
-  DELETE_IMAGE: 1,          // حذف صورة: تخصم نقطة واحدة
-  CLEAN_IMAGES: 1,          // تنظيف الصور: تخصم نقطة واحدة
-  FULL_SYNC: 2,             // مزامنة كاملة: تخصم نقطتين
-  ADD_PRODUCT: 0            // إضافة منتج: لا تخصم نقاط
+  "version": "1.0",
+  "FREE_DELIVERY_PRODUCTS": [
+    1765456782838
+  ]
 };
 
 // =============================================================================
@@ -1364,8 +1306,7 @@ function loadDeliveryConfig() {
     return {
         deliveryPrices: STORE_CONFIG.DELIVERY_PRICES || {},
         freeDelivery: STORE_CONFIG.FREE_DELIVERY || {},
-        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts || [],
-        FREE_DELIVERY_PRODUCTS: STORE_CONFIG.FREE_DELIVERY_PRODUCTS || []
+        freeDeliveryProducts: STORE_CONFIG.FREE_DELIVERY.freeDeliveryProducts || []
     };
 }
 
@@ -1406,44 +1347,6 @@ function loadPixelConfig() {
 }
 
 // =============================================================================
-// ⏰ دالة تحميل نظام النقاط
-// =============================================================================
-
-function loadPointsSystem() {
-    return STORE_CONFIG.POINTS_SYSTEM || {
-        currentPoints: 500,
-        remainingDays: 30,
-        lastReset: null,
-        planType: 'free',
-        monthlyPoints: 500,
-        resetPeriod: 30,
-        currentMonthDays: 30,
-        lastUpdated: null
-    };
-}
-
-// =============================================================================
-// 🔄 دالة تحديث نظام النقاط
-// =============================================================================
-
-function updatePointsSystem(newPoints) {
-    if (!STORE_CONFIG.POINTS_SYSTEM) {
-        STORE_CONFIG.POINTS_SYSTEM = {};
-    }
-    
-    for (const key in newPoints) {
-        if (newPoints.hasOwnProperty(key)) {
-            STORE_CONFIG.POINTS_SYSTEM[key] = newPoints[key];
-        }
-    }
-    
-    // تحديث وقت التحديث الأخير
-    STORE_CONFIG.POINTS_SYSTEM.lastUpdated = new Date().toISOString();
-    
-    return STORE_CONFIG.POINTS_SYSTEM;
-}
-
-// =============================================================================
 // 📊 دالة تحميل جميع الإعدادات
 // =============================================================================
 
@@ -1463,75 +1366,3 @@ function updateConfig(newConfig) {
     }
     return STORE_CONFIG;
 }
-
-// =============================================================================
-// 🔧 دالة إعادة تعيين الإعدادات الافتراضية
-// =============================================================================
-
-function resetToDefaultConfig() {
-    for (const key in STORE_CONFIG.DEFAULT_CONFIG) {
-        if (STORE_CONFIG.DEFAULT_CONFIG.hasOwnProperty(key)) {
-            STORE_CONFIG[key] = STORE_CONFIG.DEFAULT_CONFIG[key];
-        }
-    }
-    return STORE_CONFIG;
-}
-
-// =============================================================================
-// 📅 دالة التحقق من صحة نظام النقاط
-// =============================================================================
-
-function validatePointsSystem() {
-    if (!STORE_CONFIG.POINTS_SYSTEM) {
-        STORE_CONFIG.POINTS_SYSTEM = {
-            currentPoints: 500,
-            remainingDays: 30,
-            lastReset: new Date().toISOString(),
-            planType: 'free',
-            monthlyPoints: 500,
-            resetPeriod: 30,
-            currentMonthDays: 30,
-            lastUpdated: new Date().toISOString()
-        };
-        return false;
-    }
-    
-    // التحقق من وجود جميع الحقول المطلوبة
-    const requiredFields = [
-        'currentPoints',
-        'remainingDays',
-        'lastReset',
-        'planType',
-        'monthlyPoints',
-        'resetPeriod'
-    ];
-    
-    let isValid = true;
-    for (const field of requiredFields) {
-        if (STORE_CONFIG.POINTS_SYSTEM[field] === undefined) {
-            isValid = false;
-            break;
-        }
-    }
-    
-    if (!isValid) {
-        STORE_CONFIG.POINTS_SYSTEM = {
-            currentPoints: STORE_CONFIG.POINTS_SYSTEM.currentPoints || 500,
-            remainingDays: STORE_CONFIG.POINTS_SYSTEM.remainingDays || 30,
-            lastReset: STORE_CONFIG.POINTS_SYSTEM.lastReset || new Date().toISOString(),
-            planType: STORE_CONFIG.POINTS_SYSTEM.planType || 'free',
-            monthlyPoints: STORE_CONFIG.POINTS_SYSTEM.monthlyPoints || 500,
-            resetPeriod: STORE_CONFIG.POINTS_SYSTEM.resetPeriod || 30,
-            currentMonthDays: STORE_CONFIG.POINTS_SYSTEM.currentMonthDays || 30,
-            lastUpdated: new Date().toISOString()
-        };
-    }
-    
-    return true;
-}
-
-// =============================================================================
-// ✅ تهيئة نظام النقاط عند تحميل الملف
-// =============================================================================
-
-validatePointsSystem();
