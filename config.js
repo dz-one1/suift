@@ -1,6 +1,6 @@
 
 // =============================================================================
-// ⚙️ ملف الإعدادات الرئيسي للمتجر
+// ⚙️ Fichier de paramètres principal du magasin
 // =============================================================================
 
 const STORE_CONFIG = {
@@ -181,61 +181,6 @@ const STORE_CONFIG = {
       "createdAt": "2025-12-14T17:40:51.098Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-1765734134763-Screenshot-20251128-190724-Gallery.jpg",
       "updatedAt": "2025-12-14T18:10:07.931Z"
-    },
-    "1766041336901": {
-      "name": "منتج جديد",
-      "price": 0,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أبيض",
-        "أسود"
-      ],
-      "availableSizes": [
-        "S",
-        "M"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أسود": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-أسود-1766041901807-modal1.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "7",
-              "ageTo": "5",
-              "size": "S"
-            },
-            {
-              "ageFrom": "9",
-              "ageTo": "8",
-              "size": "M"
-            }
-          ]
-        },
-        "أبيض": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-أبيض-1766041845845-modal15.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "10",
-              "ageTo": "9",
-              "size": "M"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {}
-      },
-      "createdAt": "2025-12-18T07:02:16.901Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-1766041710978-modal11.jpg",
-      "updatedAt": "2025-12-18T07:12:05.813Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -735,10 +680,10 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 467,
+    "currentPoints": 465,
     "remainingDays": 27,
     "lastReset": "2025-12-14T16:47:22.307Z",
-    "planType": "free",
+    "planType": "gratuit",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
@@ -815,7 +760,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-18T07:13:06.129Z"
+    "lastUpdated": "2025-12-18T09:12:01.524Z"
   },
   "PIXEL_CODES": {
     "facebook": {
@@ -1342,7 +1287,7 @@ const STORE_CONFIG = {
 };
 
 // =============================================================================
-// 🛍️ دالة تحميل المنتجات
+// 🛍️ Fonction de chargement des produits
 // =============================================================================
 
 function loadProductsConfig() {
@@ -1350,7 +1295,7 @@ function loadProductsConfig() {
 }
 
 // =============================================================================
-// 🚚 دالة تحميل أسعار التوصيل
+// 🚚 Fonction de chargement des prix de livraison
 // =============================================================================
 
 function loadDeliveryConfig() {
@@ -1362,7 +1307,7 @@ function loadDeliveryConfig() {
 }
 
 // =============================================================================
-// 💰 دالة تحميل إعدادات الخصم
+// 💰 Fonction de chargement des paramètres de réduction
 // =============================================================================
 
 function loadDiscountConfig() {
@@ -1370,7 +1315,7 @@ function loadDiscountConfig() {
 }
 
 // =============================================================================
-// 🏪 دالة تحميل معلومات المتجر
+// 🏪 Fonction de chargement des informations du magasin
 // =============================================================================
 
 function loadStoreInfo() {
@@ -1378,7 +1323,7 @@ function loadStoreInfo() {
 }
 
 // =============================================================================
-// 🎨 دالة تحميل الألوان والقياسات
+// 🎨 Fonction de chargement des couleurs et tailles
 // =============================================================================
 
 function loadSizesColorsConfig() {
@@ -1390,7 +1335,7 @@ function loadSizesColorsConfig() {
 }
 
 // =============================================================================
-// 📊 دالة تحميل إعدادات البكسل
+// 📊 Fonction de chargement des paramètres de pixel
 // =============================================================================
 
 function loadPixelConfig() {
@@ -1398,7 +1343,7 @@ function loadPixelConfig() {
 }
 
 // =============================================================================
-// 📊 دالة تحميل جميع الإعدادات
+// 📊 Fonction de chargement de tous les paramètres
 // =============================================================================
 
 function loadAllConfig() {
@@ -1406,7 +1351,7 @@ function loadAllConfig() {
 }
 
 // =============================================================================
-// 🔄 دالة تحديث الإعدادات
+// 🔄 Fonction de mise à jour des paramètres
 // =============================================================================
 
 function updateConfig(newConfig) {
