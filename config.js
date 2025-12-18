@@ -1,6 +1,6 @@
 
 // =============================================================================
-// ⚙️ ملف الإعدادات الرئيسي للمتجر
+// ⚙️ Fichier de paramètres principal du magasin
 // =============================================================================
 
 const STORE_CONFIG = {
@@ -462,13 +462,14 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766098736436-Screenshot-20250903-115403-Facebook.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
-    "instagramUrl": "",
-    "messengerUrl": "",
-    "viberNumber": "",
+    "instagramUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
+    "messengerUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
+    "viberNumber": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "whatsappNumber": "213671466489",
-    "whatsappUrl": "https://wa.me/213671466489"
+    "whatsappUrl": "https://wa.me/213671466489",
+    "tiktokUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT"
   },
   "GOOGLE_SHEETS": {
     "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
@@ -680,10 +681,10 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 465,
-    "remainingDays": 27,
+    "currentPoints": 475,
+    "remainingDays": 26,
     "lastReset": "2025-12-14T16:47:22.307Z",
-    "planType": "free",
+    "planType": "gratuit",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
@@ -760,7 +761,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-18T09:57:29.960Z"
+    "lastUpdated": "2025-12-18T22:59:14.856Z"
   },
   "PIXEL_CODES": {
     "facebook": {
@@ -1287,7 +1288,7 @@ const STORE_CONFIG = {
 };
 
 // =============================================================================
-// 🛍️ دالة تحميل المنتجات
+// 🛍️ Fonction de chargement des produits
 // =============================================================================
 
 function loadProductsConfig() {
@@ -1295,7 +1296,7 @@ function loadProductsConfig() {
 }
 
 // =============================================================================
-// 🚚 دالة تحميل أسعار التوصيل
+// 🚚 Fonction de chargement des prix de livraison
 // =============================================================================
 
 function loadDeliveryConfig() {
@@ -1307,7 +1308,7 @@ function loadDeliveryConfig() {
 }
 
 // =============================================================================
-// 💰 دالة تحميل إعدادات الخصم
+// 💰 Fonction de chargement des paramètres de réduction
 // =============================================================================
 
 function loadDiscountConfig() {
@@ -1315,7 +1316,7 @@ function loadDiscountConfig() {
 }
 
 // =============================================================================
-// 🏪 دالة تحميل معلومات المتجر
+// 🏪 Fonction de chargement des informations du magasin
 // =============================================================================
 
 function loadStoreInfo() {
@@ -1323,7 +1324,7 @@ function loadStoreInfo() {
 }
 
 // =============================================================================
-// 🎨 دالة تحميل الألوان والقياسات
+// 🎨 Fonction de chargement des couleurs et tailles
 // =============================================================================
 
 function loadSizesColorsConfig() {
@@ -1335,7 +1336,7 @@ function loadSizesColorsConfig() {
 }
 
 // =============================================================================
-// 📊 دالة تحميل إعدادات البكسل
+// 📊 Fonction de chargement des paramètres de pixel
 // =============================================================================
 
 function loadPixelConfig() {
@@ -1343,7 +1344,7 @@ function loadPixelConfig() {
 }
 
 // =============================================================================
-// 📊 دالة تحميل جميع الإعدادات
+// 📊 Fonction de chargement de tous les paramètres
 // =============================================================================
 
 function loadAllConfig() {
@@ -1351,7 +1352,7 @@ function loadAllConfig() {
 }
 
 // =============================================================================
-// 🔄 دالة تحديث الإعدادات
+// 🔄 Fonction de mise à jour des paramètres
 // =============================================================================
 
 function updateConfig(newConfig) {
