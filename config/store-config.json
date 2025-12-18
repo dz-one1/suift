@@ -457,13 +457,14 @@
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766098736436-Screenshot-20250903-115403-Facebook.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
-    "instagramUrl": "",
-    "messengerUrl": "",
-    "viberNumber": "",
+    "instagramUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
+    "messengerUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
+    "viberNumber": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "whatsappNumber": "213671466489",
-    "whatsappUrl": "https://wa.me/213671466489"
+    "whatsappUrl": "https://wa.me/213671466489",
+    "tiktokUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT"
   },
   "GOOGLE_SHEETS": {
     "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
@@ -675,10 +676,10 @@
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 465,
-    "remainingDays": 27,
+    "currentPoints": 475,
+    "remainingDays": 26,
     "lastReset": "2025-12-14T16:47:22.307Z",
-    "planType": "free",
+    "planType": "gratuit",
     "monthlyPoints": 500,
     "resetPeriod": 30,
     "currentMonthDays": 30,
@@ -755,7 +756,7 @@
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-18T09:57:27.418Z"
+    "lastUpdated": "2025-12-18T22:59:13.288Z"
   },
   "PIXEL_CODES": {
     "facebook": {
