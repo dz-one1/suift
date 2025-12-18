@@ -181,6 +181,61 @@ const STORE_CONFIG = {
       "createdAt": "2025-12-14T17:40:51.098Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-1765734134763-Screenshot-20251128-190724-Gallery.jpg",
       "updatedAt": "2025-12-14T18:10:07.931Z"
+    },
+    "1766041336901": {
+      "name": "منتج جديد",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أبيض",
+        "أسود"
+      ],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أسود": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-أسود-1766041901807-modal1.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "7",
+              "ageTo": "5",
+              "size": "S"
+            },
+            {
+              "ageFrom": "9",
+              "ageTo": "8",
+              "size": "M"
+            }
+          ]
+        },
+        "أبيض": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-أبيض-1766041845845-modal15.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "10",
+              "ageTo": "9",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {}
+      },
+      "createdAt": "2025-12-18T07:02:16.901Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766041336901-1766041710978-modal11.jpg",
+      "updatedAt": "2025-12-18T07:12:05.813Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -680,7 +735,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 472,
+    "currentPoints": 467,
     "remainingDays": 27,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "free",
@@ -760,7 +815,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-18T07:01:42.435Z"
+    "lastUpdated": "2025-12-18T07:13:06.129Z"
   },
   "PIXEL_CODES": {
     "facebook": {
