@@ -461,7 +461,7 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766169686837-Screenshot-20251110-205919-Gallery.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
@@ -679,7 +679,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 458,
+    "currentPoints": 455,
     "remainingDays": 25,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -759,7 +759,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-19T18:13:06.000Z"
+    "lastUpdated": "2025-12-19T18:41:52.974Z"
   },
   "PIXEL_CODES": {
     "facebook": {
