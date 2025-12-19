@@ -53,7 +53,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-11T12:39:42.838Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765456782838-1765456803780-modal1.jpeg",
-      "updatedAt": "2025-12-12T17:42:05.505Z"
+      "updatedAt": "2025-12-19T08:24:56.159Z"
     },
     "1765488374530": {
       "name": "فستان الافراح",
@@ -84,7 +84,7 @@ const STORE_CONFIG = {
         }
       },
       "sizeGuide": {
-        "enabled": false,
+        "enabled": true,
         "guide": {}
       },
       "createdAt": "2025-12-11T21:26:14.530Z",
@@ -462,14 +462,13 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766098736436-Screenshot-20250903-115403-Facebook.jpg",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1765213966600-fc-bayern-logo_1305393777_img.gif",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
-    "instagramUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
-    "messengerUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
-    "viberNumber": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
+    "instagramUrl": "",
+    "messengerUrl": "",
+    "viberNumber": "",
     "whatsappNumber": "213671466489",
-    "whatsappUrl": "https://wa.me/213671466489",
-    "tiktokUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT"
+    "whatsappUrl": "https://wa.me/213671466489"
   },
   "GOOGLE_SHEETS": {
     "url": "https://docs.google.com/spreadsheets/d/1B6um1tNw0Uh4NJvLjF5zUX6palzubXv1UeH5gSIt_Go/edit?gid=774585379#gid=774585379",
@@ -681,7 +680,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 473,
+    "currentPoints": 462,
     "remainingDays": 26,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -761,16 +760,16 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-19T07:20:36.412Z"
+    "lastUpdated": "2025-12-19T08:25:03.260Z"
   },
   "PIXEL_CODES": {
     "facebook": {
       "enabled": true,
       "pixelId": "",
       "events": {
-        "pageView": false,
+        "pageView": true,
         "addToCart": true,
-        "purchase": false,
+        "purchase": true,
         "initiateCheckout": true,
         "viewContent": true
       }
