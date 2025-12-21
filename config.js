@@ -182,8 +182,8 @@ const STORE_CONFIG = {
       "updatedAt": "2025-12-14T18:10:07.931Z"
     },
     "1766356532089": {
-      "name": "Nouveau produit",
-      "price": 0,
+      "name": "Ensemble jogging  femme",
+      "price": 3200,
       "description": "",
       "category": "",
       "stock": 0,
@@ -332,7 +332,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-21T23:04:27.487Z"
+      "updatedAt": "2025-12-21T23:09:34.379Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -836,7 +836,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 447,
+    "currentPoints": 445,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -916,7 +916,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-21T23:04:37.298Z"
+    "lastUpdated": "2025-12-21T23:09:42.399Z"
   },
   "PIXEL_CODES": {
     "facebook": {
