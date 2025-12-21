@@ -126,11 +126,6 @@ const STORE_CONFIG = {
             {
               "ageFrom": "A",
               "ageTo": "A",
-              "size": "38"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
               "size": "40"
             },
             {
@@ -152,6 +147,11 @@ const STORE_CONFIG = {
               "ageFrom": "A",
               "ageTo": "A",
               "size": "47"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "48"
             }
           ]
         },
@@ -196,13 +196,80 @@ const STORE_CONFIG = {
           "images": [
             "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Marron%20clair-1766357425095-Screenshot-20251221-232736-Messenger.jpg"
           ],
-          "ageRanges": []
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "38"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "39"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "40"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "42"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "43"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "44"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "47"
+            }
+          ]
         },
         "Vert  Kaki": {
           "images": [
             "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Vert%20%20Kaki-1766359591550-Screenshot-20251221-232759-Messenger.jpg"
           ],
-          "ageRanges": []
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "38"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "39"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "40"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "46"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "47"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "48"
+            }
+          ]
         }
       },
       "sizeGuide": {
@@ -211,7 +278,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-21T23:31:37.833Z"
+      "updatedAt": "2025-12-21T23:47:04.832Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -713,7 +780,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 437,
+    "currentPoints": 435,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -793,7 +860,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-21T23:31:49.236Z"
+    "lastUpdated": "2025-12-21T23:47:15.208Z"
   },
   "PIXEL_CODES": {
     "facebook": {
