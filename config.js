@@ -131,17 +131,7 @@ const STORE_CONFIG = {
             {
               "ageFrom": "A",
               "ageTo": "A",
-              "size": "39"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
               "size": "40"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "42"
             },
             {
               "ageFrom": "A",
@@ -162,11 +152,6 @@ const STORE_CONFIG = {
               "ageFrom": "A",
               "ageTo": "A",
               "size": "47"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "48"
             }
           ]
         },
@@ -179,21 +164,6 @@ const STORE_CONFIG = {
               "ageFrom": "A",
               "ageTo": "A",
               "size": "38"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "39"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "40"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "42"
             },
             {
               "ageFrom": "A",
@@ -241,7 +211,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-21T23:26:44.056Z"
+      "updatedAt": "2025-12-21T23:31:37.833Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -743,7 +713,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 439,
+    "currentPoints": 437,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -823,7 +793,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-21T23:26:52.171Z"
+    "lastUpdated": "2025-12-21T23:31:49.236Z"
   },
   "PIXEL_CODES": {
     "facebook": {
