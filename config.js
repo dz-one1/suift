@@ -180,6 +180,159 @@ const STORE_CONFIG = {
       "createdAt": "2025-12-14T17:40:51.098Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-1765734134763-Screenshot-20251128-190724-Gallery.jpg",
       "updatedAt": "2025-12-14T18:10:07.931Z"
+    },
+    "1766356532089": {
+      "name": "Nouveau produit",
+      "price": 0,
+      "description": "",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "Beige clair",
+        "Marron",
+        "Marron clair",
+        "Vert  Kaki"
+      ],
+      "availableSizes": [
+        "38",
+        "39",
+        "40",
+        "42",
+        "43",
+        "44",
+        "45",
+        "45",
+        "46",
+        "47",
+        "48"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "Beige clair": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Beige%20clair-1766357351128-Screenshot-20251221-233746-Facebook.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "38"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "39"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "40"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "42"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "43"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "44"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "46"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "47"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "48"
+            }
+          ]
+        },
+        "Marron": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Marron-1766357393087-Screenshot-20251221-232855-Messenger.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "38"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "39"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "40"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "42"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "43"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "44"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "46"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "47"
+            },
+            {
+              "ageFrom": "A",
+              "ageTo": "A",
+              "size": "48"
+            }
+          ]
+        },
+        "Marron clair": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Marron%20clair-1766357425095-Screenshot-20251221-232736-Messenger.jpg"
+          ],
+          "ageRanges": []
+        },
+        "Vert  Kaki": {
+          "images": [
+            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-Vert%20%20Kaki-1766357491883-Screenshot-20251221-232736-Messenger.jpg"
+          ],
+          "ageRanges": []
+        }
+      },
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {}
+      },
+      "createdAt": "2025-12-21T22:35:32.089Z",
+      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
+      "updatedAt": "2025-12-21T23:04:27.487Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -484,7 +637,11 @@ const STORE_CONFIG = {
     "رمادي",
     "أصفر",
     "vert motard",
-    "Vert pistache"
+    "Vert pistache",
+    "Beige clair",
+    "Marron",
+    "Marron clair",
+    "Vert  Kaki"
   ],
   "AVAILABLE_SIZES": [
     "S",
@@ -679,8 +836,8 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 455,
-    "remainingDays": 25,
+    "currentPoints": 447,
+    "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
     "monthlyPoints": 500,
@@ -759,7 +916,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-19T18:41:52.974Z"
+    "lastUpdated": "2025-12-21T23:04:37.298Z"
   },
   "PIXEL_CODES": {
     "facebook": {
