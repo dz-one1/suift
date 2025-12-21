@@ -85,97 +85,6 @@
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765488374530-1765488425903-modle6.jpg",
       "updatedAt": "2025-12-11T21:31:04.170Z"
     },
-    "1765734051098": {
-      "name": "قمجة تركية",
-      "price": 2500,
-      "description": "",
-      "category": "",
-      "stock": 0,
-      "featured": false,
-      "availableColors": [
-        "أحمر",
-        "vert motard",
-        "Vert pistache"
-      ],
-      "availableSizes": [
-        "S",
-        "M"
-      ],
-      "ageRanges": [],
-      "colorImages": {
-        "أحمر": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-أحمر-1765735538838-Screenshot-20251128-190507-Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "5",
-              "ageTo": "7",
-              "size": "S"
-            },
-            {
-              "ageFrom": "8",
-              "ageTo": "9",
-              "size": "M"
-            }
-          ]
-        },
-        "vert motard": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-vert%20motard-1765735620402-Screenshot-20251128-190530-Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "5",
-              "ageTo": "7",
-              "size": "S"
-            },
-            {
-              "ageFrom": "8",
-              "ageTo": "9",
-              "size": "M"
-            }
-          ]
-        },
-        "Vert pistache": {
-          "images": [
-            "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-Vert%20pistache-1765735698221-Screenshot-20251128-190550-Gallery.jpg"
-          ],
-          "ageRanges": [
-            {
-              "ageFrom": "5",
-              "ageTo": "7",
-              "size": "S"
-            },
-            {
-              "ageFrom": "8",
-              "ageTo": "9",
-              "size": "M"
-            }
-          ]
-        }
-      },
-      "sizeGuide": {
-        "enabled": true,
-        "guide": {
-          "S": {
-            "heightFrom": 80,
-            "heightTo": 100,
-            "weightFrom": 20,
-            "weightTo": 25
-          },
-          "M": {
-            "heightFrom": 95,
-            "heightTo": 110,
-            "weightFrom": 23,
-            "weightTo": 30
-          }
-        }
-      },
-      "createdAt": "2025-12-14T17:40:51.098Z",
-      "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1765734051098-1765734134763-Screenshot-20251128-190724-Gallery.jpg",
-      "updatedAt": "2025-12-14T18:10:07.931Z"
-    },
     "1766356532089": {
       "name": "Ensemble jogging  femme",
       "price": 3200,
@@ -596,9 +505,7 @@
     "promotionalDiscountPercent": 20,
     "promotionalDiscountedPrice": null,
     "promoDiscountScope": "selected",
-    "promoDiscountProducts": [
-      1765734051098
-    ]
+    "promoDiscountProducts": []
   },
   "STORE_INFO": {
     "name": " SANIX-DZ",
@@ -831,7 +738,7 @@
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 445,
+    "currentPoints": 443,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -911,7 +818,7 @@
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-21T23:09:39.946Z"
+    "lastUpdated": "2025-12-21T23:10:57.961Z"
   },
   "PIXEL_CODES": {
     "facebook": {
