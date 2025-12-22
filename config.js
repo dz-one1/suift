@@ -205,11 +205,6 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "39"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
               "size": "40"
             },
             {
@@ -220,22 +215,12 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "43"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
               "size": "44"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
               "size": "46"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "47"
             },
             {
               "ageFrom": " ",
@@ -257,11 +242,6 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "39"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
               "size": "40"
             },
             {
@@ -272,23 +252,65 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "47"
+              "size": "48"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "48"
+              "size": "42"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "44"
             }
           ]
         }
       },
       "sizeGuide": {
         "enabled": true,
-        "guide": {}
+        "guide": {
+          "38": {
+            "heightFrom": 150,
+            "heightTo": 155,
+            "weightFrom": 40,
+            "weightTo": 45
+          },
+          "40": {
+            "heightFrom": 150,
+            "heightTo": 160,
+            "weightFrom": 50,
+            "weightTo": 55
+          },
+          "42": {
+            "heightFrom": 160,
+            "heightTo": 165,
+            "weightFrom": 52,
+            "weightTo": 55
+          },
+          "44": {
+            "heightFrom": 170,
+            "heightTo": 175,
+            "weightFrom": 65,
+            "weightTo": 70
+          },
+          "46": {
+            "heightFrom": 170,
+            "heightTo": 175,
+            "weightFrom": 60,
+            "weightTo": 65
+          },
+          "48": {
+            "heightFrom": 170,
+            "heightTo": 175,
+            "weightFrom": 65,
+            "weightTo": 70
+          }
+        }
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-21T23:51:57.233Z"
+      "updatedAt": "2025-12-22T00:07:14.651Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -790,7 +812,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 433,
+    "currentPoints": 431,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -870,7 +892,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-21T23:52:13.122Z"
+    "lastUpdated": "2025-12-22T00:07:22.818Z"
   },
   "PIXEL_CODES": {
     "facebook": {
