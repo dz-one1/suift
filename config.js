@@ -104,17 +104,9 @@ const STORE_CONFIG = {
         "Vert  Kaki"
       ],
       "availableSizes": [
-        "38",
-        "39",
-        "40",
-        "42",
-        "43",
-        "44",
-        "45",
-        "45",
-        "46",
-        "47",
-        "48"
+        "38-40",
+        "42-44",
+        "46-48"
       ],
       "ageRanges": [],
       "colorImages": {
@@ -124,34 +116,19 @@ const STORE_CONFIG = {
           ],
           "ageRanges": [
             {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "40"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "43"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "44"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "46"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "47"
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "38-40"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "48"
+              "size": "42-44"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "46-48"
             }
           ]
         },
@@ -161,34 +138,19 @@ const STORE_CONFIG = {
           ],
           "ageRanges": [
             {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "38"
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "38-40"
             },
             {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "43"
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "42-44"
             },
             {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "44"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "46"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "47"
-            },
-            {
-              "ageFrom": "A",
-              "ageTo": "A",
-              "size": "48"
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "46-48"
             }
           ]
         },
@@ -200,32 +162,17 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "38"
+              "size": "38-40"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "40"
+              "size": "42-44"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "42"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "44"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "46"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "48"
+              "size": "46-48"
             }
           ]
         },
@@ -237,32 +184,17 @@ const STORE_CONFIG = {
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "38"
+              "size": "38-40"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "40"
+              "size": "42-44"
             },
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "46"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "48"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "42"
-            },
-            {
-              "ageFrom": " ",
-              "ageTo": " ",
-              "size": "44"
+              "size": "46-48"
             }
           ]
         }
@@ -270,47 +202,29 @@ const STORE_CONFIG = {
       "sizeGuide": {
         "enabled": true,
         "guide": {
-          "38": {
+          "38-40": {
             "heightFrom": 150,
             "heightTo": 155,
             "weightFrom": 40,
-            "weightTo": 45
+            "weightTo": 50
           },
-          "40": {
-            "heightFrom": 150,
-            "heightTo": 160,
-            "weightFrom": 50,
-            "weightTo": 55
-          },
-          "42": {
+          "42-44": {
             "heightFrom": 160,
             "heightTo": 165,
-            "weightFrom": 52,
-            "weightTo": 55
-          },
-          "44": {
-            "heightFrom": 170,
-            "heightTo": 175,
-            "weightFrom": 65,
-            "weightTo": 70
-          },
-          "46": {
-            "heightFrom": 170,
-            "heightTo": 175,
-            "weightFrom": 60,
+            "weightFrom": 55,
             "weightTo": 65
           },
-          "48": {
+          "46-48": {
             "heightFrom": 170,
             "heightTo": 175,
-            "weightFrom": 65,
-            "weightTo": 70
+            "weightFrom": 70,
+            "weightTo": 75
           }
         }
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-22T00:07:14.651Z"
+      "updatedAt": "2025-12-22T00:16:27.197Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -639,7 +553,10 @@ const STORE_CONFIG = {
     "47",
     "48",
     "49",
-    "50"
+    "50",
+    "38-40",
+    "42-44",
+    "46-48"
   ],
   "SIZE_GUIDE": {
     "38": {
@@ -812,7 +729,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 431,
+    "currentPoints": 429,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -892,7 +809,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-22T00:07:22.818Z"
+    "lastUpdated": "2025-12-22T00:16:34.723Z"
   },
   "PIXEL_CODES": {
     "facebook": {
