@@ -92,7 +92,7 @@ const STORE_CONFIG = {
     },
     "1766356532089": {
       "name": "Ensemble jogging  femme",
-      "price": 1800,
+      "price": 3600,
       "description": "Prix de gros : 1800 DZR /Série 12 pièces   \n",
       "category": "",
       "stock": 0,
@@ -224,7 +224,7 @@ const STORE_CONFIG = {
       },
       "createdAt": "2025-12-21T22:35:32.089Z",
       "image": "https://raw.githubusercontent.com/dz-one1/suift/main/images/product-1766356532089-1766357548487-Screenshot-20251221-233746-Facebook.jpg",
-      "updatedAt": "2025-12-22T00:33:51.379Z"
+      "updatedAt": "2025-12-22T04:20:05.506Z"
     }
   },
   "DELIVERY_PRICES": {
@@ -487,7 +487,8 @@ const STORE_CONFIG = {
     "discountPerItem": 500,
     "discountScope": "selected",
     "discountProducts": [
-      1765456782838
+      1765456782838,
+      1766356532089
     ],
     "enablePromotionalDiscount": true,
     "promotionalDiscountPercent": 20,
@@ -729,7 +730,7 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 427,
+    "currentPoints": 425,
     "remainingDays": 23,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
@@ -809,7 +810,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-22T00:34:16.649Z"
+    "lastUpdated": "2025-12-22T04:20:16.291Z"
   },
   "PIXEL_CODES": {
     "facebook": {
