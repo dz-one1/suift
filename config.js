@@ -497,7 +497,7 @@ const STORE_CONFIG = {
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
-    "name": " SANIX-DZ",
+    "name": " BBENAKRAB-DZ",
     "storeIcon": "-",
     "storeTitle": "-",
     "tagline": "أحدث موديلات الأطفال لسنة 2026",
@@ -505,7 +505,7 @@ const STORE_CONFIG = {
       "0671466489",
       "0551102155"
     ],
-    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766169686837-Screenshot-20251110-205919-Gallery.jpg",
+    "logo": "https://raw.githubusercontent.com/dz-one1/suift/main/images/store-logo-1766661018161-Screenshot-20251225-120948-Photo-Editor.jpg",
     "facebookUrl": "https://www.facebook.com/groups/3131209233768404/?ref=share&mibextid=NSMWBT",
     "instagramUrl": "",
     "messengerUrl": "",
@@ -730,8 +730,8 @@ const STORE_CONFIG = {
     }
   },
   "POINTS_SYSTEM": {
-    "currentPoints": 425,
-    "remainingDays": 23,
+    "currentPoints": 418,
+    "remainingDays": 20,
     "lastReset": "2025-12-14T16:47:22.307Z",
     "planType": "gratuit",
     "monthlyPoints": 500,
@@ -810,7 +810,7 @@ const STORE_CONFIG = {
         "user": "admin"
       }
     ],
-    "lastUpdated": "2025-12-22T04:20:16.291Z"
+    "lastUpdated": "2025-12-25T11:19:48.794Z"
   },
   "PIXEL_CODES": {
     "facebook": {
